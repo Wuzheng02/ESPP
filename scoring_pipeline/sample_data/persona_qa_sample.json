@@ -1,0 +1,3481 @@
+[
+  {
+    "persona_id": "P_0000",
+    "persona": {
+      "id": "P_0000",
+      "demographic": {
+        "age_group": "teen",
+        "gender": "female",
+        "ethnicity": "white",
+        "occupation": "student"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "low",
+        "extraversion": "high",
+        "agreeableness": "low",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "general_genui",
+        "domain_experience": "novice",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "curiosity",
+      "frustration": "unclear_feedback",
+      "goal": "productivity",
+      "behavior_pattern": "minimal-effort",
+      "context": "focused_work",
+      "ui_expectation": [
+        "clear feedback",
+        "interactive elements"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q15",
+        "question": "Do you understand the purpose of streaming (the typewriter effect)?",
+        "options": [
+          "A. Yes; it allows me to see progress instantly and reduces perceived latency.",
+          "B. No; I find the flashing text distracting and prefer the result to appear all at once.",
+          "C. No feeling; I've grown accustomed to this presentation."
+        ],
+        "answer": "A - Yes; it allows me to see progress instantly and reduces perceived latency."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q29",
+        "question": "When the AI cannot complete a task, how do you want it to explain its limitations to you?",
+        "options": null,
+        "answer": "Honestly I just want it to be super straightforward and not give me some long confusing paragraph about why it can't do something. Like just tell me \"I can't do this\" and then maybe suggest something else I could try instead. Don't make me read a whole essay or use weird technical words because I'll just get annoyed and close the app. I need to know right away what's going on so I'm not sitting there confused wondering if it's still working or what."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q61",
+        "question": "When GenUI's operational suggestions conflict with your professional judgment, you will:",
+        "options": [
+          "A. Prioritize following the AI's suggestion.",
+          "B. Insist on your own professional judgment.",
+          "C. Synthesize both to find a compromise.",
+          "D. Decide after consulting other professionals."
+        ],
+        "answer": "B - I like being in control of what I'm doing, so I'd go with my own gut feeling over what some AI tells me."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q82",
+        "question": "What kind of GenUI design do you think would allow you to trust the system while still maintaining sufficient critical thinking?",
+        "options": null,
+        "answer": "Honestly I'd trust it way more if it just told me straight up what it's doing and why, like don't make me guess what's happening behind the scenes. I want clear pop-ups or highlights that say \"hey I changed this because of X reason\" so I can decide if I agree or not. I don't wanna have to dig through settings or read long explanations though, keep it short and obvious. Maybe like a thumbs up/thumbs down thing so I can quickly say if it got it right without having to think too hard about it."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q54",
+        "question": "When GenUI generates a functionally complex interface for you, the part where you feel the heaviest cognitive burden is:",
+        "options": [
+          "A. Initially understanding the interface structure.",
+          "B. Making decisions among numerous options.",
+          "C. Remembering operation steps and interface changes.",
+          "D. Verifying the accuracy of AI-generated results."
+        ],
+        "answer": "A - When something new pops up and it's all complicated looking, my brain just immediately checks out because I can't even figure out where to start."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q43",
+        "question": "Talk about your views on a \"minimalist\" AI interface (with only one input box).",
+        "options": null,
+        "answer": "Honestly, a single input box kind of stresses me out because like, how am I supposed to know what it can even do? I need buttons and options and stuff to click on so I don't feel lost. If I type something and it just gives me a weird response with no explanation, I get so frustrated. I want the interface to actually guide me and show me what's happening, not just sit there looking blank expecting me to figure it out on my own."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q14",
+        "question": "For \"Human-in-the-loop\" collaboration, what do you think is the hardest part?",
+        "options": [
+          "A. Attention loss caused by frequent context switching.",
+          "B. Difficulty in defining which errors were made by the AI and which were caused by me.",
+          "C. The time spent auditing AI output exceeds the time it would take to do it myself."
+        ],
+        "answer": "A - I literally lose focus so fast when I have to keep switching between what I'm doing and checking what the AI did, it's so annoying."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q145",
+        "question": "How do you establish a \"collaboration rhythm\" with GenUI?",
+        "options": null,
+        "answer": "Honestly I don't really think about it that deeply, I just kind of use it when I need to get stuff done and expect it to keep up with me. Like if I click something or ask for something I want it to respond right away and make it obvious what it did, otherwise I get frustrated and just start mashing buttons. I guess my \"rhythm\" is basically me doing the bare minimum and the system filling in the gaps, and if it doesn't give me clear feedback I lose trust in it super fast. I need it to match my energy, not make me figure out what's happening behind the scenes."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q12",
+        "question": "How do you judge whether a citation link provided by the AI is credible?",
+        "options": [
+          "A. Check if the domain name is well-known.",
+          "B. I must click it to see if the content actually exists and matches.",
+          "C. Trust that the AI will not fabricate links."
+        ],
+        "answer": "A - I just look at the link and if it's from a site I've heard of like a big news website or something then I figure it's probably legit."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q130",
+        "question": "How do you judge if an explanation is credible?",
+        "options": null,
+        "answer": "Honestly I just go with my gut — if it sounds weird or too complicated I'm like nah that's probably wrong. If it makes sense right away and matches what I already kinda know, then I'll believe it. I also look at whether the person saying it seems confident or if other people agree with them. I don't really go digging into sources or whatever, I just need it to feel right and not be confusing."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0001",
+    "persona": {
+      "id": "P_0001",
+      "demographic": {
+        "age_group": "middle_aged",
+        "gender": "female",
+        "ethnicity": "asian",
+        "occupation": "business_owner"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "high",
+        "extraversion": "medium",
+        "agreeableness": "medium",
+        "neuroticism": "medium"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "design_tools",
+        "domain_experience": "intermediate",
+        "usage_frequency": "occasional"
+      },
+      "motivation": "learning",
+      "frustration": "complex_interface",
+      "goal": "content_creation",
+      "behavior_pattern": "exploratory",
+      "context": "low-resource",
+      "ui_expectation": [
+        "structured layouts"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q5",
+        "question": "How do you rate your mastery of Prompt Engineering?",
+        "options": [
+          "A. Proficient; know how to use structured frameworks (e.g., Role, Context, Goal).",
+          "B. Knowledgeable; rely mainly on natural language intuition to communicate.",
+          "C. Not at all; type randomly as if chatting with a real person."
+        ],
+        "answer": "C - I just type what I need like I'm talking to someone, I don't really know any special techniques or frameworks for it."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q29",
+        "question": "When the AI cannot complete a task, how do you want it to explain its limitations to you?",
+        "options": null,
+        "answer": "I want it to tell me straight away in simple language — no technical jargon, no long paragraphs. Just say clearly what it can't do and, more importantly, give me an alternative or a next step I can take. I don't have time to figure out error codes or read through walls of text. A short, honest explanation with a practical suggestion is all I need to keep moving forward."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q12",
+        "question": "When AI-generated visuals (e.g., UI designs) are very exquisite, you:",
+        "options": [
+          "A. Automatically assume the underlying logic is also professional and reliable.",
+          "B. Remain vigilant, believing that a \"fancy exterior\" might hide functional deficiencies.",
+          "C. Only evaluate the visuals and do not link them to functional trust."
+        ],
+        "answer": "B - I've been in business long enough to know that something looking polished on the outside doesn't mean it works properly underneath, so I always check the actual functionality before trusting it."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q78",
+        "question": "When GenUI's recommended results are contrary to your intuition, how do you decide whether to follow the AI's judgment?",
+        "options": null,
+        "answer": "Honestly, I tend to trust my own gut feeling first because I've been running my business for years and I know what works for my customers. If the AI suggests something that feels off, I'll usually stick with what I know unless I can clearly see the reasoning behind its recommendation. I might try the AI's suggestion on a small scale first — like testing a design variation — before committing to it fully. I'm not the type to just blindly follow technology when my experience tells me otherwise, but I'm open to learning if it can show me why it thinks differently."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q55",
+        "question": "If there are too many operation options in the GenUI interface, you usually:",
+        "options": [
+          "A. Evaluate each option one by one before making a decision.",
+          "B. Consider only the first few options and choose quickly.",
+          "C. Request the AI to reduce the number of options.",
+          "D. Operate directly according to the default recommendation."
+        ],
+        "answer": "C - I prefer to ask the system to simplify things because too many options just overwhelm me and I need a cleaner layout to feel in control of what I'm doing."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q140",
+        "question": "How do you judge whether an interface is \"efficient\"?",
+        "options": null,
+        "answer": "For me, an efficient interface is one where I can get what I need done without wasting time figuring out where things are or clicking through too many steps. I don't want to feel lost or overwhelmed — if I can open it up and within a few minutes start creating what I had in mind, that's efficient. I also pay attention to whether it respects my workflow, meaning I shouldn't have to redo things or backtrack because the system wasn't clear. Basically, if it saves me time and mental energy compared to doing things the old way, then it's working well."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q4",
+        "question": "How do you view the \"Autocomplete\" or \"Pre-fill\" functions provided by AI?",
+        "options": [
+          "A. A huge help; I accept them directly almost without checking.",
+          "B. Only as a reference; I usually modify most of the content.",
+          "C. They interfere with my originality; I tend to turn these features off."
+        ],
+        "answer": "B - Only as a reference; I usually modify most of the content."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q147",
+        "question": "How do you use the system to improve your operational efficiency?",
+        "options": null,
+        "answer": "I mainly use it when I need to create marketing materials or social media posts for my business, so I don't have to hire someone every single time. It saves me time because I can get a decent draft going without starting from scratch, even though I sometimes struggle with the more complicated features. I like when things are laid out clearly so I can just follow the steps — if I have to dig around too much, I'll just give up and do it the old way. Honestly, for a small business like mine, anything that cuts down on outsourcing costs and lets me handle things in-house is a win."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q51",
+        "question": "When GenUI automatically generates an interface layout, do you want the system to explain the reason for generating that layout?",
+        "options": [
+          "A. Yes; I want a detailed explanation for every generation.",
+          "B. Yes; but only when the result does not match expectations.",
+          "C. Not necessarily; only when the explanation is useful.",
+          "D. No; as long as the result is useful, I don't need an explanation."
+        ],
+        "answer": "B - I want to know why it did what it did especially when the result isn't what I expected, because otherwise I'm just guessing how to fix it."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q145",
+        "question": "Do you want the system to provide traceable operation records? Why?",
+        "options": null,
+        "answer": "Yes, absolutely. I need to be able to see what steps were taken and what changes were made, because if something goes wrong I want to know exactly where it happened so I can fix it or undo it. As a business owner, I'm used to keeping records of everything — it's just good practice. Having that kind of trail also helps me feel more in control of the tool, especially since I'm still learning how it works and I don't want to accidentally lose my progress."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0002",
+    "persona": {
+      "id": "P_0002",
+      "demographic": {
+        "age_group": "senior",
+        "gender": "female",
+        "ethnicity": "asian",
+        "occupation": "retired"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "medium",
+        "extraversion": "high",
+        "agreeableness": "high",
+        "neuroticism": "medium"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "medium",
+        "target_domain": "design_tools",
+        "domain_experience": "novice",
+        "usage_frequency": "rare"
+      },
+      "motivation": "efficiency",
+      "frustration": "unclear_feedback",
+      "goal": "productivity",
+      "behavior_pattern": "task-oriented",
+      "context": "multitasking",
+      "ui_expectation": [
+        "exploratory interfaces",
+        "interactive elements",
+        "friendly tone"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q104",
+        "question": "When the interface is inconsistent with your expectations, how do you interpret it?",
+        "options": [
+          "A. Assume it is a system generation error.",
+          "B. Adjust your own way of understanding.",
+          "C. Try several different operation paths.",
+          "D. Re-input requirements and let the system regenerate."
+        ],
+        "answer": "C - I like to explore and try different ways to get things working, especially since I'm still learning these tools and clicking around helps me understand what's happening better than just starting over."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q79",
+        "question": "Please describe an experience where you \"suddenly understood the interface logic\" while using GenUI. What triggered this understanding?",
+        "options": null,
+        "answer": "You know, I was trying out one of those AI design tools my granddaughter recommended, and at first I felt quite lost — everything kept changing and I couldn't figure out why the layout was shifting around. But then I noticed that every time I typed something different in the prompt area, the interface would rearrange itself to match what I was asking for. It was like a little lightbulb moment — I realized the tool was trying to respond to my words visually, not just giving me text back. Once I understood that connection between what I typed and how the screen changed, I felt much more confident exploring different options. It would have helped if there had been a friendly little note explaining that from the start, though!"
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q108",
+        "question": "When the system explains its generation logic, you will:",
+        "options": [
+          "A. Trust it more.",
+          "B. Slightly increase your trust.",
+          "C. Feel no significant change.",
+          "D. Still remain skeptical."
+        ],
+        "answer": "A - When a system takes the time to explain why it did something, I feel much more confident using it because I like to understand what's happening before I commit to any changes."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q86",
+        "question": "In a team collaboration scenario, how do you handle conflicts when GenUI's recommendations differ from the opinions of team members?",
+        "options": null,
+        "answer": "You know, I've always believed that good communication is the key to resolving any disagreement. If the AI tool suggests one thing and my team members feel differently, I'd want us to talk it through openly — I'm curious about why the tool made that recommendation, but I also deeply value the human experience and intuition that my teammates bring. I tend to lean toward what the group feels comfortable with, especially if the AI's reasoning isn't clearly explained. At my age, I've learned that maintaining harmony and trust in a team is more important than any single design choice, so I'd encourage everyone to share their perspective and find a middle ground together."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q1",
+        "question": "When facing an extra-long response generated by AI, your first psychological reaction is:",
+        "options": [
+          "A. Excitement; I feel it's full of information and worth digging into.",
+          "B. Anxiety; I feel reading pressure and wish for a short summary.",
+          "C. Fatigue; I skip it directly and ask the AI to \"get to the point.\""
+        ],
+        "answer": "B - When I see a very long response, I feel a bit overwhelmed and would much prefer a clear, concise summary so I can quickly find what I need without wading through everything."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q46",
+        "question": "What do you think the \"Undo\" function of an AI assistant should look like to be most intuitive?",
+        "options": null,
+        "answer": "I think the \"Undo\" button should be big, clearly visible, and always in the same spot on the screen — not hidden away in some menu where I have to go searching for it. At my age, I appreciate when things are straightforward, so maybe a nice arrow pointing backward with the word \"Undo\" right next to it, no guessing involved. It would also be wonderful if it showed me a little preview of what I'm going back to, so I feel confident I'm not making things worse by pressing it. I like to feel in control of what's happening, so having a clear history trail — like stepping back through my changes one at a time — would give me that peace of mind."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q105",
+        "question": "When the system misunderstands your needs, you:",
+        "options": [
+          "A. Continue using the result.",
+          "B. Fine-tune the input.",
+          "C. Re-describe the requirements.",
+          "D. Give up on using it."
+        ],
+        "answer": "C - I would rather explain what I actually need in a different way, because if the system didn't understand me the first time, I want to make sure I'm being clear about what I'm looking for."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q94",
+        "question": "Do you think \"human supervision of AI\" in GenUI usage scenarios should be a proactive behavior or a passive safeguard? Please state your position.",
+        "options": null,
+        "answer": "I firmly believe human supervision should be a proactive behavior, not something we only rely on after things go wrong. At my age, I've learned that staying in control of any process from the beginning saves you a lot of headaches later. When I use these design tools, I want to be actively guiding what the AI does — checking in, making adjustments, understanding what's happening — rather than just hoping it gets things right and only stepping in when there's a problem. I may not be the most tech-savvy person, but I know that being hands-on and attentive gives me confidence that the final result is truly what I intended."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q61",
+        "question": "What is the impact of GenUI's \"Black Box\" nature (unable to explain internal logic) on your user experience?",
+        "options": [
+          "A. Severe impact; cannot accept an opaque system.",
+          "B. Some impact; but acceptable if the result is useful.",
+          "C. Little impact; I care more about the usage results.",
+          "D. No impact; internal AI logic is not my concern."
+        ],
+        "answer": "B - Some impact; but acceptable if the result is useful."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q45",
+        "question": "How do you view the identity transparency issue when an AI simulates an \"Expert Tone\" to answer questions?",
+        "options": null,
+        "answer": "You know, I think honesty is very important, especially for someone like me who is still learning these tools. If an AI is speaking to me in a confident, expert tone, I might naturally trust it more than I should, and that concerns me. I appreciate when the system is upfront about being AI-generated advice rather than pretending to be a human specialist. At my age, I've learned that trust is earned through transparency, not through sounding impressive. I'd much rather have a friendly, clear response that admits its limitations than a polished answer that hides its true nature."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0003",
+    "persona": {
+      "id": "P_0003",
+      "demographic": {
+        "age_group": "young_adult",
+        "gender": "female",
+        "ethnicity": "white",
+        "occupation": "junior_employee"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "medium",
+        "extraversion": "high",
+        "agreeableness": "high",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "data_analysis",
+        "domain_experience": "intermediate",
+        "usage_frequency": "occasional"
+      },
+      "motivation": "social_connection",
+      "frustration": "information_overload",
+      "goal": "information_acquisition",
+      "behavior_pattern": "task-oriented",
+      "context": "multitasking",
+      "ui_expectation": [
+        "exploratory interfaces",
+        "clear feedback",
+        "interactive elements",
+        "friendly tone"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q53",
+        "question": "If a functional module you don't recognize appears in the GenUI generated interface, how do you handle it?",
+        "options": [
+          "A. Ignore it and only use the parts I'm familiar with.",
+          "B. Click and try it out to see what happens.",
+          "C. Hover the mouse or look for tooltip information.",
+          "D. Assume there is a problem with the interface and provide feedback to the system."
+        ],
+        "answer": "C - I'd want to get a little more context before just clicking randomly, so hovering to find a tooltip feels like the safest way to figure out what it does without accidentally messing something up."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q94",
+        "question": "To what extent do you think GenUI should actively explain the reasons for interface changes to users? In what form would you like this explanation to be presented?",
+        "options": null,
+        "answer": "Honestly, I think it's really important for the system to explain why things are changing on screen — otherwise I get kind of anxious and confused, like, did I do something wrong or is it just doing its own thing? I'd love a friendly little tooltip or a short pop-up message that says something like \"Hey, I rearranged this because you seemed to be looking for X\" in plain language, not tech jargon. It doesn't need to be a whole essay, just a quick reassuring note so I feel like I'm still in control of what's happening. Maybe even a subtle animation that draws my eye to what changed, paired with a one-liner explanation — that would make me feel way more comfortable using it."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q14",
+        "question": "Do you feel a lack of trust because the AI responds extremely quickly?",
+        "options": [
+          "A. Yes; I feel it hasn't gone through deep \"thinking\" (reasoning).",
+          "B. No; speed indicates strong computing power and is a sign of efficiency.",
+          "C. I only have this doubt when dealing with extremely complex tasks."
+        ],
+        "answer": "C - I only really question it when the task is something super complex, like a detailed data analysis, because for simple stuff quick responses feel fine but for harder things I want to know it actually thought it through."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q37",
+        "question": "Have you ever experienced a negative consequence because you trusted an AI's suggestion? How did you handle it?",
+        "options": null,
+        "answer": "Yeah, actually there was a time at work when I was pulling together some data for a report and I relied on an AI tool's summary without double-checking the numbers myself. My manager caught a couple of inaccuracies and I felt so embarrassed — my stomach just dropped. I handled it by owning up to it immediately and going back to verify everything manually, which took forever but at least I felt more in control of the final product. Now I'm way more cautious about trusting AI outputs at face value, especially when it's something that's going in front of other people. It honestly made me realize I need to treat AI suggestions more like a starting point than a final answer."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q74",
+        "question": "When the GenUI interface loads slowly, you usually:",
+        "options": [
+          "A. Wait patiently.",
+          "B. Refresh the page to reload.",
+          "C. Switch to other tasks and wait for loading to complete.",
+          "D. Feel frustrated; usage intent is affected."
+        ],
+        "answer": "C - I'm usually juggling a few things at once anyway, so I'll just flip to another tab or task and come back when it's ready."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q38",
+        "question": "When you are handling multiple tasks in parallel, what notification methods from an AI assistant would you find least intrusive?",
+        "options": null,
+        "answer": "Honestly, when I'm juggling a bunch of things at once, I really appreciate subtle visual cues like a small badge or a gentle color change on a tab rather than something that pops up and demands my attention right away. I get overwhelmed pretty easily when there's too much information flying at me, so a quiet notification that I can check on my own terms feels way less stressful. Maybe like a little dot that appears in the corner or a soft chime—something that says \"hey, I have something for you when you're ready\" without breaking my flow. I want to feel in control of when I engage with it, not like the AI is interrupting me constantly."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q71",
+        "question": "When using GenUI in a multi-person collaboration scenario, what role do you think the AI should play?",
+        "options": [
+          "A. Neutral coordinator, balancing the needs of all parties.",
+          "B. Executor, operating according to team consensus.",
+          "C. Consultant, providing suggestions and analysis for the team.",
+          "D. Recorder, tracking the collaboration process and decisions."
+        ],
+        "answer": "C - I think having the AI as a consultant feels the most natural because I'd want it to offer helpful suggestions and analysis without taking over, so the team still feels in control of the decisions."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q95",
+        "question": "When using GenUI for creative tasks, how do you ensure the final output reflects your ideas rather than the AI's default preferences?",
+        "options": null,
+        "answer": "Honestly, I'm not super technical so I don't always know exactly what's happening under the hood, but I try to be really specific about what I want when I'm giving instructions — like, I'll describe the vibe or feeling I'm going for rather than just accepting whatever it spits out first. I usually go back and forth with it a few times, tweaking things until it feels like *me*, because the first version almost never captures what I had in mind. I also like when there are interactive options where I can click around and explore different directions instead of just getting one final answer dumped on me. It's important to me that I stay in control of the creative direction, even if the AI is doing a lot of the heavy lifting."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q59",
+        "question": "At what level do you think GenUI's use of user data should remain transparent?",
+        "options": [
+          "A. Just informing which data types were used.",
+          "B. Explaining how the data affects the generation results.",
+          "C. Providing a complete data usage record.",
+          "D. Allowing users to view and manage all data used."
+        ],
+        "answer": "D - I really want to feel like I'm in control of my own data, so being able to actually see and manage everything feels like the bare minimum for me to trust a system like that."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q31",
+        "question": "If the AI could show its \"Mental Prediction Model\" (i.e., what it thinks you want), would you be interested? Why?",
+        "options": null,
+        "answer": "Honestly, yes, I'd be really interested in seeing that! I think it would help me feel more in control of the situation, because sometimes when I'm using AI tools I get overwhelmed by all the information thrown at me and I'm not sure if it's even reading me right. If I could see what it *thinks* I want, I could quickly correct it before it goes off in some random direction, which would save me so much time when I'm juggling multiple things at once. It would also just feel more like a conversation, you know? Like having a coworker check in and say \"hey, is this what you're looking for?\" rather than just dumping stuff on me."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0004",
+    "persona": {
+      "id": "P_0004",
+      "demographic": {
+        "age_group": "teen",
+        "gender": "male",
+        "ethnicity": "black",
+        "occupation": "student"
+      },
+      "personality": {
+        "openness": "medium",
+        "conscientiousness": "medium",
+        "extraversion": "low",
+        "agreeableness": "low",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "low"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "design_tools",
+        "domain_experience": "novice",
+        "usage_frequency": "rare"
+      },
+      "motivation": "learning",
+      "frustration": "lack_of_control",
+      "goal": "social_interaction",
+      "behavior_pattern": "deep_research",
+      "context": "multitasking",
+      "ui_expectation": [
+        "clear feedback"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q109",
+        "question": "When the interface structural hierarchy is deep, you will:",
+        "options": [
+          "A. Click through layer by layer.",
+          "B. Prioritize finding the return path.",
+          "C. Try to jump directly.",
+          "D. Feel confused."
+        ],
+        "answer": "D - When stuff gets too deep and layered I just get lost and confused honestly, like I don't even know where I am anymore."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q144",
+        "question": "How do you interpret operations recommended by the system?",
+        "options": null,
+        "answer": "Honestly, most of the time when a system recommends something to me, I'm kinda skeptical about it. Like I don't really know what's going on behind the scenes, so it feels like the system is just doing whatever it wants and I'm supposed to trust it. I usually try to look into it more before I actually go through with anything it suggests, because I've had times where things changed and I didn't even understand why. I just need it to be clear about what it's doing and why, otherwise I'm not messing with it."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q16",
+        "question": "How do you evaluate the AI's performance in moral and value judgments?",
+        "options": [
+          "A. Trustworthy; it represents the mainstream conventions of human society.",
+          "B. Rigid and dogmatic; unable to handle complex moral gray areas.",
+          "C. Biased; I often sense the penetration of specific cultural backgrounds."
+        ],
+        "answer": "C - I feel like a lot of the time these AI systems are coming from a certain perspective that doesn't really match up with how I see things or my experiences."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q99",
+        "question": "Do you think that as GenUI technology continues to advance, user trust in AI should increase accordingly? Or should a certain degree of skepticism be maintained? Please state your position.",
+        "options": null,
+        "answer": "Honestly, I think people should stay skeptical no matter how advanced this stuff gets. Like, just because something looks smoother or works better doesn't mean it's actually looking out for you. I already feel like I don't have enough control over what these tools do, so if everyone just blindly trusts it, that's kinda scary to me. I'd rather keep questioning things even if it makes me seem paranoid or whatever."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q11",
+        "question": "Faced with \"interaction guidance\" or \"feature descriptions\" popped up by the system, you usually:",
+        "options": [
+          "A. Read them carefully to ensure mastery of all shortcuts.",
+          "B. Click \"Close\" or \"Skip\" directly; I am more used to exploratory learning.",
+          "C. Only go back to check them when I encounter an operational obstacle."
+        ],
+        "answer": "C - I usually just close them at first but then when I get stuck on something I'll go back and look for help because I need to actually see what went wrong before the instructions make sense to me."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q146",
+        "question": "How do you balance learning cost and usage efficiency?",
+        "options": null,
+        "answer": "Honestly I don't really think about it that much in a strategic way. If something takes too long to figure out I just get frustrated and stop using it, but if I'm actually interested in what it can do then I'll spend time watching tutorials or messing around with it. I'd rather take my time understanding something properly than rush through and not know what I'm doing. But yeah, if the app doesn't give me clear signs that I'm making progress or doing things right, I'll probably just give up on it pretty quick."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q63",
+        "question": "If GenUI encounters ambiguity while executing a task, how do you want it to handle it?",
+        "options": [
+          "A. Automatically choose the most likely interpretation and continue execution.",
+          "B. Pause and confirm the correct intention with me.",
+          "C. Generate results for multiple interpretations simultaneously for me to choose from.",
+          "D. Mark the ambiguity points and ask uniformly after the task is completed."
+        ],
+        "answer": "B - I'd rather it just pause and ask me what I actually meant so it doesn't go off doing something I didn't want."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q97",
+        "question": "How do you think the collaboration interface of GenUI should be designed so that users clearly know \"who is responsible for the current operation\" at any time?",
+        "options": null,
+        "answer": "Honestly I think it should just be really obvious, like maybe color-coded or something where the AI's stuff shows up in one color and my stuff shows up in another. I get stressed when I can't tell what's happening or who did what, so it needs to be super clear without me having to dig around for that info. Like a little label or icon next to each change that says \"you did this\" or \"AI did this\" would help a lot. I don't wanna feel like the system is doing things behind my back without me knowing."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q124",
+        "question": "When the system fails to explain, you will:",
+        "options": [
+          "A. Ignore it.",
+          "B. Feel confused.",
+          "C. Lower your trust.",
+          "D. Stop using it."
+        ],
+        "answer": "C - When something doesn't explain itself I just start trusting it less because it feels like it's hiding stuff from me and I already don't feel like I have much control over what's happening."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q50",
+        "question": "Imagine that future AI transparency reaches 100% (you can understand every line of neuron activity). Do you think this would change the way you use it?\n\nDimension 5: Explainability & Transparency (Continued)\nMultiple Choice Questions (Part 2 - Claude Framework)",
+        "options": null,
+        "answer": "Honestly, even if I could see every single thing happening inside the AI, I probably wouldn't look at it much. Like, I barely understand how the stuff works now, so seeing all the neuron activity or whatever would just be overwhelming and confusing to me. I guess it might make me feel a little less anxious about what it's doing behind the scenes, knowing that someone could check it if they wanted to. But nah, I don't think it would really change how I use it day to day — I'd still just want it to tell me clearly what it's doing and why, without me having to dig into all that technical stuff."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0005",
+    "persona": {
+      "id": "P_0005",
+      "demographic": {
+        "age_group": "middle_aged",
+        "gender": "male",
+        "ethnicity": "white",
+        "occupation": "senior_engineer"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "medium",
+        "extraversion": "low",
+        "agreeableness": "low",
+        "neuroticism": "low"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "adventurous",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "medium",
+        "target_domain": "design_tools",
+        "domain_experience": "intermediate",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "entertainment",
+      "frustration": "information_overload",
+      "goal": "content_creation",
+      "behavior_pattern": "minimal-effort",
+      "context": "low-resource",
+      "ui_expectation": [
+        "exploratory interfaces"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q9",
+        "question": "When you enter a vague command (e.g., \"optimize this\"), you expect the AI to:",
+        "options": [
+          "A. Automatically guess my intent and provide the result directly.",
+          "B. Stop and ask for specific optimization dimensions (e.g., word count, tone, logic).",
+          "C. Provide three different versions of optimization for me to choose from."
+        ],
+        "answer": "C - I'd rather see a few different takes and pick the one that clicks than get bogged down answering a bunch of clarifying questions or trust the system to just guess right."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q31",
+        "question": "Faced with a massive amount of output, what strategy do you use to quickly filter for effective information?",
+        "options": null,
+        "answer": "Honestly, I tend to rely on my gut feeling more than any systematic approach. If I'm staring at a wall of generated content, I'll scan for the bits that feel surprising or novel—anything that breaks the pattern gets my attention first. I've learned to ignore the filler pretty quickly; years of engineering work trains you to spot signal versus noise without overthinking it. If a tool can't surface the interesting stuff for me though, I'll lose patience fast and just move on."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q55",
+        "question": "When you find that GenUI's recommended results do not match your expectations, you will:",
+        "options": [
+          "A. Assume there is a problem with how I expressed my needs.",
+          "B. Assume it is a limitation of the AI's understanding capabilities.",
+          "C. Re-input your requirements and request the AI to generate it again.",
+          "D. Abandon the AI recommendation and complete the task manually."
+        ],
+        "answer": "C - I'll just tweak what I said and have it take another pass, since it's less effort than doing it manually and usually gets closer on the second try."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q88",
+        "question": "Please describe the process of how your trust level in GenUI has changed over time. What factors drove this change?",
+        "options": null,
+        "answer": "When I first started messing around with generative UI tools, I was pretty skeptical but also curious — I figured if it could save me effort on the tedious parts of design work, why not give it a shot. Over time my trust has grown, but it's a qualified trust. I trust it more now because I've developed a feel for where it performs well and where it's going to spit out garbage or overwhelm me with options I didn't ask for. The biggest factor driving that was just repetition — using it enough to understand its patterns and limitations. I still don't fully hand over the reins though; I need to feel like I'm steering the thing, not the other way around."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q11",
+        "question": "Faced with \"interaction guidance\" or \"feature descriptions\" popped up by the system, you usually:",
+        "options": [
+          "A. Read them carefully to ensure mastery of all shortcuts.",
+          "B. Click \"Close\" or \"Skip\" directly; I am more used to exploratory learning.",
+          "C. Only go back to check them when I encounter an operational obstacle."
+        ],
+        "answer": "B - I'd rather just dive in and figure things out by poking around than sit through a bunch of tooltips and walkthroughs."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q80",
+        "question": "How do you think GenUI should balance \"functional richness\" and \"interface simplicity\"? Where is your ideal balance point?",
+        "options": null,
+        "answer": "Honestly, I lean heavily toward simplicity with depth hiding underneath. I want a clean surface that doesn't bombard me with options, but when I poke at something, I expect layers to unfold — like peeling back an interface rather than staring at a cluttered dashboard from the start. My ideal balance point is basically a minimal canvas that responds to intent, where the system infers what I might need next rather than presenting everything at once. I'd rather discover functionality through exploration than have it all screaming at me simultaneously — that's where information overload kills the creative flow."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q13",
+        "question": "When collaborating on code or documents, if the AI modifies part of your original logic, you will:",
+        "options": [
+          "A. Carefully compare the differences and learn its optimization ideas.",
+          "B. Feel offended; immediately undo and demand it only adds rather than modifies.",
+          "C. Accept it depending on performance improvement; as long as it runs more stably."
+        ],
+        "answer": "A - I want to see what it did differently because sometimes the AI catches patterns I missed, but I'm going to scrutinize it closely before I decide whether to keep it."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q99",
+        "question": "Please describe your understanding of the concept of \"AI enhancing human capability\" and, combining your GenUI experience, explain whether this enhancement has truly happened to you.",
+        "options": null,
+        "answer": "Yeah, I'd say the enhancement is real but it's not some magical transformation people hype it up to be. For me it's mostly about bypassing the tedious grunt work in design tools—I can get to the interesting creative decisions faster without manually setting up every little element. The AI handles the scaffolding and I steer it where I want, which suits me fine because I want control over the outcome without burning energy on repetitive setup. It genuinely extends what I can explore in a given timeframe, though I'll admit sometimes it throws so much at me that I spend more time filtering through options than I saved. Net positive, but it works best when I'm already clear on what I want and just need the system to keep up with me."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q61",
+        "question": "What is the impact of GenUI's \"Black Box\" nature (unable to explain internal logic) on your user experience?",
+        "options": [
+          "A. Severe impact; cannot accept an opaque system.",
+          "B. Some impact; but acceptable if the result is useful.",
+          "C. Little impact; I care more about the usage results.",
+          "D. No impact; internal AI logic is not my concern."
+        ],
+        "answer": "B - Some impact; but acceptable if the result is useful."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q134",
+        "question": "How do you handle an explanation you cannot understand?",
+        "options": null,
+        "answer": "Honestly, if an explanation isn't clicking for me, I'll usually just skip past it and try to figure things out by poking around on my own. I've been an engineer long enough to know that hands-on experimentation teaches me more than walls of text ever will. If it's something I genuinely need to understand, I might circle back later when I'm in a different headspace, but I'm not going to sit there grinding through jargon that's clearly written for someone else. Life's too short for that."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0006",
+    "persona": {
+      "id": "P_0006",
+      "demographic": {
+        "age_group": "teen",
+        "gender": "female",
+        "ethnicity": "black",
+        "occupation": "student"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "medium",
+        "extraversion": "medium",
+        "agreeableness": "low",
+        "neuroticism": "medium"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "low"
+      },
+      "experience": {
+        "tech_literacy": "medium",
+        "target_domain": "programming_tools",
+        "domain_experience": "expert",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "curiosity",
+      "frustration": "lack_of_control",
+      "goal": "information_acquisition",
+      "behavior_pattern": "task-oriented",
+      "context": "focused_work",
+      "ui_expectation": [
+        "minimal interface"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q72",
+        "question": "When a function in the GenUI interface does not perfectly match your expected goal, you will:",
+        "options": [
+          "A. Adjust your own goals to adapt to the interface.",
+          "B. Try to find an alternative function.",
+          "C. Manually request the AI to regenerate the interface.",
+          "D. Give up using that function."
+        ],
+        "answer": "B - If something doesn't do exactly what I need, I'm gonna look for another way to get it done rather than just settling or wasting time asking it to redo stuff."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q46",
+        "question": "When processing cross-linguistic information, what is your standard for understanding AI translation accuracy?",
+        "options": null,
+        "answer": "Honestly, I don't really deal with cross-linguistic stuff that much in my day-to-day coding work. But if I'm using an AI to translate something, I'd check if the technical terms are correct and if the logic of what's being said actually makes sense in context. I'm not gonna trust it blindly—I'd compare it against what I already know or look it up real quick. If the translation messes up variable names or coding concepts, that's an immediate red flag for me."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q73",
+        "question": "Which type of GenUI recommendation are you more inclined to trust?",
+        "options": [
+          "A. Recommendations based on big data statistics.",
+          "B. Recommendations based on my personal historical behavior.",
+          "C. Recommendations driven by expert rules.",
+          "D. Recommendations synthesized from multiple sources."
+        ],
+        "answer": "B - I trust recommendations based on my own history more because at least I know the data it's pulling from is actually relevant to what I do."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q96",
+        "question": "Please describe an experience where GenUI performed exceptionally well beyond your expectations. How did this experience affect your subsequent level of reliance on it?",
+        "options": null,
+        "answer": "Honestly, I was working on a Python project and the GenUI tool generated an entire error-handling module that was actually clean and well-structured — like, it anticipated edge cases I hadn't even thought about yet. I was lowkey impressed because usually I expect to have to rewrite half of what it gives me. It made me more willing to use it as a starting point for boilerplate stuff, but I still don't fully trust it to get the logic right on more complex problems. I guess it raised my expectations a bit, but I'm not about to rely on it blindly just because it got lucky once."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q52",
+        "question": "When GenUI dynamically updates interface content, your attention will:",
+        "options": [
+          "A. Naturally follow the changes and adapt well.",
+          "B. Be briefly distracted and need to refocus.",
+          "C. Be significantly interfered with, affecting the task.",
+          "D. Proactively ignore changes and focus on the current operation."
+        ],
+        "answer": "B - I notice the changes and it pulls my focus for a sec, but I can get back on track pretty quickly."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q85",
+        "question": "How do you want GenUI to prompt you for important information without interrupting your workflow?",
+        "options": null,
+        "answer": "Honestly, I'd prefer it to just put a small indicator or badge somewhere in the corner that I can check when I'm ready, instead of popping something up in my face while I'm in the middle of coding. Like a subtle notification dot that doesn't steal focus from what I'm working on. If it's actually critical, maybe a brief inline note near whatever I'm editing, but it shouldn't block my input or make me click through something to get back to my code. I don't need the system making decisions about when I should stop and pay attention to it."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q10",
+        "question": "Are you willing to let the AI act as a \"Project Manager\" to allocate your working hours?",
+        "options": [
+          "A. Willing; its algorithmic scheduling might be more scientific than my emotional arrangements.",
+          "B. Refuse; I must have absolute control over my personal time.",
+          "C. Only refer to its suggestions when tasks are extremely tedious."
+        ],
+        "answer": "B - Refuse; I must have absolute control over my personal time."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q47",
+        "question": "Talk about your concerns regarding permission management when multiple people collaborate with one AI.",
+        "options": null,
+        "answer": "Honestly, I don't really stress about permission management that much since I'm not big on controlling everything. But I will say it's annoying when someone else messes with settings or prompts and it changes how the AI responds for me too. Like if I'm trying to get specific code suggestions and someone else's preferences are bleeding into my workspace, that's irritating. I'd rather just have my own separate session where nobody else's stuff interferes with what I'm doing."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q119",
+        "question": "When the system provides historical generation records, you will:",
+        "options": [
+          "A. View them frequently.",
+          "B. View them occasionally.",
+          "C. Rarely view them.",
+          "D. Not view them."
+        ],
+        "answer": "B - I'd check them occasionally if I need to reference something I found before, but I'm not gonna be scrolling through history all the time."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q82",
+        "question": "Which level of understanding do you think GenUI's explanation should target: Operational (what it did), Logical (why it did it), or Principle (how it was done)? Why?",
+        "options": null,
+        "answer": "Honestly, I'd want the logical level — like just tell me why you made that choice so I can decide if I agree or not. I don't need a whole breakdown of the underlying algorithms or whatever, that's too much noise when I'm trying to focus. But just knowing what it did without the reasoning feels useless because then I can't tell if it's actually making good decisions or just guessing. Keep it short though, I don't want a paragraph cluttering up my screen."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0007",
+    "persona": {
+      "id": "P_0007",
+      "demographic": {
+        "age_group": "senior",
+        "gender": "female",
+        "ethnicity": "hispanic",
+        "occupation": "retired"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "low",
+        "extraversion": "medium",
+        "agreeableness": "medium",
+        "neuroticism": "low"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "low"
+      },
+      "experience": {
+        "tech_literacy": "high",
+        "target_domain": "design_tools",
+        "domain_experience": "expert",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "curiosity",
+      "frustration": "slow_response",
+      "goal": "information_acquisition",
+      "behavior_pattern": "deep_research",
+      "context": "focused_work",
+      "ui_expectation": [
+        "minimal interface"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q21",
+        "question": "How do you handle contradictory information in AI output?",
+        "options": [
+          "A. Ask the AI again and demand it prove its statement.",
+          "B. Use a third-party tool (e.g., Google) for cross-verification.",
+          "C. Choose the option that seems more reasonable based on intuition."
+        ],
+        "answer": "B - When I come across contradictions in AI output, I go verify against reliable external sources because that's the only way to actually resolve the discrepancy with confidence."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q135",
+        "question": "When interface behavior is inconsistent with your expectations, how do you usually adjust?",
+        "options": null,
+        "answer": "When something doesn't behave the way I expect, I usually just poke around a bit to figure out the new logic — I've been working with design tools long enough that I can usually reverse-engineer what's happening pretty quickly. I don't get flustered about it; I just observe the pattern and adapt. Honestly, as long as the system isn't slow about it, I can tolerate a fair amount of inconsistency. What I won't tolerate is having to click through five menus to find something that should be obvious. I'd rather the interface just stay out of my way and let me get to what I need."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q74",
+        "question": "When a GenUI system has not been updated or upgraded for a long time, your level of trust in it will:",
+        "options": [
+          "A. Decrease; assume the system may be outdated.",
+          "B. Remain unchanged; stability is actually an advantage.",
+          "C. Increase; it is more reliable after long-term verification.",
+          "D. Depend on the usage scenario."
+        ],
+        "answer": "A - If a system hasn't been updated in a long time, I assume it's falling behind and the outputs are probably based on stale models, which makes me trust it less."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q85",
+        "question": "Which features or behaviors of GenUI do you think most easily lead users to develop unnecessary over-reliance?",
+        "options": null,
+        "answer": "From what I've seen, the biggest culprit is when these systems generate polished, confident-looking outputs that mask uncertainty—people stop questioning the results because they look so professional. Auto-complete and predictive suggestions are another trap; once you get used to the system finishing your thoughts, you stop developing your own design instincts. I've also noticed that when GenUI remembers your preferences and adapts seamlessly, people get lazy about specifying what they actually want, which means they're ceding creative control without even realizing it. The speed and convenience factor is seductive—why think hard when the tool gives you something \"good enough\" in seconds?"
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q122",
+        "question": "When the interface task flow is clear, you:",
+        "options": [
+          "A. Complete it efficiently.",
+          "B. Complete it steadily.",
+          "C. Feel slightly confused.",
+          "D. Still find it difficult."
+        ],
+        "answer": "A - When the flow is clear and responsive, I just move through it quickly without fuss."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q79",
+        "question": "Please describe a \"smooth and effortless\" scenario you experienced in GenUI. What design made you feel at ease?",
+        "options": null,
+        "answer": "I've been using some generative design tools where the interface just stays out of your way — minimal chrome, no clutter, just the workspace and the output. There was one session where I was exploring layout variations and the system responded almost instantly, generating options as fast as I could evaluate them. No modal dialogs, no unnecessary confirmations, just a clean flow from prompt to result. That's what I want — speed and directness without the system second-guessing me or burying things under layers of menus. After decades in design, I know what I'm looking for; I just need the tool to keep up."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q67",
+        "question": "When GenUI has completed a task for you but the result is only 80% consistent with your requirements, you will:",
+        "options": [
+          "A. Accept the result, believing 80% is good enough.",
+          "B. Request the AI to continue optimizing the remaining 20%.",
+          "C. Manually complete the remaining 20% adjustment yourself.",
+          "D. Decide whether to optimize further depending on task importance."
+        ],
+        "answer": "D - Whether I bother fixing that last 20% depends entirely on how much the task matters to me—sometimes good enough is fine, other times it's worth pushing further."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q33",
+        "question": "How do you judge whether a task is suitable for \"outsourcing to AI\" or \"being led by yourself\"?",
+        "options": null,
+        "answer": "For me it comes down to whether the task requires my accumulated judgment or just grunt work. If I need to gather information, compare options, or generate variations quickly, I'll let the AI handle that — it's faster than me clicking through menus. But anything where the final decision matters, like choosing a design direction or evaluating whether something actually works for the end user, that stays with me. I've been doing this long enough to know that AI is a good research assistant but a lousy decision-maker, and I'm not about to hand over the steering wheel on things that need real expertise."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q55",
+        "question": "In which situation do you think GenUI most needs to proactively provide transparency information?",
+        "options": [
+          "A. When the AI makes a decision inconsistent with user expectations.",
+          "B. When the task involves user privacy or sensitive data.",
+          "C. When the AI's confidence level is low.",
+          "D. When the operation result is irreversible."
+        ],
+        "answer": "A - If the system does something I didn't expect, that's exactly when I need to understand why it made that choice so I can decide whether to trust it or override it."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q30",
+        "question": "Describe a way of displaying source citations that you find \"most convincing.\"",
+        "options": null,
+        "answer": "For me, the most convincing way to display citations is inline — right next to the claim, with a small numbered reference I can hover over or click to see the full source without leaving the page. I don't want to scroll to the bottom or open a new tab just to verify something. I've spent decades evaluating design work and research, so I know that if a citation is buried or vague, it might as well not exist. Give me the author, the date, and ideally a direct link to the original material, and keep it unobtrusive so it doesn't clutter the interface."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0008",
+    "persona": {
+      "id": "P_0008",
+      "demographic": {
+        "age_group": "adult",
+        "gender": "female",
+        "ethnicity": "white",
+        "occupation": "researcher"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "high",
+        "extraversion": "high",
+        "agreeableness": "low",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "high",
+        "target_domain": "content_creation",
+        "domain_experience": "intermediate",
+        "usage_frequency": "rare"
+      },
+      "motivation": "curiosity",
+      "frustration": "complex_interface",
+      "goal": "social_interaction",
+      "behavior_pattern": "exploratory",
+      "context": "focused_work",
+      "ui_expectation": [
+        "exploratory interfaces",
+        "structured layouts",
+        "clear feedback",
+        "interactive elements"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q66",
+        "question": "When using GenUI, what situation do you think most affects your understanding of the interface?",
+        "options": [
+          "A. Too many interface elements; high information density.",
+          "B. Frequent interface changes; difficult to memorize.",
+          "C. Vague functional labels; unclear meanings.",
+          "D. Lack of operation feedback; not knowing if it succeeded."
+        ],
+        "answer": "B - Frequent interface changes make it nearly impossible to build a reliable mental model, which is particularly frustrating when I need to feel in control of my workflow during focused research sessions."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q127",
+        "question": "When the interface structure is complex, what strategy do you use to clarify the logic?",
+        "options": null,
+        "answer": "When I encounter a complex interface, my first instinct is to map out the information hierarchy mentally—I'm looking for the underlying logic of how elements relate to each other before I start interacting with anything. I'll often try to identify the primary action paths versus secondary ones, almost like reverse-engineering the designer's intent. If the structure still feels opaque, I get genuinely frustrated because I have a strong need to feel in control of the system, not the other way around. I might systematically explore different sections to build a mental model, but honestly, if the logic isn't surfaced clearly through visual cues or progressive disclosure, I consider that a design failure rather than a user comprehension problem."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q60",
+        "question": "When using GenUI, which type of task are you more inclined to let the AI complete autonomously?",
+        "options": [
+          "A. Repetitive tasks with strong patterns.",
+          "B. Tasks requiring massive data processing.",
+          "C. Creative and open-ended tasks.",
+          "D. Tasks with low requirements for accuracy."
+        ],
+        "answer": "A - Repetitive tasks with strong patterns are the ones where I'm most comfortable ceding control, because the predictability means I can verify the output quickly and trust the system isn't making judgment calls I'd disagree with."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q34",
+        "question": "When working on a team project, how do you explain your personal responsibility/endorsement for the AI-generated parts?",
+        "options": null,
+        "answer": "When I'm working on a team project, I'm quite upfront about which elements were AI-generated, but I also make it clear that I've vetted and refined everything before it reaches the group. I take full responsibility for the output because I directed the prompts, evaluated the quality, and made editorial decisions—it's not like I just dumped raw AI text into our shared doc. Honestly, I find it a bit irritating when people treat AI-assisted work as somehow less rigorous; the intellectual labor is in knowing what to ask for and critically assessing what comes back. I'll flag it transparently in our workflow, but I expect my colleagues to evaluate the work on its merits rather than its provenance."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q53",
+        "question": "When using GenUI to complete multi-step tasks, you prefer to:",
+        "options": [
+          "A. See all steps at once and plan for yourself.",
+          "B. See steps displayed one by one and follow the guidance.",
+          "C. See only the current step and see the next one only after completion.",
+          "D. Switch flexibly between the above methods based on task complexity."
+        ],
+        "answer": "D - I want the flexibility to toggle between overview and step-by-step modes depending on how complex or familiar the task is, because I need to feel in control of my workflow rather than being locked into one rigid interaction pattern."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q148",
+        "question": "How do you reduce the burden caused by repetitive operations?",
+        "options": null,
+        "answer": "Honestly, I find repetitive operations incredibly frustrating—they break my flow and eat into the cognitive bandwidth I'd rather spend on actual creative or analytical work. I tend to look for keyboard shortcuts, macros, or any kind of automation that lets me batch similar tasks together, even if it takes some upfront effort to set up. When I'm working in a GenUI context, I expect the system to learn from my patterns and offer to streamline repeated actions without me having to explicitly ask every time. If an interface doesn't provide that kind of adaptive shortcutting, I'll usually dig into settings or scripting options to build my own workarounds, because I refuse to waste time doing the same thing manually over and over."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q66",
+        "question": "In a GenUI collaboration scenario, what do you think is the most important manifestation of \"human supervision\"?",
+        "options": [
+          "A. Auditing every output result generated by AI.",
+          "B. Setting task boundaries and constraints.",
+          "C. Retaining veto power at key decision nodes.",
+          "D. Regularly evaluating whether AI behavior meets expectations."
+        ],
+        "answer": "C - Retaining veto power at key decision nodes feels most critical to me because it preserves meaningful human agency without creating the bottleneck of micromanaging every output, which is both impractical and cognitively exhausting."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q78",
+        "question": "Please describe an experience of \"tacit coordination\" during collaboration with GenUI. What made this collaboration so smooth?",
+        "options": null,
+        "answer": "I recall a session where I was iterating on a content piece and the system seemed to anticipate my next structural move—like when I'd roughed out a paragraph and it offered to expand on the theoretical framing without me explicitly asking. It felt like working with a colleague who reads the room well, picking up on the trajectory of my thinking rather than requiring me to spell out every intention. What made it smooth was that the interface surfaced suggestions contextually, right where I was working, without interrupting my flow or cluttering the layout with irrelevant options. I'd say the \"tacit\" part came from the system's responsiveness to patterns in my editing behavior—though I'll admit I'm still somewhat wary about how much inference is happening beneath the surface that I can't inspect or override."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q114",
+        "question": "When there is uncertainty in the system's explanation, you will:",
+        "options": [
+          "A. Accept the uncertainty.",
+          "B. Use it cautiously.",
+          "C. Lower your trust.",
+          "D. Give up on using it."
+        ],
+        "answer": "C - When a system can't clearly explain what it's doing or why, that immediately erodes my confidence in it because I need to feel in control of the tools I'm working with."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q126",
+        "question": "Under what circumstances do you want GenUI to provide an explanation?",
+        "options": null,
+        "answer": "I want explanations whenever the system makes a decision that affects my workflow—like why it chose a particular layout, rearranged elements, or filtered certain options. If something changes unexpectedly, I need to understand the reasoning immediately, not hunt for it. I'm also quite particular about wanting explanations when the system constrains my choices; I don't appreciate feeling railroaded without knowing why. That said, I don't need verbose justifications for every micro-interaction—just surface the logic when it matters, ideally in a concise, accessible way that doesn't clutter the interface."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0009",
+    "persona": {
+      "id": "P_0009",
+      "demographic": {
+        "age_group": "senior",
+        "gender": "male",
+        "ethnicity": "asian",
+        "occupation": "retired"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "high",
+        "extraversion": "low",
+        "agreeableness": "low",
+        "neuroticism": "low"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "medium",
+        "target_domain": "programming_tools",
+        "domain_experience": "expert",
+        "usage_frequency": "occasional"
+      },
+      "motivation": "learning",
+      "frustration": "lack_of_control",
+      "goal": "information_acquisition",
+      "behavior_pattern": "task-oriented",
+      "context": "low-resource",
+      "ui_expectation": [
+        "exploratory interfaces",
+        "structured layouts"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q109",
+        "question": "When the interface structural hierarchy is deep, you will:",
+        "options": [
+          "A. Click through layer by layer.",
+          "B. Prioritize finding the return path.",
+          "C. Try to jump directly.",
+          "D. Feel confused."
+        ],
+        "answer": "C - When I know what I'm looking for, I prefer to jump directly to the relevant section rather than wasting time navigating through unnecessary layers, since I value efficiency and control over the interface."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q44",
+        "question": "When you need the AI to mimic a specific writing style, what key information do you provide?",
+        "options": null,
+        "answer": "When I need the AI to produce output in a particular style, I provide concrete examples of the target style — a code comment block, a documentation snippet, or a paragraph from a technical paper — so the system has an unambiguous reference. I also specify constraints explicitly: tone (formal, terse, explanatory), audience level (novice versus experienced developer), and any formatting conventions such as indentation or heading structure. I find that vague instructions like \"make it professional\" are nearly useless; precision in the prompt yields precision in the output. If the first result deviates, I'll point out exactly where and why it missed the mark, because I prefer to maintain tight control over the iterative refinement process."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q59",
+        "question": "When GenUI automatically completes an operation for you, but you are unsure if the result is correct, you will:",
+        "options": [
+          "A. Trust the AI and perform no additional verification.",
+          "B. Randomly spot-check some of the results.",
+          "C. Verify all results one by one.",
+          "D. Seek verification from a third-party tool."
+        ],
+        "answer": "C - When I'm uncertain about correctness, I verify everything systematically—after decades in programming, I've learned that unverified output is unreliable output, and I refuse to cede that control to any automated system."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q43",
+        "question": "To what extent does the \"brand background\" of an AI (e.g., from Google or OpenAI) influence your initial trust?",
+        "options": null,
+        "answer": "I'll be frank — brand background does carry some weight with me, but not in the way marketers might hope. I've spent decades in programming and I know that a big name doesn't guarantee quality or reliability; I've seen plenty of bloated, poorly designed systems from major corporations. What matters more to me is whether the organization has a track record of transparency, whether they document their limitations honestly, and whether I can maintain control over what the system does with my data. A company like Google has resources, certainly, but their history of abruptly discontinuing products and their data practices make me cautious rather than trusting. I'd rather evaluate the tool on its own technical merits than be swayed by a logo."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q57",
+        "question": "When you are interrupted while executing a task in GenUI, how long does it usually take to recover your state when you return?",
+        "options": [
+          "A. Almost no time; recover immediately.",
+          "B. Less than 1 minute.",
+          "C. 1–5 minutes.",
+          "D. More than 5 minutes; need to reorganize."
+        ],
+        "answer": "C - At my age and with the analytical approach I take, I need a few minutes to retrace my steps and recall exactly where I left off in the workflow, especially when the interface doesn't preserve state clearly."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q147",
+        "question": "What kind of interface makes you feel \"tired\"?",
+        "options": null,
+        "answer": "Interfaces that constantly shift and rearrange themselves without my consent exhaust me mentally. I spent decades writing code where predictability and structure were paramount, so when a UI decides to move buttons around or present information in a different layout each time I open it, I find it genuinely draining. Excessive animations, auto-playing content, and those chatty pop-ups that interrupt my workflow also wear me out quickly. I prefer a clean, stable interface where I can focus on the task at hand without fighting the tool itself for control over my experience."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q119",
+        "question": "When you can adjust the interface in real-time, you:",
+        "options": [
+          "A. Do not adjust.",
+          "B. Make minor adjustments.",
+          "C. Adjust frequently.",
+          "D. Feel confused."
+        ],
+        "answer": "C - I adjust frequently because I want the interface to conform precisely to my workflow and information needs, not the other way around."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q84",
+        "question": "Please describe how you convey a vague or difficult-to-precisely-describe requirement to GenUI during collaboration.",
+        "options": null,
+        "answer": "When I have a vague requirement, I typically start by describing the functional outcome I want rather than the specific implementation. I'll break it down into smaller, more concrete sub-problems — decades of programming taught me that decomposition is the most reliable way to handle ambiguity. I might say something like \"I need a layout that prioritizes data density over aesthetics\" or \"the interaction pattern should resemble a decision tree rather than a linear flow.\" If the system gives me something off-target, I'll iterate by pointing out what's wrong with the output rather than trying to describe the ideal from scratch. I prefer this incremental refinement approach because it keeps me in control of the direction rather than hoping the system guesses correctly from a single vague prompt."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q125",
+        "question": "When the system allows you to request an explanation, you will:",
+        "options": [
+          "A. Request frequently.",
+          "B. Request occasionally.",
+          "C. Rarely request.",
+          "D. Never request."
+        ],
+        "answer": "A - When I'm using a system to learn, I want to understand the reasoning behind every decision it makes, so I will ask for explanations as often as the system allows."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q130",
+        "question": "How do you judge if an explanation is credible?",
+        "options": null,
+        "answer": "I judge credibility much the same way I evaluated code reviews throughout my career—by checking internal consistency, verifying whether the reasoning chain holds up under scrutiny, and cross-referencing against what I already know to be established fact. If an explanation skips logical steps or uses vague hand-waving where precision is needed, I become immediately suspicious. I also look at whether the source acknowledges limitations or uncertainties; overconfidence is often a sign of shallow understanding. Decades of engineering discipline taught me that a credible explanation should be falsifiable and structured, not just persuasive."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0010",
+    "persona": {
+      "id": "P_0010",
+      "demographic": {
+        "age_group": "middle_aged",
+        "gender": "male",
+        "ethnicity": "asian",
+        "occupation": "manager"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "medium",
+        "extraversion": "medium",
+        "agreeableness": "medium",
+        "neuroticism": "medium"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "medium",
+        "target_domain": "general_genui",
+        "domain_experience": "expert",
+        "usage_frequency": "occasional"
+      },
+      "motivation": "efficiency",
+      "frustration": "slow_response",
+      "goal": "entertainment",
+      "behavior_pattern": "exploratory",
+      "context": "focused_work",
+      "ui_expectation": [
+        "exploratory interfaces"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q125",
+        "question": "When you need to understand a complex task flow, you will:",
+        "options": [
+          "A. Try it step-by-step.",
+          "B. Understand the whole first.",
+          "C. Follow the prompts.",
+          "D. Operate randomly."
+        ],
+        "answer": "B - I prefer to get a big-picture understanding of the entire flow before diving into any individual steps, since that gives me the control and context I need to navigate efficiently."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q127",
+        "question": "When the interface structure is complex, what strategy do you use to clarify the logic?",
+        "options": null,
+        "answer": "When I'm dealing with a complex interface, I tend to step back and look at the overall flow intuitively first—trying to grasp the big picture before diving into details. I'll mentally map out the user journey and identify where the logic branches or gets tangled, almost like tracing a conversation tree. If things still feel unclear, I'll sketch out a rough diagram or walk through it with my team to pressure-test the logic. I prefer having clear control points where I can see what triggers what, because if I can't trace the cause and effect quickly, the end user definitely won't be able to either."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q72",
+        "question": "When GenUI automatically makes a decision for you that you later deem incorrect, you will:",
+        "options": [
+          "A. Accept the result, viewing it as a low-probability error.",
+          "B. Immediately adjust settings to limit the AI's autonomy.",
+          "C. Demand that the system explain the reason for the decision.",
+          "D. Reduce the scope of authorization for autonomous AI operations."
+        ],
+        "answer": "C - I need to understand why the system made that call before I decide how to adjust things, because without knowing the reasoning I can't make an informed decision about whether to trust it going forward."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q79",
+        "question": "Please describe an experience where GenUI caused you to lose trust, and whether this experience changed how you used it afterward.",
+        "options": null,
+        "answer": "There was a time when I was using a GenUI tool to generate a dashboard layout for a team presentation, and it kept rearranging elements in ways that completely ignored the hierarchy I had set up. Every time I made an adjustment, it would \"helpfully\" restructure things based on its own logic, and I lost about twenty minutes just fighting it to maintain my original intent. That really eroded my trust because I need to feel like I'm steering the ship, not the system. After that, I became much more cautious—I now prefer tools that let me lock certain elements in place or at least give me clear override controls before I commit to using them for anything important. I still explore new GenUI options, but I always test how much control I actually have before relying on them for real work."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q18",
+        "question": "If the AI could automatically simplify response length based on your mood (e.g., fatigue), you:",
+        "options": [
+          "A. Think it's a very humanized design.",
+          "B. Worry about missing information; I'd rather it stay complete.",
+          "C. Don't care; I can control the reading rhythm myself."
+        ],
+        "answer": "A - Think it's a very humanized design."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q141",
+        "question": "Do you prefer automation or manual control? Why?",
+        "options": null,
+        "answer": "I definitely lean toward manual control, though I appreciate smart automation that respects my preferences. As someone who manages teams and processes, I need to feel like I'm steering the ship — if a system makes decisions for me without transparency, it creates anxiety rather than efficiency. That said, I'm open to automation handling routine tasks as long as I can override or adjust things when needed. The ideal setup gives me a high-level view with the ability to drill down and take the wheel whenever I want."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q114",
+        "question": "When the interface generated by the system is partially correct, you:",
+        "options": [
+          "A. Use it directly.",
+          "B. Modify the incorrect part.",
+          "C. Reconstruct the whole.",
+          "D. Regenerate."
+        ],
+        "answer": "B - If the system gets most of it right, I'd rather tweak the parts that need fixing than waste time starting over from scratch."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q37",
+        "question": "When the AI is executing a long task, how frequently do you want it to synchronize progress with you?",
+        "options": null,
+        "answer": "I want fairly frequent updates—maybe every 15-20 seconds or at meaningful milestones, whichever comes first. I don't need a constant stream of chatter, but I absolutely hate staring at a spinner with no idea whether the system is actually making progress or has stalled. As someone who values being in control of the process, knowing where things stand lets me decide whether to keep waiting or intervene. A brief, concise status line is enough—just don't leave me in the dark."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q7",
+        "question": "When reviewing AI-generated financial or medical advice, your requirement for transparency is:",
+        "options": [
+          "A. Must be 100% transparent, listing all calculation formulas or evidence.",
+          "B. Logically self-consistent is enough; no need to delve into atomic-level data.",
+          "C. As long as there is a disclaimer endorsed by a professional institution."
+        ],
+        "answer": "A - When it comes to financial or medical decisions, I need full transparency on how the system arrived at its recommendation because I want to maintain control and verify the logic myself before acting on it."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q40",
+        "question": "If the AI provided a \"Why are you seeing this result\" feature, what information would you want it to include?",
+        "options": null,
+        "answer": "I'd want it to clearly explain what inputs or context it used to generate that particular result — like what parts of my query it prioritized and any assumptions it made along the way. It should also tell me if there were alternative approaches it considered but didn't go with, so I can redirect it if needed. As someone who likes to stay in control of the process, knowing the reasoning chain gives me confidence that the system isn't just throwing random outputs at me. A brief mention of any data sources or patterns it drew from would also be helpful, but keep it concise — I don't need a dissertation, just enough to trust the output."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0011",
+    "persona": {
+      "id": "P_0011",
+      "demographic": {
+        "age_group": "young_adult",
+        "gender": "male",
+        "ethnicity": "black",
+        "occupation": "junior_employee"
+      },
+      "personality": {
+        "openness": "medium",
+        "conscientiousness": "low",
+        "extraversion": "low",
+        "agreeableness": "medium",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "adventurous",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "general_genui",
+        "domain_experience": "intermediate",
+        "usage_frequency": "occasional"
+      },
+      "motivation": "entertainment",
+      "frustration": "slow_response",
+      "goal": "information_acquisition",
+      "behavior_pattern": "deep_research",
+      "context": "mobile_fragmented",
+      "ui_expectation": [
+        "clear feedback"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q20",
+        "question": "When collaborating on code or documents, how do you view the completion suggestions?",
+        "options": [
+          "A. They are a prediction of my thoughts and improve efficiency.",
+          "B. They interfere with my train of thought; I prefer to stay in control.",
+          "C. They are an authoritative reference; I will adopt them even if I don't understand."
+        ],
+        "answer": "B - I like to think things through myself and stay in control of what I'm doing, so suggestions popping up can throw me off my flow."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q46",
+        "question": "When processing cross-linguistic information, what is your standard for understanding AI translation accuracy?",
+        "options": null,
+        "answer": "Honestly, I don't have some super technical standard for judging AI translations. I mostly just check if the meaning comes across in a way that makes sense to me — like, does the sentence flow naturally and does it match what I was expecting based on context? If something sounds off or awkward, I'll usually cross-reference it with another source or ask someone who speaks that language. I need to feel confident the info is right, especially when I'm digging deep into a topic, so if the translation feels sketchy I just won't trust it."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q105",
+        "question": "When using GenUI in important tasks, you will:",
+        "options": [
+          "A. Rely on it completely.",
+          "B. Rely on it partially.",
+          "C. Use it only as a reference.",
+          "D. Not use it at all."
+        ],
+        "answer": "C - I need to feel like I'm in control of the important stuff, so I'd use it to get ideas or information but make the final call myself."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q34",
+        "question": "When working on a team project, how do you explain your personal responsibility/endorsement for the AI-generated parts?",
+        "options": null,
+        "answer": "Honestly, I usually just tell my team straight up which parts I used AI for and which parts I did myself. I don't try to hide it or anything, but I also make sure I've actually read through and checked whatever the AI spit out before I put my name on it. If something's wrong in there, that's still on me because I chose to use it and I should've caught it. I get anxious about it sometimes though, like what if something slips through that I didn't notice—that keeps me up at night a bit."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q75",
+        "question": "Which personalization setting do you think is most helpful for reducing cognitive load when using GenUI?",
+        "options": [
+          "A. Customizing shortcut entries for common functions.",
+          "B. Adjusting interface information density and display hierarchy.",
+          "C. Setting task reminders and operation guidance frequency.",
+          "D. Saving personal operation habits to reduce repetitive settings."
+        ],
+        "answer": "B - Being able to control how much info is on screen and what's prioritized would help me focus without getting overwhelmed, especially when I'm on my phone trying to find something quickly."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q99",
+        "question": "When using GenUI, have you ever had the experience that \"the simpler the interface, the harder it is to complete complex tasks\"? Please describe this contradictory feeling.",
+        "options": null,
+        "answer": "Yeah, I've definitely felt that. Like sometimes the interface looks clean and minimal which is cool at first, but then when I'm trying to dig deeper into something or do a more specific search, I can't find where the options are or how to get more control over what it's showing me. It's frustrating because I want things to be straightforward but I also don't want to feel like the system is dumbing things down for me. I need that balance where it's not overwhelming but still lets me steer things the way I want, especially when I'm on my phone trying to get real answers fast."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q110",
+        "question": "When you need precise control over the interface, you:",
+        "options": [
+          "A. Rely on the system.",
+          "B. Provide detailed instructions.",
+          "C. Adjust multiple times.",
+          "D. Give up on precise control."
+        ],
+        "answer": "C - I usually end up adjusting things multiple times because it's hard to get exactly what I want on the first try, especially when I'm on my phone and the system doesn't always respond how I expect."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q143",
+        "question": "How do you respond when the system automatically modifies your results?",
+        "options": null,
+        "answer": "Honestly, it kind of irritates me when the system just changes things without asking. Like, I want to feel like I'm in control of what I'm looking at, not have some algorithm deciding what's best for me behind the scenes. If it's gonna modify my results, at least show me what changed and why—don't just silently swap things around. I get anxious when I can't tell if I'm seeing what I actually searched for or some filtered version of it."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q58",
+        "question": "When GenUI informs you that its generation result has a confidence level of 70%, how will you handle this result?",
+        "options": [
+          "A. Use it directly; 70% is reliable enough.",
+          "B. Use it but conduct extra verification on key content.",
+          "C. Request the AI to regenerate to improve confidence.",
+          "D. Give up on the result and find other ways to complete the task."
+        ],
+        "answer": "B - I'd use it but double-check the important parts myself, because 70% means it's probably mostly right but I'm not about to trust something blindly when there's a 30% chance it's off."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q146",
+        "question": "How do you use historical records to understand system behavior?",
+        "options": null,
+        "answer": "Honestly, I mostly just scroll back through my past interactions to see if the system gave me weird or inconsistent answers before. Like if I'm looking something up and the response feels off, I'll check if it did the same thing last time I asked something similar. I'm pretty analytical about it—I want to spot patterns so I know when to trust what it's telling me and when to just move on. It bugs me when there's no easy way to pull up that history on my phone though, because half the time I'm doing this on the go and the interface makes it harder than it needs to be."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0012",
+    "persona": {
+      "id": "P_0012",
+      "demographic": {
+        "age_group": "young_adult",
+        "gender": "male",
+        "ethnicity": "hispanic",
+        "occupation": "junior_employee"
+      },
+      "personality": {
+        "openness": "medium",
+        "conscientiousness": "medium",
+        "extraversion": "medium",
+        "agreeableness": "medium",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "content_creation",
+        "domain_experience": "novice",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "social_connection",
+      "frustration": "complex_interface",
+      "goal": "productivity",
+      "behavior_pattern": "task-oriented",
+      "context": "focused_work",
+      "ui_expectation": [
+        "clear feedback"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q2",
+        "question": "When facing a complex task, you prefer to:",
+        "options": [
+          "A. Provide a long, detailed instruction and expect the AI to complete it in one go.",
+          "B. Break the task into multiple small steps and guide the AI through a multi-turn conversation.",
+          "C. Ask the AI to provide an outline first, then fill in the details step-by-step."
+        ],
+        "answer": "C - I like seeing the outline first so I know what's coming and can stay in control of how the details get filled in without feeling lost."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q40",
+        "question": "If you had to explain to a novice how AI works, what metaphor would you use?",
+        "options": null,
+        "answer": "I'd probably tell them it's like a really smart assistant that learned by reading millions of books and conversations, so now it can kind of predict what you need based on patterns it picked up. It's like how you learn to cook by watching your mom make the same recipes over and over — eventually you just know the steps without thinking. The AI doesn't actually \"understand\" stuff the way we do, but it's really good at recognizing what comes next based on everything it's seen before. I think that's the simplest way to put it without getting too technical, because honestly I'm still figuring out the deeper stuff myself."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q119",
+        "question": "When the system performs stably, you will:",
+        "options": [
+          "A. Trust it completely.",
+          "B. Trust it quite a bit.",
+          "C. Trust it moderately.",
+          "D. Still remain skeptical."
+        ],
+        "answer": "C - I'd trust it moderately because even if it's working fine now, I've seen things go wrong out of nowhere and I like to stay in control of what's happening."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q85",
+        "question": "Which features or behaviors of GenUI do you think most easily lead users to develop unnecessary over-reliance?",
+        "options": null,
+        "answer": "Honestly, I think the biggest thing is when the AI just gives you an answer without showing you how it got there. Like, you start trusting it blindly because it sounds confident and the interface doesn't push you to double-check anything. I've caught myself just accepting whatever it generates because questioning it feels like extra work, especially when the interface is already confusing enough. When it auto-completes stuff or makes decisions for you without asking, it's easy to just let it take over and stop thinking critically about the output."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q69",
+        "question": "When a new step that you are unfamiliar with appears in the GenUI operation process, how will your cognitive load change?",
+        "options": [
+          "A. Increase significantly; need extra thought.",
+          "B. Increase slightly; adapt quickly.",
+          "C. Unaffected; I am good at dealing with new steps.",
+          "D. Decrease, because new steps usually have detailed guidance."
+        ],
+        "answer": "A - Increase significantly; need extra thought."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q40",
+        "question": "If you were to optimize the history search function of an AI, what filtering dimensions would you most want to add?",
+        "options": null,
+        "answer": "Honestly, I'd want it to be pretty straightforward — like being able to filter by date range so I can find stuff from last week or last month without scrolling forever. I'd also want to filter by the type of content I was working on, like whether it was a social media post, an email draft, or something else. A keyword search would be super helpful too because sometimes I remember a specific word I used but not when I used it. I don't need anything too complicated, just those basic options that actually make it easier to find what I'm looking for without getting lost in a bunch of menus."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q63",
+        "question": "If GenUI encounters ambiguity while executing a task, how do you want it to handle it?",
+        "options": [
+          "A. Automatically choose the most likely interpretation and continue execution.",
+          "B. Pause and confirm the correct intention with me.",
+          "C. Generate results for multiple interpretations simultaneously for me to choose from.",
+          "D. Mark the ambiguity points and ask uniformly after the task is completed."
+        ],
+        "answer": "B - I'd rather it pause and check with me because I want to stay in control of what's happening and not end up with something I didn't intend."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q131",
+        "question": "In what situations are you willing to let the system handle things completely automatically?",
+        "options": null,
+        "answer": "Honestly, I'm not super comfortable letting a system just do whatever it wants without checking in with me. But if it's something really simple and repetitive, like auto-formatting text or adjusting basic layout stuff, I guess I'm okay with that as long as I can see what it did and undo it easily. The moment it starts making decisions about my actual content or changing the direction of what I'm working on, that's where I need to be in control. I get anxious when I can't tell what's happening behind the scenes, so clear feedback about what it's doing automatically is a must for me."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q21",
+        "question": "Your difference in trust regarding the explainability of \"Open Source\" vs. \"Closed Source\" models is:",
+        "options": [
+          "A. Open source is more credible because the code and weights are public and transparent.",
+          "B. Closed source is more credible because big companies have more rigorous alignment testing.",
+          "C. No difference; to me, they are both unknowable algorithmic black boxes."
+        ],
+        "answer": "A - I feel like if the code is out there for anyone to check, that gives me more confidence that nothing weird is going on behind the scenes."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q134",
+        "question": "How do you handle an explanation you cannot understand?",
+        "options": null,
+        "answer": "When I get an explanation that doesn't make sense to me, honestly it stresses me out a bit because I feel like I should be getting it. I usually try to break it down piece by piece and figure out which part specifically is confusing me. If that doesn't work, I'll ask someone I trust—like a coworker or a friend—to explain it in simpler terms. I'd rather take my time and actually understand something than just pretend I get it and mess things up later."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0013",
+    "persona": {
+      "id": "P_0013",
+      "demographic": {
+        "age_group": "teen",
+        "gender": "male",
+        "ethnicity": "asian",
+        "occupation": "student"
+      },
+      "personality": {
+        "openness": "high",
+        "conscientiousness": "low",
+        "extraversion": "high",
+        "agreeableness": "low",
+        "neuroticism": "medium"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "data_analysis",
+        "domain_experience": "intermediate",
+        "usage_frequency": "occasional"
+      },
+      "motivation": "curiosity",
+      "frustration": "lack_of_control",
+      "goal": "information_acquisition",
+      "behavior_pattern": "task-oriented",
+      "context": "mobile_fragmented",
+      "ui_expectation": [
+        "exploratory interfaces",
+        "interactive elements"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q1",
+        "question": "When the content generated by AI completely fails to meet your expectations, you usually:",
+        "options": [
+          "A. Assume the AI is \"stupid\" and abandon the task.",
+          "B. Question if your prompt was imprecise and try rewriting it.",
+          "C. Assume there is a system bug or a random error."
+        ],
+        "answer": "B - I usually figure my prompt was off or too vague, so I'll try rewording it to see if I can get something closer to what I actually want."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q84",
+        "question": "When the GenUI interface changes with the task scenario, how do you maintain memory of the function locations?",
+        "options": null,
+        "answer": "Honestly, I kinda struggle with that sometimes. Like when the layout shifts around I just have to tap through stuff until I find what I was looking for, which is pretty annoying. I wish there was like a consistent menu or something I could always go back to instead of the interface just rearranging itself on me. I'm the type who wants to feel in control of where things are, so when functions move around it lowkey stresses me out. If there was at least some kind of map or search thing that stays in one spot, that would help a lot."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q115",
+        "question": "When interface suggestions are inconsistent with your experience, you will:",
+        "options": [
+          "A. Prioritize trusting the system.",
+          "B. Decide after making a comparison.",
+          "C. Prioritize trusting yourself.",
+          "D. Ignore the system."
+        ],
+        "answer": "C - I'd rather trust my own judgment because I like being in control of what's happening, and if the system's suggestion doesn't match what I know, I'm going with my gut."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q48",
+        "question": "Describe how you balance the relationship between \"improving efficiency (trusting AI)\" and \"ensuring accuracy (self-review).\"",
+        "options": null,
+        "answer": "Honestly, I don't fully trust AI to get things right on its own, so I always want to check stuff myself before I use it for anything important. Like if I'm doing data analysis for a school project, I'll let the AI do the heavy lifting but then I'll go through the results to make sure nothing looks off. It's kind of annoying because the whole point of using AI is to save time, but I'd rather spend a few extra minutes reviewing than turn in something wrong. I guess I lean more toward accuracy over speed because I hate feeling like I'm not in control of what's being produced."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q115",
+        "question": "When you need to handle multiple tasks at the same time, you:",
+        "options": [
+          "A. Process them in parallel.",
+          "B. Process them one by one.",
+          "C. Switch frequently.",
+          "D. Feel confused."
+        ],
+        "answer": "C - I usually end up switching between things a lot, like jumping from one tab to another on my phone, even though I know it's not the most efficient way to get stuff done."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q39",
+        "question": "Do you feel that AI \"multi-turn questioning\" sometimes becomes a nuisance? In what situations?",
+        "options": null,
+        "answer": "Yeah honestly it gets annoying pretty fast, especially when I'm on my phone and just want a quick answer but the AI keeps asking me follow-up questions like \"what do you mean by that?\" or \"can you clarify?\" Like bro I already told you what I want, just give me the data. It's especially bad when I'm between classes or on the bus and I don't have time to go back and forth five times. I'd rather have it just show me options I can tap on instead of making me type out more stuff."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q64",
+        "question": "Within what range do you think GenUI's autonomous decision-making power should be limited?",
+        "options": [
+          "A. Can only execute operations I explicitly specify.",
+          "B. Can optimize the execution method but cannot change the goal.",
+          "C. Can make autonomous decisions within the boundaries I set.",
+          "D. Can be completely autonomous within the domain I authorize."
+        ],
+        "answer": "C - I want to stay in control and set the boundaries myself, but within those limits it's fine if the system makes its own calls since I don't wanna micromanage every little thing."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q140",
+        "question": "Do you prefer one-time generation or iterative generation? Why?",
+        "options": null,
+        "answer": "I definitely prefer iterative generation because I like being able to tweak things and stay in control of what's happening. If the AI just gives me one final result and I can't do anything about it, that's super frustrating — like what if it's not what I wanted? I'd rather go back and forth, adjust stuff, and explore different directions until I get exactly what I need. It feels more like a conversation where I'm still the one calling the shots."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q51",
+        "question": "When GenUI automatically generates an interface layout, do you want the system to explain the reason for generating that layout?",
+        "options": [
+          "A. Yes; I want a detailed explanation for every generation.",
+          "B. Yes; but only when the result does not match expectations.",
+          "C. Not necessarily; only when the explanation is useful.",
+          "D. No; as long as the result is useful, I don't need an explanation."
+        ],
+        "answer": "B - I want to know why it did something weird because if it's not what I expected, I need to understand what went wrong so I can fix it or tell it what I actually want."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q45",
+        "question": "How do you view the identity transparency issue when an AI simulates an \"Expert Tone\" to answer questions?",
+        "options": null,
+        "answer": "Honestly, it kinda bugs me when an AI talks like it's some expert professor and you can't even tell if it's actually pulling from legit sources or just making stuff sound convincing. Like, I want to explore data and learn things, but I also want to know when I'm talking to a machine versus getting actual expert-backed info. It feels like a control thing for me — if the AI is faking confidence, I lose my ability to judge what's real and what's not. They should at least be upfront about it instead of trying to sound all authoritative when it might just be hallucinating or whatever."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0014",
+    "persona": {
+      "id": "P_0014",
+      "demographic": {
+        "age_group": "young_adult",
+        "gender": "female",
+        "ethnicity": "hispanic",
+        "occupation": "freelancer"
+      },
+      "personality": {
+        "openness": "medium",
+        "conscientiousness": "low",
+        "extraversion": "low",
+        "agreeableness": "medium",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "low"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "general_genui",
+        "domain_experience": "intermediate",
+        "usage_frequency": "rare"
+      },
+      "motivation": "curiosity",
+      "frustration": "slow_response",
+      "goal": "productivity",
+      "behavior_pattern": "task-oriented",
+      "context": "multitasking",
+      "ui_expectation": [
+        "clear feedback"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q73",
+        "question": "Through which way do you prefer to understand the overall structure of a GenUI-generated interface?",
+        "options": [
+          "A. Viewing an interface map or navigation tree.",
+          "B. Exploring page by page.",
+          "C. Summarizing rules after completing specific tasks.",
+          "D. Reading product documentation or instructions."
+        ],
+        "answer": "A - I'd rather just see a map or tree of the whole thing upfront so I know where everything is without having to click around and waste time."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q46",
+        "question": "When processing cross-linguistic information, what is your standard for understanding AI translation accuracy?",
+        "options": null,
+        "answer": "Honestly, I don't have like a super technical standard for judging translation accuracy. I'm a native Spanish speaker so when something gets translated between Spanish and English, I can usually tell right away if it sounds off or if the meaning got twisted. My basic standard is just—does it sound natural and does it actually say what was meant? If I read a translation and it feels robotic or misses the tone of what someone was trying to say, that's when I know it's not accurate enough. I get kind of anxious when I have to rely on AI for translations in languages I don't know because I have no way to verify it myself."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q120",
+        "question": "When the system provides historical records or traceability, you will:",
+        "options": [
+          "A. Become more reliant.",
+          "B. Slightly increase reliance.",
+          "C. Feel no significant change.",
+          "D. Not care."
+        ],
+        "answer": "B - Having a record of what happened before makes me feel a little more comfortable using it again, but I still don't fully trust these systems enough to rely on them heavily."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q143",
+        "question": "Are you willing to let GenUI complete complex tasks for you? Why?",
+        "options": null,
+        "answer": "Honestly, I'm kind of torn on that. Part of me is curious to see what it can do, and if it saves me time on boring stuff while I'm juggling multiple projects, that's a win. But I also get nervous about trusting it with something complex because what if it messes up and I don't even understand what went wrong? I'd probably let it handle simpler parts of a bigger task, but I'd want really clear feedback on what it's doing so I'm not left in the dark."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q1",
+        "question": "When facing an extra-long response generated by AI, your first psychological reaction is:",
+        "options": [
+          "A. Excitement; I feel it's full of information and worth digging into.",
+          "B. Anxiety; I feel reading pressure and wish for a short summary.",
+          "C. Fatigue; I skip it directly and ask the AI to \"get to the point.\""
+        ],
+        "answer": "B - I immediately feel overwhelmed and stressed because I just want the answer quickly without having to wade through a wall of text."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q92",
+        "question": "When using GenUI, do you increase decision-making time because of the fear that an \"operation is irreversible\"? Please describe the impact of this psychology on your efficiency.",
+        "options": null,
+        "answer": "Yeah, honestly this happens to me a lot. Like if I'm not sure whether I can undo something, I'll just sit there staring at the screen way longer than I should, second-guessing myself. It really kills my productivity because I'm already trying to juggle multiple things at once, and that hesitation just adds up. I wish these tools would just clearly tell me \"hey, you can undo this\" so I don't have to stress about it. When things feel permanent and there's no clear way back, I'd rather not click anything at all, which kind of defeats the whole purpose of using the tool."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q113",
+        "question": "When you need to modify a detail, you:",
+        "options": [
+          "A. Change the interface directly.",
+          "B. Re-describe the requirement.",
+          "C. Try multiple times.",
+          "D. Give up on the modification."
+        ],
+        "answer": "B - I'd rather just explain what I need differently since I'm not super comfortable messing with interface settings directly."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q28",
+        "question": "When the content generated by AI requires high-frequency correction from you, how long do you usually persist before choosing to completely give up on collaboration?",
+        "options": null,
+        "answer": "Honestly, not very long. If I have to correct it more than like three or four times and it's still not getting what I need, I start feeling really frustrated and anxious about wasting my time. I'd say maybe five to ten minutes max before I just close the thing and try to do it myself or find another way. I'm usually juggling other stuff anyway, so I don't have the patience to babysit an AI that keeps getting it wrong."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q15",
+        "question": "If the AI's tone becomes very aggressive or strange, you would first:",
+        "options": [
+          "A. Think its logic collapsed due to context interference.",
+          "B. Suspect that the safety filter behind it has failed.",
+          "C. Think it is simulating a specific personality trait."
+        ],
+        "answer": "B - That would freak me out honestly, and my first thought would be that something broke in whatever safety system is supposed to keep it from acting like that."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q97",
+        "question": "Describe the level of transparency you want GenUI to maintain regarding user data usage and how this affects your willingness to use it.",
+        "options": null,
+        "answer": "Honestly, I get pretty anxious about where my data goes, so I need these tools to be upfront about what they're collecting and why. I don't want to dig through pages of legal jargon to figure it out — just tell me clearly what's happening with my info. If something feels shady or unclear, I'll just stop using it because the stress isn't worth it. I'm already not using these tools that often, so it wouldn't take much for me to walk away if I don't trust how they handle my data."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0015",
+    "persona": {
+      "id": "P_0015",
+      "demographic": {
+        "age_group": "senior",
+        "gender": "female",
+        "ethnicity": "asian",
+        "occupation": "retired"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "medium",
+        "extraversion": "low",
+        "agreeableness": "low",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "medium",
+        "target_domain": "design_tools",
+        "domain_experience": "novice",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "social_connection",
+      "frustration": "lack_of_control",
+      "goal": "productivity",
+      "behavior_pattern": "task-oriented",
+      "context": "mobile_fragmented",
+      "ui_expectation": [
+        "clear feedback"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q65",
+        "question": "If GenUI generates an interaction pattern you have never seen before, you will:",
+        "options": [
+          "A. Try to operate based on my own intuition.",
+          "B. Look for guided prompts or tutorials.",
+          "C. Give up using the function.",
+          "D. Contact support or consult documentation."
+        ],
+        "answer": "B - I want to know exactly what something does before I press it, so I'd look for some kind of guide or prompt to tell me clearly what to do."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q81",
+        "question": "When using GenUI, how do you distinguish between \"functions customized for me by AI\" and \"system-default functions\"?",
+        "options": null,
+        "answer": "Honestly, it's not always easy to tell the difference, and that bothers me. I want to know exactly what the system decided on its own versus what it's doing because it thinks it knows what I want. If something looks different from what I'm used to or shows up unexpectedly, I get suspicious and uncomfortable — I didn't ask for that change. I wish they would just label things clearly, like put a little mark or different color on anything the AI changed, so I'm not left guessing and feeling like I've lost control of my own screen."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q8",
+        "question": "When the AI cannot answer a question and proactively admits \"I don't know,\" your trust in it:",
+        "options": [
+          "A. Increases; I find it honest and aware of its boundaries.",
+          "B. Decreases; I feel its capability is limited and it isn't \"smart\" enough.",
+          "C. No feeling; it's just a standard programmed response."
+        ],
+        "answer": "A - I find it honest and aware of its boundaries."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q81",
+        "question": "When using GenUI, do you intentionally reserve certain tasks to be completed independently by yourself? Please explain your selection logic.",
+        "options": null,
+        "answer": "Yes, absolutely. I don't let the system handle anything where I need to feel certain about the outcome — like final decisions on layout choices or anything involving my personal preferences. I've been around long enough to know that if you hand over too much control, you end up with something that doesn't feel like yours anymore. I'll use it for the tedious parts, like generating options or doing repetitive adjustments, but the final say is always mine. If I can't clearly see what it's doing and why, I'd rather just do it myself."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q123",
+        "question": "When the interface requires frequent confirmation of operations, you:",
+        "options": [
+          "A. Accept the confirmation.",
+          "B. Feel slightly annoyed.",
+          "C. Skip the confirmation.",
+          "D. Become impatient."
+        ],
+        "answer": "A - I actually prefer having confirmations because it gives me a sense of control and reassurance that I'm not accidentally doing something I didn't intend."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q36",
+        "question": "Talk about your cognitive experience with \"auto-paging\" or \"infinite scroll\" dialogue flows.",
+        "options": null,
+        "answer": "I find infinite scroll quite frustrating, to be honest. On my phone, I lose track of where I was, and there's no clear sense of how much is left or where things begin and end. I prefer pages with clear boundaries — I want to feel like I'm in control of moving forward, not being dragged along by the system. It makes me anxious when content just keeps loading without any indication of progress or a stopping point."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q11",
+        "question": "When you and the AI disagree, your final decision logic is:",
+        "options": [
+          "A. Always insist on my own view; the AI is just a reference.",
+          "B. Try to persuade the AI and see if its counter-arguments can move me.",
+          "C. Listen to the AI in most cases because it has seen more data."
+        ],
+        "answer": "A - I always go with my own judgment because I need to feel in control, and the AI is just a tool that should follow what I want, not the other way around."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q138",
+        "question": "How do you use rollback or history functions to optimize operations?",
+        "options": null,
+        "answer": "I use the undo button quite a lot, actually. When the system changes something I didn't ask for or moves things around without my permission, I need to go back to where I was before. I don't like having to dig through complicated history panels though — I just want a simple way to step back one or two actions. If I can't easily undo what happened, I get quite frustrated and sometimes I just close the whole thing and start over, which wastes my time."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q9",
+        "question": "If the AI could show its model's \"Attention Weights\" through visual charts, you would:",
+        "options": [
+          "A. View them frequently to help me optimize the weight distribution of my prompts.",
+          "B. Occasionally try to take a look, but give up because it's too professional.",
+          "C. Think this is for technical staff; it is meaningless to me."
+        ],
+        "answer": "C - I don't need to see technical charts and numbers; I just want the tool to do what I tell it to do clearly and simply."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q144",
+        "question": "How do you view the transparency of the system?",
+        "options": null,
+        "answer": "I find it quite frustrating when the system does things without explaining why or how it arrived at a particular result. I need to see clearly what's happening at each step — if it just changes something on its own without telling me, I feel uneasy and out of control. At my age, I don't have patience for guessing games. I want straightforward feedback, not some mysterious process happening behind the scenes that I can't follow or undo."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0016",
+    "persona": {
+      "id": "P_0016",
+      "demographic": {
+        "age_group": "teen",
+        "gender": "female",
+        "ethnicity": "asian",
+        "occupation": "student"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "medium",
+        "extraversion": "low",
+        "agreeableness": "high",
+        "neuroticism": "medium"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "conservative",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "content_creation",
+        "domain_experience": "novice",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "efficiency",
+      "frustration": "lack_of_control",
+      "goal": "content_creation",
+      "behavior_pattern": "task-oriented",
+      "context": "focused_work",
+      "ui_expectation": [
+        "friendly tone"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q17",
+        "question": "How do you distinguish between \"Dialogue Mode\" and \"Creation Mode\"?",
+        "options": [
+          "A. Can clearly distinguish the difference in thinking logic between the two.",
+          "B. Think there is no difference; both involve typing in a chat box.",
+          "C. Rely on visual cues in the interface (e.g., colors, icons) to distinguish."
+        ],
+        "answer": "C - I usually just look at how the screen looks different, like if there are different colors or icons, because I don't really think about the logic behind it that much."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q42",
+        "question": "How do you view the \"next step\" suggestions the AI automatically generates for you?",
+        "options": null,
+        "answer": "Honestly, I find them kind of helpful when they actually match what I'm trying to do, like if I'm working on a school project and it suggests something relevant. But a lot of the time they feel random or pushy, like the AI is trying to decide for me what I should do next, and that really bothers me. I'd rather just have the option to ask for suggestions when I want them instead of having them pop up automatically. I like being in control of my own workflow, even if I'm not super techy about it."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q111",
+        "question": "When the system provides auto-fill or automated operations, you will:",
+        "options": [
+          "A. Accept all of them.",
+          "B. Accept them after checking.",
+          "C. Accept them partially.",
+          "D. Not use them."
+        ],
+        "answer": "B - I'd want to check everything first because I like being in control of what goes into my work, even if the auto-fill saves me time."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q146",
+        "question": "How do you view system uncertainty?",
+        "options": null,
+        "answer": "Honestly, it kind of stresses me out when the system isn't sure about something because I just want it to give me a clear answer so I can get my work done. Like if it's uncertain, I'd rather it just tells me straight up instead of giving me something that might be wrong without warning me. I guess I'd want it to be upfront about it so I can decide what to do myself, because I really don't like feeling like I'm not in control of what's happening. It makes me a bit anxious when I can't tell if the output is reliable or not."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q22",
+        "question": "If GenUI automatically creates a complex Kanban board for you, your first choice is to:",
+        "options": [
+          "A. Immediately adjust the layout to fit my habits.",
+          "B. Run it once following the AI's logic without changing things easily.",
+          "C. Choose to close it directly because I don't understand how to use it."
+        ],
+        "answer": "A - I'd want to fix it up right away so it works the way I like, because I don't really feel comfortable using something that's set up in a way I didn't choose."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q84",
+        "question": "After using GenUI continuously for a long time, how do you usually recover your attention and reduce fatigue?",
+        "options": null,
+        "answer": "Honestly, I usually just close my laptop and take a break from screens altogether. I might lie on my bed and scroll through my phone for a bit or listen to music to kind of reset my brain. Sometimes I'll get a snack or make some tea because it gives me something simple to do that doesn't require thinking. I don't really have a fancy routine or anything, I just need to step away for a while before I can focus again."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q118",
+        "question": "When the system predicts your next step, you:",
+        "options": [
+          "A. Accept the prediction.",
+          "B. Accept after checking.",
+          "C. Modify the prediction.",
+          "D. Ignore the prediction."
+        ],
+        "answer": "B - I usually accept it after checking because I want to make sure it's actually doing what I need it to do before I let it go ahead."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q130",
+        "question": "In what situations do you want complete control over the interface?",
+        "options": null,
+        "answer": "Honestly, I want complete control pretty much all the time when I'm working on my content stuff. Like if I'm making something for a school project or editing a post, I don't want the AI randomly changing where things are or suggesting layouts I didn't ask for. It stresses me out when things move around without me doing it because then I have to figure out how to get it back to what I wanted. I just want it to do what I tell it to do and stay put until I decide to change something myself."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q53",
+        "question": "In what form do you think GenUI's explanation information should be presented most appropriately?",
+        "options": [
+          "A. Short text description (one-sentence summary).",
+          "B. Detailed step-by-step description (itemized explanation).",
+          "C. Visual charts (e.g., decision path diagrams).",
+          "D. Interactive explanation (expand details on demand)."
+        ],
+        "answer": "D - I like being able to control how much info I see, so having the option to expand details only when I want them feels less overwhelming and lets me focus on my work."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q145",
+        "question": "Do you want the system to provide traceable operation records? Why?",
+        "options": null,
+        "answer": "Yes, I really want that. Like, when I'm working on my content and the system changes something or generates something, I want to be able to see exactly what it did and when. It makes me feel more in control because sometimes I don't fully understand what's happening behind the scenes, and having a record means I can go back and undo stuff if I need to. I get kind of anxious when things change without me knowing why, so having that history would make me feel way more comfortable using it."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0017",
+    "persona": {
+      "id": "P_0017",
+      "demographic": {
+        "age_group": "teen",
+        "gender": "female",
+        "ethnicity": "asian",
+        "occupation": "student"
+      },
+      "personality": {
+        "openness": "medium",
+        "conscientiousness": "low",
+        "extraversion": "high",
+        "agreeableness": "low",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "intuitive",
+        "risk": "adventurous",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "high",
+        "target_domain": "programming_tools",
+        "domain_experience": "intermediate",
+        "usage_frequency": "rare"
+      },
+      "motivation": "curiosity",
+      "frustration": "unclear_feedback",
+      "goal": "information_acquisition",
+      "behavior_pattern": "exploratory",
+      "context": "mobile_fragmented",
+      "ui_expectation": [
+        "clear feedback",
+        "interactive elements"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q51",
+        "question": "When you first see an AI-generated interface (GenUI), what do you usually do?",
+        "options": [
+          "A. Start using it immediately, figure it out as I go.",
+          "B. Browse the overall layout first before starting any operations.",
+          "C. Look for help documents or instructions before using it.",
+          "D. Compare the interface style with my expectations before deciding how to proceed."
+        ],
+        "answer": "A - I just dive right in and start clicking around because that's the fastest way to figure out what it can do."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q90",
+        "question": "Please describe the process of building operational confidence in a completely unfamiliar GenUI environment.",
+        "options": null,
+        "answer": "Honestly, I'd just start tapping around and seeing what happens — like I'm not gonna read a manual or whatever. If the system gives me clear feedback when I do something, like visual cues or confirmations, I build confidence pretty fast because I can tell what's actually working. But if I click something and nothing happens or I get some vague response, that's when I get frustrated and start losing trust in the whole thing. I need the UI to basically react to me in real-time so I can figure out the boundaries of what it can do, and then I'll push those boundaries on purpose to see how far I can go."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q102",
+        "question": "When the interface provides recommended operations, you:",
+        "options": [
+          "A. Always execute according to the recommendation.",
+          "B. Accept them in most cases.",
+          "C. Accept them only when they seem reasonable.",
+          "D. Basically ignore the recommendations."
+        ],
+        "answer": "C - I only go with recommendations if they actually make sense to me because I like being in control of what happens and I don't trust the system blindly."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q98",
+        "question": "When you feel uncertain while using GenUI, are you more inclined to \"trust the AI to proceed\" or \"pause and seek confirmation\"? What factors influence your choice?",
+        "options": null,
+        "answer": "Honestly, I'm way more inclined to pause and seek confirmation because I HATE when things go in a direction I didn't want and then I have no idea how to undo it. Like if the AI isn't giving me clear feedback about what it's about to do, I'm not just gonna let it run wild with my code or whatever. But if I'm just exploring something low-stakes out of curiosity, like generating a quick UI mockup or something, I'll let it do its thing because worst case I just start over. The biggest factor is honestly whether I feel like I'm in control—if the system makes it easy to undo or shows me exactly what's happening, I'll trust it more, but vague outputs with no explanation? Nah, I'm hitting pause immediately."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q107",
+        "question": "When the system provides shortcuts, you:",
+        "options": [
+          "A. Use them proactively.",
+          "B. Use them occasionally.",
+          "C. Rarely use them.",
+          "D. Do not use them."
+        ],
+        "answer": "A - I love shortcuts because they let me get things done faster and I like feeling in control of the flow instead of waiting around."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q142",
+        "question": "When the interface is inconsistent, how do you adapt?",
+        "options": null,
+        "answer": "Honestly it's so annoying when things are inconsistent because I just want to figure stuff out quickly, especially when I'm on my phone between classes or whatever. I usually just tap around aggressively until I find what I'm looking for — like trial and error but faster because I trust my gut. If something keeps being weird and I can't get clear feedback on what's happening, I'll get frustrated pretty fast and might just close the app entirely. I'd rather find a different tool than waste my time guessing what the UI wants from me."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q108",
+        "question": "When you can guide the GenUI generation step-by-step, you:",
+        "options": [
+          "A. Input requirements all at once.",
+          "B. Adjust in steps.",
+          "C. Modify frequently.",
+          "D. Are unsure how to guide it."
+        ],
+        "answer": "B - I like adjusting in steps because it gives me more control over what's happening and I can actually see how each change affects the output."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q41",
+        "question": "When the collaboration plan provided by AI is completely beyond your professional cognitive boundary, how do you maintain control?",
+        "options": null,
+        "answer": "Honestly, if the AI throws something at me that's totally beyond what I know, I'm not just gonna sit there and accept it blindly—I'd start poking at it, asking it to break things down or explain why it chose that approach. Like, I need to understand the reasoning or I literally cannot trust it. I'd probably also just google stuff on my phone real quick to cross-check whether it's making sense or feeding me garbage. If it still feels off and I can't get clear feedback on what's happening, I'd rather scrap the plan and tell it to try again with something I can actually follow, because what's the point of a \"collaboration\" if I have zero control over what's going on?"
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q57",
+        "question": "When do you think GenUI's transparency information should be presented?",
+        "options": [
+          "A. Proactively displayed before the AI executes the operation.",
+          "B. Automatically attached after the AI executes the operation.",
+          "C. Displayed only when the user proactively requests it.",
+          "D. Automatically popped up at key decision nodes."
+        ],
+        "answer": "A - I want to know what's about to happen before it happens so I can decide if I'm okay with it, because honestly nothing's more annoying than an AI just doing stuff without telling you first."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q79",
+        "question": "When an explanation given by GenUI conflicts with your intuition, how do you decide which side to believe? Describe your thought process.",
+        "options": null,
+        "answer": "Honestly, I usually trust my gut first because if something feels off, there's probably a reason. Like, I'll quickly Google it or check Stack Overflow on my phone to see if other people agree with what the AI is saying, because I've had times where GenUI gives me something that sounds confident but is just... wrong. If I can't find anything to back up either side, I'll just test it myself — like run the code and see what actually happens. I hate when AI explanations are vague or wishy-washy because then I can't even tell if it's conflicting with my intuition or just being unclear, which is so frustrating."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0018",
+    "persona": {
+      "id": "P_0018",
+      "demographic": {
+        "age_group": "adult",
+        "gender": "male",
+        "ethnicity": "black",
+        "occupation": "manager"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "high",
+        "extraversion": "low",
+        "agreeableness": "medium",
+        "neuroticism": "low"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "adventurous",
+        "control": "high"
+      },
+      "experience": {
+        "tech_literacy": "low",
+        "target_domain": "design_tools",
+        "domain_experience": "novice",
+        "usage_frequency": "rare"
+      },
+      "motivation": "curiosity",
+      "frustration": "slow_response",
+      "goal": "entertainment",
+      "behavior_pattern": "exploratory",
+      "context": "mobile_fragmented",
+      "ui_expectation": [
+        "structured layouts"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q9",
+        "question": "When you enter a vague command (e.g., \"optimize this\"), you expect the AI to:",
+        "options": [
+          "A. Automatically guess my intent and provide the result directly.",
+          "B. Stop and ask for specific optimization dimensions (e.g., word count, tone, logic).",
+          "C. Provide three different versions of optimization for me to choose from."
+        ],
+        "answer": "B - I need the system to ask me exactly what I mean because I want to stay in control of the outcome and not waste time going back and forth fixing something it guessed wrong."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q94",
+        "question": "To what extent do you think GenUI should actively explain the reasons for interface changes to users? In what form would you like this explanation to be presented?",
+        "options": null,
+        "answer": "Honestly, I think the system should always tell me why something changed on my screen. I don't like when things just shift around without warning — it makes me feel like I'm not in control of what's happening. A short, simple sentence at the top of the screen explaining what changed and why would work fine for me. Keep it structured and straightforward, don't give me some long paragraph or a popup I have to dismiss. I just need to know what happened so I can decide if I'm good with it or if I want to undo it."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q3",
+        "question": "If the AI makes a mistake on a minor issue, your trust in its ability to handle subsequent complex problems:",
+        "options": [
+          "A. Collapses instantly; I view the entire system as unreliable.",
+          "B. Drops slightly; I will check its output more frequently.",
+          "C. Is largely unaffected; I consider local errors to be a matter of probability."
+        ],
+        "answer": "B - If it messes up on something small, I'm going to be double-checking what it gives me going forward, especially on anything more complicated."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q146",
+        "question": "How do you view system uncertainty?",
+        "options": null,
+        "answer": "I view system uncertainty as something that needs to be communicated clearly and directly. If the system isn't sure about something, just tell me straight up — don't waste my time letting me think everything is solid when it's not. I appreciate when things are structured and upfront, so I can make my own call on whether to trust the output or not. At the end of the day, I need to feel like I'm in control of the decision, not the machine."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q55",
+        "question": "If there are too many operation options in the GenUI interface, you usually:",
+        "options": [
+          "A. Evaluate each option one by one before making a decision.",
+          "B. Consider only the first few options and choose quickly.",
+          "C. Request the AI to reduce the number of options.",
+          "D. Operate directly according to the default recommendation."
+        ],
+        "answer": "A - I like to take my time and evaluate what's in front of me before I commit to anything, especially when I'm not that familiar with the tool."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q79",
+        "question": "Please describe a \"smooth and effortless\" scenario you experienced in GenUI. What design made you feel at ease?",
+        "options": null,
+        "answer": "Honestly, I haven't had too many experiences with these AI design tools since I only use them once in a while when I'm curious about something. But there was one time I was messing around on my phone with a tool that laid everything out in clear sections with big buttons and straightforward options — no clutter, no guessing what to tap next. That felt smooth to me because I didn't have to think too hard about where things were; it just made sense. I appreciate when the interface doesn't try to be too clever and just gives me a structured path to follow without a bunch of loading screens slowing me down."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q1",
+        "question": "In a creative task, what role do you usually want to play?",
+        "options": [
+          "A. Director: Provide the core creative idea and let the AI handle all detailed execution.",
+          "B. Architect: Build the framework, let the AI fill in the materials, and then I perform the final refinements.",
+          "C. Editor: Let the AI write the first draft, and then I perform large-scale rewriting and auditing."
+        ],
+        "answer": "B - I like to set up the structure and have control over the framework, then let the tool do some of the filling in, but I want to be the one making the final call on what stays."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q35",
+        "question": "If an AI's suggestion makes you feel manipulated, what action would you take to regain control?",
+        "options": null,
+        "answer": "If I felt like the AI was trying to push me in a direction I didn't choose, I'd shut it down immediately and go back to doing things manually. I'm not the type to let a tool run me — I run the tools. I'd probably dig into whatever settings are available to turn off those kinds of suggestions or limit what it can do on its own. At the end of the day, if I can't trust it to stay in its lane, I'd just stop using it altogether."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q8",
+        "question": "How do you understand \"Auto-adjustment\" logic in GenUI?",
+        "options": [
+          "A. I believe the system is monitoring my behavior and performing profile analysis.",
+          "B. I believe the system is performing rule matching based on the current task type.",
+          "C. I view it as magic; I don't understand the underlying mechanism at all."
+        ],
+        "answer": "A - I believe the system is monitoring my behavior and performing profile analysis."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q80",
+        "question": "Do you think there is a contradiction between \"AI Transparency\" and \"User Privacy\"? How do you hope to balance these in GenUI?",
+        "options": null,
+        "answer": "Honestly, I haven't thought too deeply about this from a technical standpoint, but I can see where there could be tension between the two. On one hand, I want to know what the system is doing with my information and why it's making certain choices—that's the transparency piece. On the other hand, I don't want it storing or exposing my personal data just to explain itself. I'd hope these GenUI tools can give me clear, straightforward explanations of how they work without needing to dig into my private details to do it. Keep the layout simple, tell me what's happening, but keep my business my business."
+      }
+    ]
+  },
+  {
+    "persona_id": "P_0019",
+    "persona": {
+      "id": "P_0019",
+      "demographic": {
+        "age_group": "adult",
+        "gender": "female",
+        "ethnicity": "black",
+        "occupation": "teacher"
+      },
+      "personality": {
+        "openness": "low",
+        "conscientiousness": "low",
+        "extraversion": "medium",
+        "agreeableness": "low",
+        "neuroticism": "high"
+      },
+      "cognitive_style": {
+        "processing": "analytical",
+        "risk": "conservative",
+        "control": "low"
+      },
+      "experience": {
+        "tech_literacy": "high",
+        "target_domain": "general_genui",
+        "domain_experience": "expert",
+        "usage_frequency": "frequent"
+      },
+      "motivation": "learning",
+      "frustration": "complex_interface",
+      "goal": "social_interaction",
+      "behavior_pattern": "task-oriented",
+      "context": "multitasking",
+      "ui_expectation": [
+        "clear feedback"
+      ]
+    },
+    "qa": [
+      {
+        "q_idx": 1,
+        "q_label": "Q1",
+        "a_label": "A1",
+        "dimension": "d1_Understanding",
+        "q_type": "mc",
+        "source_qid": "Q9",
+        "question": "When you enter a vague command (e.g., \"optimize this\"), you expect the AI to:",
+        "options": [
+          "A. Automatically guess my intent and provide the result directly.",
+          "B. Stop and ask for specific optimization dimensions (e.g., word count, tone, logic).",
+          "C. Provide three different versions of optimization for me to choose from."
+        ],
+        "answer": "B - I need the system to ask me what exactly I mean because \"optimize\" could mean a hundred different things, and I don't want to waste time undoing something I never asked for."
+      },
+      {
+        "q_idx": 2,
+        "q_label": "Q2",
+        "a_label": "A2",
+        "dimension": "d1_Understanding",
+        "q_type": "oe",
+        "source_qid": "Q30",
+        "question": "What is your standard for a \"good prompt\"? Please provide an example you commonly use.",
+        "options": null,
+        "answer": "For me, a good prompt is one that's direct and gets me what I need without a bunch of back-and-forth. I don't have time to be crafting elaborate instructions when I'm juggling lesson planning, grading, and trying to have a conversation at the same time. I usually go with something like \"Give me three discussion questions for 10th graders on [topic], focus on critical thinking, keep it simple.\" If the system can't figure out what I mean from a clear, straightforward request like that, then honestly that's a design problem, not a me problem. I shouldn't have to jump through hoops to get a usable output."
+      },
+      {
+        "q_idx": 3,
+        "q_label": "Q3",
+        "a_label": "A3",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "mc",
+        "source_qid": "Q68",
+        "question": "When GenUI recommends multiple plans for you to choose from, your basis for selection is usually:",
+        "options": [
+          "A. The plans ranked highest by the AI.",
+          "B. The plan that best fits my personal preferences.",
+          "C. The plan that looks safest and carries the lowest risk.",
+          "D. The plan that can complete the task the fastest."
+        ],
+        "answer": "C - I tend to go with whatever feels safest because I don't want to deal with unexpected problems or complications when I'm already juggling multiple things."
+      },
+      {
+        "q_idx": 4,
+        "q_label": "Q4",
+        "a_label": "A4",
+        "dimension": "d2_Trust_and_Reliance",
+        "q_type": "oe",
+        "source_qid": "Q35",
+        "question": "If the AI shows an obvious bias toward a certain viewpoint, would you try to correct it or stop using it?",
+        "options": null,
+        "answer": "I'd probably try to correct it first, because I know how these systems work and I'm not about to just accept whatever it feeds me without pushing back. But honestly, if it keeps pushing the same slant after I've called it out, I'm done—I don't have the patience or the energy to keep fighting a tool that's supposed to be helping me. I'm not looking for something that validates one perspective; I need it to give me straight information so I can form my own conclusions. Life's stressful enough without having to babysit an AI's biases on top of everything else."
+      },
+      {
+        "q_idx": 5,
+        "q_label": "Q5",
+        "a_label": "A5",
+        "dimension": "d3_usability",
+        "q_type": "mc",
+        "source_qid": "Q116",
+        "question": "When the interface supports personalization settings, you:",
+        "options": [
+          "A. Make deep adjustments.",
+          "B. Make simple settings.",
+          "C. Keep the defaults.",
+          "D. Do not use them."
+        ],
+        "answer": "C - I don't really have the patience to mess around with settings when the defaults work well enough and I'd rather just get on with what I'm doing."
+      },
+      {
+        "q_idx": 6,
+        "q_label": "Q6",
+        "a_label": "A6",
+        "dimension": "d3_usability",
+        "q_type": "oe",
+        "source_qid": "Q81",
+        "question": "When you are using GenUI to handle high-pressure or urgent tasks, which system designs help or hinder you from staying focused?",
+        "options": null,
+        "answer": "When I'm under pressure, the last thing I need is some overly complex interface throwing a bunch of options at me or rearranging itself without warning. Clear feedback is what keeps me grounded—I need to know immediately whether the system processed my input or if something went wrong, not some vague loading spinner with no context. What really hinders me is when the UI decides to get creative and generate some novel layout I've never seen before right when I'm trying to move fast; that's not helpful, that's disorienting. I work better when the system keeps things predictable and gives me straightforward confirmation at each step so I can stay task-focused without second-guessing what's happening underneath."
+      },
+      {
+        "q_idx": 7,
+        "q_label": "Q7",
+        "a_label": "A7",
+        "dimension": "d4_control",
+        "q_type": "mc",
+        "source_qid": "Q61",
+        "question": "In which type of task do you think human-AI collaboration can exert the greatest value?",
+        "options": [
+          "A. Analysis tasks that require processing large amounts of data.",
+          "B. Design tasks that require a combination of creativity and judgment.",
+          "C. Operation tasks that require precise execution and have low fault tolerance.",
+          "D. Complex tasks that require integrating information across systems."
+        ],
+        "answer": "A - When I'm juggling multiple things at once, having AI crunch through large amounts of data and surface what matters is where I get the most value without having to wrestle with overly complex interfaces."
+      },
+      {
+        "q_idx": 8,
+        "q_label": "Q8",
+        "a_label": "A8",
+        "dimension": "d4_control",
+        "q_type": "oe",
+        "source_qid": "Q138",
+        "question": "How do you use rollback or history functions to optimize operations?",
+        "options": null,
+        "answer": "I use rollback pretty heavily when I'm multitasking and accidentally go down the wrong path—like if I'm tweaking a workflow and it gets more convoluted instead of simpler, I just revert and start over rather than trying to fix the mess. I don't have the patience to carefully plan every step, so having that safety net means I can move fast and not stress about breaking things. History functions are useful for comparing what I had before versus what changed, especially when the interface decides to rearrange itself and I need to figure out what went wrong. Honestly, if a system doesn't have clear undo/rollback with obvious feedback that it actually worked, I get irritated fast because I'm not about to guess whether my action took effect or not."
+      },
+      {
+        "q_idx": 9,
+        "q_label": "Q9",
+        "a_label": "A9",
+        "dimension": "d5_transparency",
+        "q_type": "mc",
+        "source_qid": "Q53",
+        "question": "In what form do you think GenUI's explanation information should be presented most appropriately?",
+        "options": [
+          "A. Short text description (one-sentence summary).",
+          "B. Detailed step-by-step description (itemized explanation).",
+          "C. Visual charts (e.g., decision path diagrams).",
+          "D. Interactive explanation (expand details on demand)."
+        ],
+        "answer": "A - I don't need a whole production, just tell me what you did in one clear sentence so I can keep moving with my tasks."
+      },
+      {
+        "q_idx": 10,
+        "q_label": "Q10",
+        "a_label": "A10",
+        "dimension": "d5_transparency",
+        "q_type": "oe",
+        "source_qid": "Q145",
+        "question": "Do you want the system to provide traceable operation records? Why?",
+        "options": null,
+        "answer": "Yes, I want traceable operation records. If something goes wrong or the system makes a change I didn't ask for, I need to be able to look back and see exactly what happened and when. I don't have time to guess what the system did behind the scenes, especially when I'm juggling multiple tasks at once. Clear records also help me figure out if the AI is actually learning what I need or just making things more complicated."
+      }
+    ]
+  }
+]

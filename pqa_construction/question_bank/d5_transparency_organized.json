@@ -1,0 +1,1031 @@
+{
+  "multiple_choice_questions": [
+    {
+      "id": "Q1",
+      "question": "When an AI provides an unexpected conclusion, your primary need is:",
+      "options": [
+        "A. To see the final conclusion directly; the process is not important.",
+        "B. To look for a \"View Details\" button to understand the underlying logic.",
+        "C. To request the AI to list the raw data or literature it cited."
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "In a GenUI interface, if a functional component suddenly disappears or changes, you want the system to:",
+      "options": [
+        "A. Pop up a short message on the side explaining why (e.g., \"Detected code writing, toolbar switched\").",
+        "B. Not explain; just change it. I trust the system's optimization.",
+        "C. Keep a tiny icon on the interface that shows the logic chain upon clicking."
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "How do you view the \"Chain of Thought\" (CoT) display provided by AI?",
+      "options": [
+        "A. Very helpful; it allows me to confirm if its reasoning path is correct.",
+        "B. A visual distraction; I only want a concise reply, not its \"mental journey.\"",
+        "C. I only check it when the AI makes an error or gives a strange answer."
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "If an AI tells you its answer is based on a \"probability distribution,\" your reaction is:",
+      "options": [
+        "A. Reassured; this shows it is honestly displaying the technical essence.",
+        "B. Uneasy; it makes me feel the answer is an uncertain random gamble.",
+        "C. Indifferent to such technical details; I only care if the result is useful."
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "Regarding the \"Knowledge Cutoff Date\" of an AI model, you want it to:",
+      "options": [
+        "A. Be clearly labeled at the start of every conversation.",
+        "B. Remind me only when a real-time information query fails.",
+        "C. Be hidden in system settings; no need for frequent prompts."
+      ]
+    },
+    {
+      "id": "Q6",
+      "question": "When an AI cannot execute a task, the most satisfying way it can explain is to:",
+      "options": [
+        "A. Provide a detailed technical limitation description (e.g., \"Due to Token limits...\").",
+        "B. Use human-like language (e.g., \"Due to privacy protection, I cannot...\").",
+        "C. Provide an alternative and briefly state why the original plan was unfeasible."
+      ]
+    },
+    {
+      "id": "Q7",
+      "question": "When reviewing AI-generated financial or medical advice, your requirement for transparency is:",
+      "options": [
+        "A. Must be 100% transparent, listing all calculation formulas or evidence.",
+        "B. Logically self-consistent is enough; no need to delve into atomic-level data.",
+        "C. As long as there is a disclaimer endorsed by a professional institution."
+      ]
+    },
+    {
+      "id": "Q8",
+      "question": "How do you understand \"Auto-adjustment\" logic in GenUI?",
+      "options": [
+        "A. I believe the system is monitoring my behavior and performing profile analysis.",
+        "B. I believe the system is performing rule matching based on the current task type.",
+        "C. I view it as magic; I don't understand the underlying mechanism at all."
+      ]
+    },
+    {
+      "id": "Q9",
+      "question": "If the AI could show its model's \"Attention Weights\" through visual charts, you would:",
+      "options": [
+        "A. View them frequently to help me optimize the weight distribution of my prompts.",
+        "B. Occasionally try to take a look, but give up because it's too professional.",
+        "C. Think this is for technical staff; it is meaningless to me."
+      ]
+    },
+    {
+      "id": "Q10",
+      "question": "Regarding biased answers, you prefer the system to:",
+      "options": [
+        "A. Directly intercept the answer and explain which guideline was violated.",
+        "B. Output as usual but label it \"This content may contain a certain bias\" on the side.",
+        "C. Attach a statement about the diversity of the model's training data at the end of the answer."
+      ]
+    },
+    {
+      "id": "Q11",
+      "question": "When you ask about the AI's identity or source, you expect to get:",
+      "options": [
+        "A. A purely technical reply (e.g., \"I am a large language model trained by X company\").",
+        "B. A humanized reply with a persona (e.g., \"I am your all-purpose assistant\").",
+        "C. Detailed bottom-layer information such as version number and model parameter scale."
+      ]
+    },
+    {
+      "id": "Q12",
+      "question": "How do you judge whether a citation link provided by the AI is credible?",
+      "options": [
+        "A. Check if the domain name is well-known.",
+        "B. I must click it to see if the content actually exists and matches.",
+        "C. Trust that the AI will not fabricate links."
+      ]
+    },
+    {
+      "id": "Q13",
+      "question": "In GenUI, when the interface predicts and displays your \"Next Possible Operation,\" you most want to know:",
+      "options": [
+        "A. What historical behavior it was predicted based on.",
+        "B. What will happen after clicking that prediction button.",
+        "C. How high the accuracy rate of this prediction is."
+      ]
+    },
+    {
+      "id": "Q14",
+      "question": "Do you want the AI to inform you of a \"Confidence Score\" for every reply?",
+      "options": [
+        "A. Yes; I will focus on verifying those with low scores.",
+        "B. No; this would increase my decision-making anxiety.",
+        "C. Only show it for factual or calculation-based tasks."
+      ]
+    },
+    {
+      "id": "Q15",
+      "question": "If the AI's tone becomes very aggressive or strange, you would first:",
+      "options": [
+        "A. Think its logic collapsed due to context interference.",
+        "B. Suspect that the safety filter behind it has failed.",
+        "C. Think it is simulating a specific personality trait."
+      ]
+    },
+    {
+      "id": "Q16",
+      "question": "For AI-generated privacy policy summaries, you believe the key to transparency is:",
+      "options": [
+        "A. Informing me which data was used for further model training.",
+        "B. Informing me how long the data is kept on the server.",
+        "C. Telling me the risk of data leakage in plain language."
+      ]
+    },
+    {
+      "id": "Q17",
+      "question": "When the AI performs a \"web search,\" you want to see:",
+      "options": [
+        "A. Real-time scrolling of search keywords and a list of sources.",
+        "B. Only the final integrated result; keep the process as a black box.",
+        "C. A summary of search results, and I decide which one to click for a deep dive."
+      ]
+    },
+    {
+      "id": "Q18",
+      "question": "How do you view \"Counter-questions\" asked by an AI assistant?",
+      "options": [
+        "A. I believe it is clarifying my ambiguous intent through questioning.",
+        "B. I feel it is shirk responsibility and deliberately stalling for time.",
+        "C. I see it as a transparent display of the parts it cannot understand."
+      ]
+    },
+    {
+      "id": "Q19",
+      "question": "When dealing with multimodal generation (e.g., text-to-video), your need for generation logic is:",
+      "options": [
+        "A. Wanting to know which word in the text corresponds to which frame in the video.",
+        "B. As long as the overall mood is right, I don't care about the correspondence.",
+        "C. Hoping to see the AI's \"creative notes\" for each frame."
+      ]
+    },
+    {
+      "id": "Q20",
+      "question": "When you click \"Dissatisfied\" on an AI result, you want the system to:",
+      "options": [
+        "A. Pop up a window for you to check specific reasons (inaccurate, too long, biased, etc.).",
+        "B. Automatically record and display \"We will improve based on this feedback.\"",
+        "C. Immediately provide another generation version with different logic for comparison."
+      ]
+    },
+    {
+      "id": "Q21",
+      "question": "Your difference in trust regarding the explainability of \"Open Source\" vs. \"Closed Source\" models is:",
+      "options": [
+        "A. Open source is more credible because the code and weights are public and transparent.",
+        "B. Closed source is more credible because big companies have more rigorous alignment testing.",
+        "C. No difference; to me, they are both unknowable algorithmic black boxes."
+      ]
+    },
+    {
+      "id": "Q22",
+      "question": "If the AI proactively corrects its previous error in a conversation, you want it to explain:",
+      "options": [
+        "A. Why it made the mistake before (e.g., \"I misunderstood your intent\").",
+        "B. How it discovered the error later (e.g., \"After re-checking the information...\").",
+        "C. No explanation needed; just provide the correct answer."
+      ]
+    },
+    {
+      "id": "Q23",
+      "question": "In a GenUI dynamic dashboard, regarding the refresh frequency logic of data changes, you:",
+      "options": [
+        "A. Need full control and want to know the trigger conditions for each refresh.",
+        "B. Leave it to the system to decide, as long as it doesn't flicker too much.",
+        "C. Want the system to provide a subtle visual feedback when refreshing."
+      ]
+    },
+    {
+      "id": "Q24",
+      "question": "How do you evaluate \"Disclaimers\" generated by AI?",
+      "options": [
+        "A. Necessary legal transparency to remind me of risks.",
+        "B. Annoying nonsense that takes up screen space.",
+        "C. It lowers my perception of the AI's authority."
+      ]
+    },
+    {
+      "id": "Q25",
+      "question": "If you could view the \"Tags\" about you in the AI's \"Memory Bank,\" your attitude would be:",
+      "options": [
+        "A. I must have full viewing and editing rights to ensure information transparency.",
+        "B. I don't want to see them; knowing it's analyzing me gives me social pressure.",
+        "C. Occasionally check if its understanding of me is still stuck in last year."
+      ]
+    },
+    {
+      "id": "Q51",
+      "question": "When GenUI automatically generates an interface layout, do you want the system to explain the reason for generating that layout?",
+      "options": [
+        "A. Yes; I want a detailed explanation for every generation.",
+        "B. Yes; but only when the result does not match expectations.",
+        "C. Not necessarily; only when the explanation is useful.",
+        "D. No; as long as the result is useful, I don't need an explanation."
+      ]
+    },
+    {
+      "id": "Q52",
+      "question": "When GenUI recommends an operation plan for you, what information do you most want the system to explain?",
+      "options": [
+        "A. Why this plan was chosen instead of others.",
+        "B. What data or rules this plan was generated based on.",
+        "C. What limitations or risks this plan may have.",
+        "D. What different results would occur if I chose another plan."
+      ]
+    },
+    {
+      "id": "Q53",
+      "question": "In what form do you think GenUI's explanation information should be presented most appropriately?",
+      "options": [
+        "A. Short text description (one-sentence summary).",
+        "B. Detailed step-by-step description (itemized explanation).",
+        "C. Visual charts (e.g., decision path diagrams).",
+        "D. Interactive explanation (expand details on demand)."
+      ]
+    },
+    {
+      "id": "Q54",
+      "question": "When GenUI cannot complete a task, how do you want the system to explain the reason?",
+      "options": [
+        "A. Simply informing me it's \"Unable to complete.\"",
+        "B. Explaining specific limitations or obstacles.",
+        "C. Providing an alternative and explaining the difference.",
+        "D. Listing all possible failure reasons in detail."
+      ]
+    },
+    {
+      "id": "Q55",
+      "question": "In which situation do you think GenUI most needs to proactively provide transparency information?",
+      "options": [
+        "A. When the AI makes a decision inconsistent with user expectations.",
+        "B. When the task involves user privacy or sensitive data.",
+        "C. When the AI's confidence level is low.",
+        "D. When the operation result is irreversible."
+      ]
+    },
+    {
+      "id": "Q56",
+      "question": "If GenUI provides a detailed decision explanation, but you don't understand the technical terms, you will:",
+      "options": [
+        "A. Ignore the explanation and use the result directly.",
+        "B. Request the system to re-explain in more plain language.",
+        "C. Search for the terms before trying to understand.",
+        "D. Think the system's explanation ability is insufficient and lower your trust."
+      ]
+    },
+    {
+      "id": "Q57",
+      "question": "When do you think GenUI's transparency information should be presented?",
+      "options": [
+        "A. Proactively displayed before the AI executes the operation.",
+        "B. Automatically attached after the AI executes the operation.",
+        "C. Displayed only when the user proactively requests it.",
+        "D. Automatically popped up at key decision nodes."
+      ]
+    },
+    {
+      "id": "Q58",
+      "question": "When GenUI informs you that its generation result has a confidence level of 70%, how will you handle this result?",
+      "options": [
+        "A. Use it directly; 70% is reliable enough.",
+        "B. Use it but conduct extra verification on key content.",
+        "C. Request the AI to regenerate to improve confidence.",
+        "D. Give up on the result and find other ways to complete the task."
+      ]
+    },
+    {
+      "id": "Q59",
+      "question": "At what level do you think GenUI's use of user data should remain transparent?",
+      "options": [
+        "A. Just informing which data types were used.",
+        "B. Explaining how the data affects the generation results.",
+        "C. Providing a complete data usage record.",
+        "D. Allowing users to view and manage all data used."
+      ]
+    },
+    {
+      "id": "Q60",
+      "question": "When GenUI's explanation contradicts your own judgment, you will:",
+      "options": [
+        "A. Believe the AI's explanation and adjust your judgment.",
+        "B. Stick to your judgment and question the AI's explanation.",
+        "C. Seek third-party verification before deciding.",
+        "D. Keep both judgments and observe subsequent results."
+      ]
+    },
+    {
+      "id": "Q61",
+      "question": "What is the impact of GenUI's \"Black Box\" nature (unable to explain internal logic) on your user experience?",
+      "options": [
+        "A. Severe impact; cannot accept an opaque system.",
+        "B. Some impact; but acceptable if the result is useful.",
+        "C. Little impact; I care more about the usage results.",
+        "D. No impact; internal AI logic is not my concern."
+      ]
+    },
+    {
+      "id": "Q62",
+      "question": "What type of content do you want GenUI to prioritize when displaying explanation information?",
+      "options": [
+        "A. Key factors affecting the final result.",
+        "B. Uncertainty in the AI's judgment process.",
+        "C. Correlation with the user's historical behavior.",
+        "D. Possible alternatives and their comparisons."
+      ]
+    },
+    {
+      "id": "Q63",
+      "question": "When you find that GenUI's actual behavior is inconsistent with the system-declared working method, you will:",
+      "options": [
+        "A. Report this inconsistency to the platform.",
+        "B. Adjust your own understanding and expectations of the system.",
+        "C. Lower your trust in the system's transparency statements.",
+        "D. Stop using the system until the problem is solved."
+      ]
+    },
+    {
+      "id": "Q64",
+      "question": "To what extent do you think GenUI should explain the basis for its personalized recommendations?",
+      "options": [
+        "A. Completely transparent, detailed explanation of the basis for each recommendation.",
+        "B. Partially transparent, explaining major influencing factors.",
+        "C. Brief explanation, summarizing recommendation reasons in one sentence.",
+        "D. No explanation needed; personalized results are fine as long as they work."
+      ]
+    },
+    {
+      "id": "Q65",
+      "question": "When GenUI displays multiple pieces of explanation information simultaneously, which organization method is easiest to understand?",
+      "options": [
+        "A. Sort by importance; key information first.",
+        "B. Chronological order, showing the decision process.",
+        "C. Group by category for easy lookup.",
+        "D. Summary form, supporting expansion on demand."
+      ]
+    },
+    {
+      "id": "Q66",
+      "question": "Do you think GenUI's transparency design should differ for different user groups?",
+      "options": [
+        "A. Yes; professional users need deeper technical explanations.",
+        "B. Yes; novice users need simpler plain language descriptions.",
+        "C. Yes; should be dynamically adjusted based on user preference.",
+        "D. No; all users should receive the same transparency."
+      ]
+    },
+    {
+      "id": "Q67",
+      "question": "When GenUI modifies your previous settings or preferences, how do you want the system to inform you?",
+      "options": [
+        "A. Real-time notification and explanation of the reason for modification.",
+        "B. Record in the operation log for lookup.",
+        "C. Explain only when I proactively ask.",
+        "D. Provide a comparison of settings before and after the change."
+      ]
+    },
+    {
+      "id": "Q68",
+      "question": "How helpful do you find GenUI's error explanations (explaining why it failed)?",
+      "options": [
+        "A. Very helpful; helps me understand system limitations.",
+        "B. Somewhat helpful; but I hope it provides solutions at the same time.",
+        "C. Limited help; I care more about how to fix it than the reason.",
+        "D. No help; when an error occurs, I just want a quick fix."
+      ]
+    },
+    {
+      "id": "Q69",
+      "question": "Which transparency information do you think best helps you make better decisions when using GenUI?",
+      "options": [
+        "A. AI's evaluation basis for different plans.",
+        "B. Data sources and quality used by the AI.",
+        "C. Key assumptions in the AI's decision process.",
+        "D. AI's historical performance in similar scenarios."
+      ]
+    },
+    {
+      "id": "Q70",
+      "question": "When GenUI's explanation information is too complex, you will:",
+      "options": [
+        "A. Read carefully and try hard to understand.",
+        "B. Read only the summary or key parts.",
+        "C. Request the system to simplify the explanation.",
+        "D. Skip the explanation and use the result directly."
+      ]
+    },
+    {
+      "id": "Q71",
+      "question": "How do you think GenUI should handle explanation information that users cannot verify?",
+      "options": [
+        "A. Provide verifiable data sources to support the explanation.",
+        "B. Clearly mark which explanations are verifiable.",
+        "C. Do not provide unverifiable explanation information.",
+        "D. Provide explanation but attach an uncertainty statement."
+      ]
+    },
+    {
+      "id": "Q72",
+      "question": "When GenUI explains that a result was generated \"based on your historical behavior,\" you will:",
+      "options": [
+        "A. Feel satisfied, believing the system understands my needs.",
+        "B. Want to know specifically which historical behaviors affected the result.",
+        "C. Feel privacy is over-analyzed and feel uncomfortable.",
+        "D. Not care; only care if the result is useful."
+      ]
+    },
+    {
+      "id": "Q73",
+      "question": "What is the value of GenUI's operation log (recording all AI operations) to you?",
+      "options": [
+        "A. Very important; I will check it regularly.",
+        "B. Valuable; but only checked when a problem occurs.",
+        "C. Limited value; too tedious to check proactively.",
+        "D. No value; I don't need this kind of record."
+      ]
+    },
+    {
+      "id": "Q74",
+      "question": "When GenUI cannot explain the reason for a decision, how do you think the system should respond?",
+      "options": [
+        "A. Honestly inform that it cannot explain and state the reason.",
+        "B. Provide an approximate explanation, even if not fully accurate.",
+        "C. Guide the user to verify the result through testing.",
+        "D. Suggest the user consult a professional."
+      ]
+    },
+    {
+      "id": "Q75",
+      "question": "What degree of understanding do you think ideal GenUI transparency should help the user reach?",
+      "options": [
+        "A. Fully understand the AI's decision logic and internal mechanisms.",
+        "B. Understand major factors influencing AI decisions.",
+        "C. Be able to predict AI behavior in similar scenarios.",
+        "D. Be able to judge whether AI results are credible."
+      ]
+    },
+    {
+      "id": "Q101",
+      "question": "When GenUI generates an interface, do you want to know the reason for its generation?",
+      "options": [
+        "A. Must know.",
+        "B. Hope to know.",
+        "C. Don't care.",
+        "D. No need to know."
+      ]
+    },
+    {
+      "id": "Q102",
+      "question": "When the system provides explanation information, you will:",
+      "options": [
+        "A. Always read it.",
+        "B. Read it selectively.",
+        "C. Rarely read it.",
+        "D. Ignore the explanation."
+      ]
+    },
+    {
+      "id": "Q103",
+      "question": "When the explanation content is complex, you will:",
+      "options": [
+        "A. Carefully try to understand.",
+        "B. Browse briefly.",
+        "C. Skip it.",
+        "D. Feel burdened."
+      ]
+    },
+    {
+      "id": "Q104",
+      "question": "When the system does not provide an explanation, you will:",
+      "options": [
+        "A. Speculate yourself.",
+        "B. Feel uneasy.",
+        "C. Continue using it.",
+        "D. Lower your trust."
+      ]
+    },
+    {
+      "id": "Q105",
+      "question": "When the explanation is inconsistent with the result, you will:",
+      "options": [
+        "A. Believe the explanation.",
+        "B. Believe the result.",
+        "C. Verify further.",
+        "D. Give up on using it."
+      ]
+    },
+    {
+      "id": "Q106",
+      "question": "When the system displays the generation process, you will:",
+      "options": [
+        "A. View it all.",
+        "B. View key parts.",
+        "C. Rarely view it.",
+        "D. Not view it."
+      ]
+    },
+    {
+      "id": "Q107",
+      "question": "When the system's explanation is too simple, you will:",
+      "options": [
+        "A. Accept it.",
+        "B. Hope for more detail.",
+        "C. Not be very satisfied.",
+        "D. Ignore the explanation."
+      ]
+    },
+    {
+      "id": "Q108",
+      "question": "When the explanation is too detailed, you will:",
+      "options": [
+        "A. Read it all.",
+        "B. Read it selectively.",
+        "C. Feel redundant.",
+        "D. Skip it."
+      ]
+    },
+    {
+      "id": "Q109",
+      "question": "When the system provides a visual explanation, you will:",
+      "options": [
+        "A. Prioritize viewing it.",
+        "B. Occasionally view it.",
+        "C. Rarely view it.",
+        "D. No need for it."
+      ]
+    },
+    {
+      "id": "Q110",
+      "question": "When you cannot understand the system explanation, you will:",
+      "options": [
+        "A. Read it again.",
+        "B. Look for information.",
+        "C. Ignore the explanation.",
+        "D. Give up on using it."
+      ]
+    },
+    {
+      "id": "Q111",
+      "question": "When the system explains its recommended operation, you will:",
+      "options": [
+        "A. Rely completely on the explanation.",
+        "B. Refer to the explanation.",
+        "C. Not pay much attention.",
+        "D. Ignore the explanation."
+      ]
+    },
+    {
+      "id": "Q112",
+      "question": "When the system displays decision basis, you will:",
+      "options": [
+        "A. Analyze it deeply.",
+        "B. Understand it simply.",
+        "C. Rarely pay attention.",
+        "D. No need for it."
+      ]
+    },
+    {
+      "id": "Q113",
+      "question": "When the explanation affects your operation, you will:",
+      "options": [
+        "A. Follow it completely.",
+        "B. Refer to it partially.",
+        "C. Be rarely affected.",
+        "D. Ignore it completely."
+      ]
+    },
+    {
+      "id": "Q114",
+      "question": "When there is uncertainty in the system's explanation, you will:",
+      "options": [
+        "A. Accept the uncertainty.",
+        "B. Use it cautiously.",
+        "C. Lower your trust.",
+        "D. Give up on using it."
+      ]
+    },
+    {
+      "id": "Q115",
+      "question": "When the system hides part of the logic, you will:",
+      "options": [
+        "A. Accept it.",
+        "B. Have slight doubts.",
+        "C. Clearly distrust it.",
+        "D. Refuse to use it."
+      ]
+    },
+    {
+      "id": "Q116",
+      "question": "When the system provides a \"Why was it designed this way\" description, you will:",
+      "options": [
+        "A. Must view it.",
+        "B. Sometimes view it.",
+        "C. Rarely view it.",
+        "D. Not view it."
+      ]
+    },
+    {
+      "id": "Q117",
+      "question": "When an explanation helps you understand the interface, you will:",
+      "options": [
+        "A. Rely on it strongly.",
+        "B. Rely on it moderately.",
+        "C. Use it occasionally.",
+        "D. Not rely on it."
+      ]
+    },
+    {
+      "id": "Q118",
+      "question": "When the explanation conflicts with your intuition, you will:",
+      "options": [
+        "A. Believe the explanation.",
+        "B. Compare and judge.",
+        "C. Believe your intuition.",
+        "D. Ignore the explanation."
+      ]
+    },
+    {
+      "id": "Q119",
+      "question": "When the system provides historical generation records, you will:",
+      "options": [
+        "A. View them frequently.",
+        "B. View them occasionally.",
+        "C. Rarely view them.",
+        "D. Not view them."
+      ]
+    },
+    {
+      "id": "Q120",
+      "question": "When the explanation increases operation time, you will:",
+      "options": [
+        "A. Still view it.",
+        "B. View it selectively.",
+        "C. Rarely view it.",
+        "D. Not view it."
+      ]
+    },
+    {
+      "id": "Q121",
+      "question": "When the system allows you to view \"Internal Logic,\" you will:",
+      "options": [
+        "A. Study it deeply.",
+        "B. Browse briefly.",
+        "C. Rarely view it.",
+        "D. Not be interested."
+      ]
+    },
+    {
+      "id": "Q122",
+      "question": "When the explanation is presented in natural language, you will:",
+      "options": [
+        "A. Understand it more easily.",
+        "B. Find it slightly helpful.",
+        "C. Have no obvious impact.",
+        "D. Not be interested."
+      ]
+    },
+    {
+      "id": "Q123",
+      "question": "When the explanation is presented in technical form, you will:",
+      "options": [
+        "A. Trust it more.",
+        "B. Trust it moderately.",
+        "C. Feel it's complex.",
+        "D. Not understand it."
+      ]
+    },
+    {
+      "id": "Q124",
+      "question": "When the system fails to explain, you will:",
+      "options": [
+        "A. Ignore it.",
+        "B. Feel confused.",
+        "C. Lower your trust.",
+        "D. Stop using it."
+      ]
+    },
+    {
+      "id": "Q125",
+      "question": "When the system allows you to request an explanation, you will:",
+      "options": [
+        "A. Request frequently.",
+        "B. Request occasionally.",
+        "C. Rarely request.",
+        "D. Never request."
+      ]
+    }
+  ],
+  "open_ended_questions": [
+    {
+      "id": "Q26",
+      "question": "Please share your views on the conflict between \"Algorithm Transparency\" and \"Trade Secrets.\""
+    },
+    {
+      "id": "Q27",
+      "question": "Describe an experience where you felt frustrated because you didn't understand an AI's behavior (e.g., sudden error or change in appearance)."
+    },
+    {
+      "id": "Q28",
+      "question": "How do you think AI should explain its \"Neural Network\" working principle to non-technical users?"
+    },
+    {
+      "id": "Q29",
+      "question": "When AI gives biased suggestions, what kind of system-level transparency explanation do you want to see?"
+    },
+    {
+      "id": "Q30",
+      "question": "Describe a way of displaying source citations that you find \"most convincing.\""
+    },
+    {
+      "id": "Q31",
+      "question": "If the AI could show its \"Mental Prediction Model\" (i.e., what it thinks you want), would you be interested? Why?"
+    },
+    {
+      "id": "Q32",
+      "question": "In a Generative UI interface, what transparency designs do you think most effectively lower the user's psychological threshold?"
+    },
+    {
+      "id": "Q33",
+      "question": "How do you define \"Informed Consent\" in AI interaction?"
+    },
+    {
+      "id": "Q34",
+      "question": "When AI logic contradicts human common sense, do you prefer it to stick to its logic or compromise to common sense?"
+    },
+    {
+      "id": "Q35",
+      "question": "Please talk about your concerns regarding the application of \"Black Box Systems\" in critical decisions (e.g., recruitment, medical)."
+    },
+    {
+      "id": "Q36",
+      "question": "Describe the three core elements that \"Explainable AI\" (XAI) should possess in your mind."
+    },
+    {
+      "id": "Q37",
+      "question": "When interface components are automatically generated, how do you want to be informed of the \"data support\" behind that component?"
+    },
+    {
+      "id": "Q38",
+      "question": "Would you use an AI more frequently because it can clearly state its limitations?"
+    },
+    {
+      "id": "Q39",
+      "question": "Talk about the role of AI-generated \"Creative Statements\" or \"Watermarks\" in terms of transparency."
+    },
+    {
+      "id": "Q40",
+      "question": "If the AI provided a \"Why are you seeing this result\" feature, what information would you want it to include?"
+    },
+    {
+      "id": "Q41",
+      "question": "Do you think \"Version Change Logs\" of AI models are useful for ordinary users? How should they be written?"
+    },
+    {
+      "id": "Q42",
+      "question": "Describe how you \"Reverse Engineer\" an AI's operating logic by observing its response characteristics."
+    },
+    {
+      "id": "Q43",
+      "question": "When an AI shows a certain preference in multi-turn dialogues, how do you want it to disclose the reason for this preference?"
+    },
+    {
+      "id": "Q44",
+      "question": "Please evaluate the pros and cons of \"Conversational Explanation\" versus \"Graphical Logic Display\" in enhancing transparency."
+    },
+    {
+      "id": "Q45",
+      "question": "How do you view the identity transparency issue when an AI simulates an \"Expert Tone\" to answer questions?"
+    },
+    {
+      "id": "Q46",
+      "question": "If the AI used your private data for real-time inference, in what way should it warn you?"
+    },
+    {
+      "id": "Q47",
+      "question": "Talk about whether research into the explainability of \"AI Hallucinations\" increases your sense of security."
+    },
+    {
+      "id": "Q48",
+      "question": "During collaboration, if the AI automatically modifies your settings, what kind of \"Log Record\" should it leave?"
+    },
+    {
+      "id": "Q49",
+      "question": "Under what circumstances do you think the AI should proactively request you to view its working principle explanation?"
+    },
+    {
+      "id": "Q50",
+      "question": "Imagine that future AI transparency reaches 100% (you can understand every line of neuron activity). Do you think this would change the way you use it?\n\nDimension 5: Explainability & Transparency (Continued)\nMultiple Choice Questions (Part 2 - Claude Framework)"
+    },
+    {
+      "id": "Q76",
+      "question": "How much do you think GenUI's \"explainability\" affects your daily use? Please explain with specific scenarios."
+    },
+    {
+      "id": "Q77",
+      "question": "Please describe an experience where GenUI's explanation truly helped you make a better decision. What made it so effective?"
+    },
+    {
+      "id": "Q78",
+      "question": "In which scenarios do you think GenUI most needs to maintain transparency? In which scenarios is transparency less important?"
+    },
+    {
+      "id": "Q79",
+      "question": "When an explanation given by GenUI conflicts with your intuition, how do you decide which side to believe? Describe your thought process."
+    },
+    {
+      "id": "Q80",
+      "question": "Do you think there is a contradiction between \"AI Transparency\" and \"User Privacy\"? How do you hope to balance these in GenUI?"
+    },
+    {
+      "id": "Q81",
+      "question": "Please describe an experience where you felt confused or uneasy because of a lack of system transparency while using GenUI."
+    },
+    {
+      "id": "Q82",
+      "question": "Which level of understanding do you think GenUI's explanation should target: Operational (what it did), Logical (why it did it), or Principle (how it was done)? Why?"
+    },
+    {
+      "id": "Q83",
+      "question": "In GenUI transparency information, which content do you think is \"Mandatory\" and which is \"Optional\"? What is the basis for this division?"
+    },
+    {
+      "id": "Q84",
+      "question": "Do you think GenUI's transparency design affects the speed of trust-building between users and AI? Explain based on personal experience."
+    },
+    {
+      "id": "Q85",
+      "question": "Please describe how you want GenUI to present its decision process visually, making it both intuitive and not overly complex."
+    },
+    {
+      "id": "Q86",
+      "question": "When an explanation provided by GenUI conflicts with your professional knowledge, how do you handle this cognitive conflict?"
+    },
+    {
+      "id": "Q87",
+      "question": "Do you think GenUI should proactively inform users of its capability boundaries and limitations? How does this affect your experience?"
+    },
+    {
+      "id": "Q88",
+      "question": "How do you judge if an explanation given by GenUI is truly reliable rather than a \"plausible-sounding\" surface-level description?"
+    },
+    {
+      "id": "Q89",
+      "question": "How should GenUI's transparency information be presented differently for users with different levels of experience?"
+    },
+    {
+      "id": "Q90",
+      "question": "When GenUI cannot explain an operation result, what long-term impact do you think this has on the human-AI collaboration relationship?"
+    },
+    {
+      "id": "Q91",
+      "question": "Describe your understanding of \"Algorithm Transparency\" and \"Result Transparency.\" Which do you value more in GenUI?"
+    },
+    {
+      "id": "Q92",
+      "question": "How should GenUI design transparency features so they are meaningful to ordinary users, not just technical experts?"
+    },
+    {
+      "id": "Q93",
+      "question": "Does your requirement for system transparency increase significantly when using GenUI for tasks involving major decisions? Describe this change."
+    },
+    {
+      "id": "Q94",
+      "question": "Please describe one design case of GenUI transparency that you think was best, and why it impressed you."
+    },
+    {
+      "id": "Q95",
+      "question": "Do you think GenUI's transparency mechanism could be abused to influence user behavior? how would you prevent this risk?"
+    },
+    {
+      "id": "Q96",
+      "question": "When there is too much explanation information from GenUI, how should the system help users filter truly valuable transparency information?"
+    },
+    {
+      "id": "Q97",
+      "question": "Describe the level of transparency you want GenUI to maintain regarding user data usage and how this affects your willingness to use it."
+    },
+    {
+      "id": "Q98",
+      "question": "Do you think GenUI's \"explainability\" should be a core indicator for evaluating AI system quality? State your position and reasons."
+    },
+    {
+      "id": "Q99",
+      "question": "Has your requirement for system transparency changed during long-term use of GenUI? What drove this change?"
+    },
+    {
+      "id": "Q100",
+      "question": "Describe your ideal GenUI transparency experience—how does the system keep you aware of AI behavior without increasing cognitive load?\n\nDimension 5: Explainability & Transparency (Continued)\nMultiple Choice Questions (Part 3 - ChatGPT Framework)"
+    },
+    {
+      "id": "Q126",
+      "question": "Under what circumstances do you want GenUI to provide an explanation?"
+    },
+    {
+      "id": "Q127",
+      "question": "What kind of explanation best helps you understand the interface?"
+    },
+    {
+      "id": "Q128",
+      "question": "Do you prefer a concise or detailed explanation? Why?"
+    },
+    {
+      "id": "Q129",
+      "question": "How do you handle it when an explanation conflicts with the result?"
+    },
+    {
+      "id": "Q130",
+      "question": "How do you judge if an explanation is credible?"
+    },
+    {
+      "id": "Q131",
+      "question": "How much influence does an explanation have on your decision? Why?"
+    },
+    {
+      "id": "Q132",
+      "question": "Do you proactively check the system's generation process? Why?"
+    },
+    {
+      "id": "Q133",
+      "question": "What kind of explanation would make you trust the system more?"
+    },
+    {
+      "id": "Q134",
+      "question": "How do you handle an explanation you cannot understand?"
+    },
+    {
+      "id": "Q135",
+      "question": "In what form (text, diagram, etc.) do you want the explanation presented? Why?"
+    },
+    {
+      "id": "Q136",
+      "question": "How do you view the \"Black Box\" behavior of the system?"
+    },
+    {
+      "id": "Q137",
+      "question": "In what situation can you accept no explanation?"
+    },
+    {
+      "id": "Q138",
+      "question": "How do you use explanations to optimize your operations?"
+    },
+    {
+      "id": "Q139",
+      "question": "Which key decisions do you want the system to explain?"
+    },
+    {
+      "id": "Q140",
+      "question": "Does explanation increase your usage burden? Why?"
+    },
+    {
+      "id": "Q141",
+      "question": "How do you balance explanation depth with usage efficiency?"
+    },
+    {
+      "id": "Q142",
+      "question": "How do you judge whether you need to view an explanation?"
+    },
+    {
+      "id": "Q143",
+      "question": "Would you give up using a system because of insufficient explanation? Why?"
+    },
+    {
+      "id": "Q144",
+      "question": "How do you view the transparency of the system?"
+    },
+    {
+      "id": "Q145",
+      "question": "Do you want the system to provide traceable operation records? Why?"
+    },
+    {
+      "id": "Q146",
+      "question": "How do you use historical records to understand system behavior?"
+    },
+    {
+      "id": "Q147",
+      "question": "What operations (e.g., modification, rollback) do you want the explanation to support?"
+    },
+    {
+      "id": "Q148",
+      "question": "How do you evaluate the explainability of a system?"
+    },
+    {
+      "id": "Q149",
+      "question": "What does an ideal explanation system look like to you?"
+    },
+    {
+      "id": "Q150",
+      "question": "How do you want GenUI to improve transparency to enhance your experience?"
+    }
+  ]
+}

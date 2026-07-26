@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HarvestDial Global - Multilingual Crop Forecasting</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Georgia', serif;
+  background: #f5e6c8;
+  color: #3d2b1f;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Vintage Seed Catalog Colors */
+:root {
+  --rust: #a0522d;
+  --olive: #556b2f;
+  --cream: #fdf5e6;
+  --burgundy: #722f37;
+  --gold: #b8860b;
+  --sage: #8fbc8f;
+  --terra: #cc7722;
+  --deep-green: #2e4a2e;
+  --parchment: #f5e6c8;
+}
+
+/* Header */
+.header {
+  background: var(--deep-green);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--gold);
+}
+.logo {
+  display: flex; align-items: center; gap: 8px;
+}
+.logo-icon {
+  width: 36px; height: 36px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  border: 2px solid var(--cream);
+}
+.logo-text {
+  color: var(--cream);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.logo-sub {
+  color: var(--sage);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.lang-btn {
+  background: var(--burgundy);
+  color: var(--cream);
+  border: 1px solid var(--gold);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* Navigation */
+.nav {
+  background: var(--rust);
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--gold);
+}
+.nav-item {
+  flex: 1;
+  min-width: fit-content;
+  padding: 8px 12px;
+  text-align: center;
+  color: var(--cream);
+  font-size: 10px;
+  line-height: 1.3;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+.nav-item:hover { background: rgba(0,0,0,0.2); }
+.nav-item span { display: block; }
+.nav-item .nav-en { font-weight: bold; font-size: 11px; }
+.nav-item .nav-es { font-style: italic; opacity: 0.8; }
+.nav-item .nav-hi { opacity: 0.8; }
+
+/* Ticker */
+.ticker-bar {
+  background: #1a1a0e;
+  padding: 8px 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gold);
+}
+.ticker-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-item {
+  color: var(--sage);
+  font-size: 11px;
+  margin-right: 30px;
+  font-family: monospace;
+}
+.ticker-item .up { color: #4caf50; }
+.ticker-item .down { color: #f44336; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--deep-green) 0%, var(--olive) 100%);
+  padding: 24px 16px;
+  text-align: center;
+  border-bottom: 3px solid var(--terra);
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 21px);
+}
+.hero h1 {
+  color: var(--cream);
+  font-size: 22px;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  position: relative;
+}
+.hero p {
+  color: var(--sage);
+  font-size: 13px;
+  position: relative;
+}
+.dial-icon {
+  width: 60px; height: 60px;
+  margin: 12px auto;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle, #2a2a1a, #1a1a0e);
+}
+.dial-needle {
+  position: absolute;
+  width: 2px; height: 22px;
+  background: var(--gold);
+  left: 50%; top: 8px;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(35deg);
+  animation: dialMove 3s ease-in-out infinite alternate;
+}
+@keyframes dialMove {
+  0% { transform: translateX(-50%) rotate(-30deg); }
+  100% { transform: translateX(-50%) rotate(35deg); }
+}
+.dial-center {
+  width: 8px; height: 8px;
+  background: var(--terra);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Region Flags */
+.regions {
+  padding: 12px 16px;
+  background: var(--cream);
+  border-bottom: 2px solid var(--rust);
+}
+.regions h3 {
+  font-size: 12px;
+  color: var(--burgundy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.flag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.flag-card {
+  display: flex; align-items: center; gap: 6px;
+  background: white;
+  border: 1px solid var(--rust);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 11px;
+}
+.flag-emoji { font-size: 18px; }
+
+/* Soil Sensor Cards */
+.sensors {
+  padding: 16px;
+  background: var(--parchment);
+}
+.sensors h3 {
+  font-size: 13px;
+  color: var(--deep-green);
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--olive);
+  padding-bottom: 4px;
+}
+.sensor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.sensor-card {
+  background: white;
+  border: 2px solid var(--olive);
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.sensor-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--olive);
+}
+.sensor-card.alert::before { background: #f44336; }
+.sensor-icon { font-size: 22px; margin-bottom: 4px; }
+.sensor-label { font-size: 9px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+.sensor-value { font-size: 18px; font-weight: bold; color: var(--deep-green); margin: 4px 0; }
+.sensor-unit { font-size: 10px; color: var(--rust); }
+.sensor-status {
+  font-size: 8px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 4px;
+}
+.status-ok { background: #e8f5e9; color: #2e7d32; }
+.status-warn { background: #fff3e0; color: #e65100; }
+.status-alert { background: #ffebee; color: #c62828; }
+
+/* Radio CTA */
+.cta-section {
+  padding: 20px 16px;
+  background: var(--deep-green);
+  text-align: center;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+}
+.radio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #4a3728 0%, #2a1f18 100%);
+  border: 3px solid var(--gold);
+  border-radius: 30px;
+  padding: 14px 28px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.radio-btn:hover { transform: scale(1.02); }
+.radio-dot {
+  width: 16px; height: 16px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  position: relative;
+}
+.radio-dot::after {
+  content: '';
+  width: 8px; height: 8px;
+  background: #4caf50;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.radio-text {
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.radio-freq {
+  color: var(--gold);
+  font-size: 10px;
+  font-family: monospace;
+}
+.cta-sub {
+  color: var(--sage);
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+/* Weather Alert Button */
+.weather-trigger {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  animation: alertPulse 2s infinite;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(244,67,54,0.5);
+}
+@keyframes alertPulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(244,67,54,0.5); }
+  50% { box-shadow: 0 2px 20px rgba(244,67,54,0.8); }
+}
+
+/* Modals */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: var(--cream);
+  border: 3px solid var(--gold);
+  border-radius: 8px;
+  max-width: 380px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-header {
+  background: var(--deep-green);
+  color: var(--cream);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--gold);
+}
+.modal-header h3 { font-size: 14px; }
+.modal-close {
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+}
+.modal-body { padding: 16px; }
+
+/* Language Modal */
+.lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: white;
+  border: 2px solid var(--olive);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.lang-option:hover { background: #e8f5e9; border-color: var(--deep-green); }
+.lang-option.selected { background: #c8e6c9; border-color: var(--deep-green); }
+
+/* Weather Modal */
+.weather-alert {
+  background: #fff3e0;
+  border: 2px solid #ff9800;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.weather-alert h4 { color: #e65100; font-size: 13px; margin-bottom: 6px; }
+.weather-alert p { font-size: 11px; line-height: 1.4; }
+.weather-map {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(135deg, #556b2f 20%, #8fbc8f 40%, #ffd700 60%, #ff6b35 80%);
+  border-radius: 4px;
+  border: 1px solid var(--olive);
+  position: relative;
+  margin-top: 10px;
+}
+.weather-map::after {
+  content: '🌧️ MONSOON TRACK';
+  position: absolute;
+  bottom: 8px; left: 8px;
+  font-size: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a0e;
+  color: var(--sage);
+  padding: 16px;
+  text-align: center;
+  font-size: 10px;
+}
+.footer-badge {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  padding: 4px 12px;
+  border-radius: 3px;
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* Forecast Section */
+.forecast {
+  padding: 16px;
+  background: white;
+  border-bottom: 2px solid var(--olive);
+}
+.forecast h3 {
+  font-size: 13px;
+  color: var(--burgundy);
+  margin-bottom: 10px;
+}
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.forecast-crop { font-size: 12px; font-weight: bold; }
+.forecast-bar {
+  flex: 1;
+  height: 8px;
+  background: #eee;
+  margin: 0 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.forecast-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.forecast-pct { font-size: 11px; font-weight: bold; min-width: 35px; text-align: right; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="logo">
+    <div class="logo-icon">🌾</div>
+    <div>
+      <div class="logo-text">HarvestDial</div>
+      <div class="logo-sub">Global Forecasting</div>
+    </div>
+  </div>
+  <button class="lang-btn" onclick="openModal('langModal')">🌐 Lang</button>
+</div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-item">
+    <span class="nav-en">Dashboard</span>
+    <span class="nav-es">Tablero</span>
+    <span class="nav-hi">डैशबोर्ड</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-en">Forecast</span>
+    <span class="nav-es">Pronóstico</span>
+    <span class="nav-hi">पूर्वानुमान</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-en">Markets</span>
+    <span class="nav-es">Mercados</span>
+    <span class="nav-hi">बाज़ार</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-en">Sensors</span>
+    <span class="nav-es">Sensores</span>
+    <span class="nav-hi">सेंसर</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-en">Alerts</span>
+    <span class="nav-es">Alertas</span>
+    <span class="nav-hi">अलर्ट</span>
+  </div>
+</nav>
+
+<!-- Crop Price Ticker -->
+<div class="ticker-bar">
+  <div class="ticker-content">
+    <span class="ticker-item">🌾 WHEAT $7.42 <span class="up">▲ +0.18</span></span>
+    <span class="ticker-item">🌽 CORN $5.89 <span class="down">▼ -0.07</span></span>
+    <span class="ticker-item">🍚 RICE $16.20 <span class="up">▲ +0.33</span></span>
+    <span class="ticker-item">🫘 SOYBEAN $13.55 <span class="up">▲ +0.21</span></span>
+    <span class="ticker-item">☕ COFFEE $182.40 <span class="down">▼ -1.20</span></span>
+    <span class="ticker-item">🥔 POTATO $22.10 <span class="up">▲ +0.45</span></span>
+    <span class="ticker-item">🌾 WHEAT $7.42 <span class="up">▲ +0.18</span></span>
+    <span class="ticker-item">🌽 CORN $5.89 <span class="down">▼ -0.07</span></span>
+    <span class="ticker-item">🍚 RICE $16.20 <span class="up">▲ +0.33</span></span>
+    <span class="ticker-item">🫘 SOYBEAN $13.55 <span class="up">▲ +0.21</span></span>
+    <span class="ticker-item">☕ COFFEE $182.40 <span class="down">▼ -1.20</span></span>
+    <span class="ticker-item">🥔 POTATO $22.10 <span class="up">▲ +0.45</span></span>
+  </div>
+</div>
+
+<!-- Weather Alert Trigger -->
+<button class="weather-trigger" onclick="openModal('weatherModal')">⚡</button>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="dial-icon">
+    <div class="dial-needle"></div>
+    <div class="dial-center"></div>
+  </div>
+  <h1>Tune Into Your Harvest</h1>
+  <p>AI-powered crop forecasting across 47 languages & 120+ regions</p>
+</div>
+
+<!-- Region Flags -->
+<div class="regions">
+  <h3>Active Monitoring Regions</h3>
+  <div class="flag-row">
+    <div class="flag-card"><span class="flag-emoji">🇮🇳</span> India</div>
+    <div class="flag-card"><span class="flag-emoji">🇧🇷</span> Brazil</div>
+    <div class="flag-card"><span class="flag-emoji">🇺🇸</span> USA</div>
+    <div class="flag-card"><span class="flag-emoji">🇲🇽</span> México</div>
+    <div class="flag-card"><span class="flag-emoji">🇳🇬</span> Nigeria</div>
+    <div class="flag-card"><span class="flag-emoji">🇦🇺</span> Australia</div>
+    <div class="flag-card"><span class="flag-emoji">🇦🇷</span> Argentina</div>
+    <div class="flag-card"><span class="flag-emoji">🇹🇭</span> Thailand</div>
+  </div>
+</div>
+
+<!-- Soil Sensor Cards -->
+<div class="sensors">
+  <h3>📡 Live Soil Sensor Array</h3>
+  <div class="sensor-grid">
+    <div class="sensor-card">
+      <div class="sensor-icon">💧</div>
+      <div class="sensor-label">Moisture</div>
+      <div class="sensor-value">67%</div>
+      <div class="sensor-unit">volumetric</div>
+      <span class="sensor-status status-ok">● OPTIMAL</span>
+    </div>
+    <div class="sensor-card">
+      <div class="sensor-icon">🌡️</div>
+      <div class="sensor-label">Temperature</div>
+      <div class="sensor-value">24°C</div>
+      <div class="sensor-unit">at 15cm depth</div>
+      <span class="sensor-status status-ok">● NORMAL</span>
+    </div>
+    <div class="sensor-card alert">
+      <div class="sensor-icon">⚗️</div>
+      <div class="sensor-label">pH Level</div>
+      <div class="sensor-value">5.2</div>
+      <div class="sensor-unit">slightly acidic</div>
+      <span class="sensor-status status-warn">● LOW</span>
+    </div>
+    <div class="sensor-card">
+      <div class="sensor-icon">🧪</div>
+      <div class="sensor-label">Nitrogen</div>
+      <div class="sensor-value">42</div>
+      <div class="sensor-unit">mg/kg</div>
+      <span class="sensor-status status-alert">● DEFICIENT</span>
+    </div>
+    <div class="sensor-card">
+      <div class="sensor-icon">☀️</div>
+      <div class="sensor-label">Solar Rad.</div>
+      <div class="sensor-value">680</div>
+      <div class="sensor-unit">W/m²</div>
+      <span class="sensor-status status-ok">● HIGH</span>
+    </div>
+    <div class="sensor-card">
+      <div class="sensor-icon">💨</div>
+      <div class="sensor-label">Wind Speed</div>
+      <div class="sensor-value">12</div>
+      <div class="sensor-unit">km/h NW</div>
+      <span class="sensor-status status-ok">● CALM</span>
+    </div>
+  </div>
+</div>
+
+<!-- Forecast Section -->
+<div class="forecast">
+  <h3>📊 Yield Forecast — Kharif 2024</h3>
+  <div class="forecast-row">
+    <span class="forecast-crop">🌾 Wheat</span>
+    <div class="forecast-bar"><div class="forecast-fill" style="width:82%;background:var(--olive)"></div></div>
+    <span class="forecast-pct" style="color:var(--olive)">82%</span>
+  </div>
+  <div class="forecast-row">
+    <span class="forecast-crop">🍚 Rice</span>
+    <div class="forecast-bar"><div class="forecast-fill" style="width:74%;background:var(--gold)"></div></div>
+    <span class="forecast-pct" style="color:var(--gold)">74%</span>
+  </div>
+  <div class="forecast-row">
+    <span class="forecast-crop">🌽 Maize</span>
+    <div class="forecast-bar"><div class="forecast-fill" style="width:91%;background:var(--deep-green)"></div></div>
+    <span class="forecast-pct" style="color:var(--deep-green)">91%</span>
+  </div>
+  <div class="forecast-row">
+    <span class="forecast-crop">🫘 Pulses</span>
+    <div class="forecast-bar"><div class="forecast-fill" style="width:58%;background:var(--rust)"></div></div>
+    <span class="forecast-pct" style="color:var(--rust)">58%</span>
+  </div>
+</div>
+
+<!-- Radio CTA -->
+<div class="cta-section">
+  <div class="radio-btn" onclick="openModal('langModal')">
+    <div class="radio-dot"></div>
+    <div>
+      <div class="radio-text">TUNE IN NOW</div>
+      <div class="radio-freq">FREQ: 47.120 MHz — ALL BANDS</div>
+    </div>
+  </div>
+  <p class="cta-sub">Sintonizar ahora • अभी ट्यून करें • Free 30-day forecast access</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>© 2024 HarvestDial Global — Retro Precision Agriculture</p>
+  <p style="margin-top:4px;">Pronóstico multilingual de cultivos • बहुभाषी फसल पूर्वानुमान</p>
+  <div class="footer-badge">EST. 1952 • TRUSTED BY FARMERS WORLDWIDE</div>
+</div>
+
+<!-- Language Modal -->
+<div class="modal-overlay" id="langModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>🌐 Select Language / Idioma / भाषा चुनें</h3>
+      <button class="modal-close" onclick="closeModal('langModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="lang-grid">
+        <div class="lang-option selected">🇬🇧 English</div>
+        <div class="lang-option">🇪🇸 Español</div>
+        <div class="lang-option">🇮🇳 हिन्दी</div>
+        <div class="lang-option">🇧🇷 Português</div>
+        <div class="lang-option">🇫🇷 Français</div>
+        <div class="lang-option">🇸🇦 العربية</div>
+        <div class="lang-option">🇨🇳 中文</div>
+        <div class="lang-option">🇯🇵 日本語</div>
+        <div class="lang-option">🇮🇩 Bahasa</div>
+        <div class="lang-option">🇹🇭 ไทย</div>
+        <div class="lang-option">🇻🇳 Tiếng Việt</div>
+        <div class="lang-option">🇰🇷 한국어</div>
+      </div>
+      <p style="margin-top:12px;font-size:10px;color:#666;text-align:center;">47 languages supported • Auto-detect enabled</p>
+    </div>
+  </div>
+</div>
+
+<!-- Weather Alert Modal -->
+<div class="modal-overlay" id="weatherModal">
+  <div class="modal">
+    <div class="modal-header" style="background:#c62828;">
+      <h3>⚠️ Weather Alert / Alerta / मौसम चेतावनी</h3>
+      <button class="modal-close" onclick="closeModal('weatherModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="weather-alert">
+        <h4>🌧️ HEAVY RAINFALL WARNING — Maharashtra, India</h4>
+        <p>Expected 120-150mm in next 48hrs. Harvest advisory: Proceed with early grain collection. Soil saturation risk HIGH.</p>
+      </div>
+      <div class="weather-alert" style="border-color:#f44336;background:#ffebee;">
+        <h4>🌪️ TROPICAL STORM — Gulf of Mexico</h4>
+        <p>Cat-2 storm approaching Tamaulipas coast. Evacuate livestock. Crop insurance claims window: 72hrs.</p>
+      </div>
+      <div class="weather-alert" style="border-color:#ff9800;background:#fff8e1;">
+        <h4>🥵 HEAT ADVISORY — Punjab Region</h4>
+        <p>Temperatures exceeding 44°C. Irrigation frequency: increase 2x. Monitor wheat stress indicators.</p>
+      </div>
+      <div class="weather-map"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).classList.add('active');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('active');
+}
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.classList.remove('active');
+    }
+  });
+});
+document.querySelectorAll('.lang-option').forEach(opt => {
+  opt.addEventListener('click', function() {
+    document.querySelectorAll('.lang-option').forEach(o => o.classList.remove('selected'));
+    this.classList.add('selected');
+  });
+});
+</script>
+</body>
+</html>

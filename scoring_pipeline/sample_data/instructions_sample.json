@@ -1,0 +1,17 @@
+[
+  {
+    "id": 27,
+    "scenario": "landing_marketing",
+    "instruction": "Create an information-dense mobile promo page for HarvestDial Global, a retro agriculture-tech platform for multilingual crop forecasting. Use vintage seed-catalog colors and a modal-heavy interface showing a language overlay, weather alert pop-up, crop price ticker, soil sensor cards, region flags, radio-style CTA button, and navigation labeled in English, Spanish, and Hindi."
+  },
+  {
+    "id": 104,
+    "scenario": "dashboard_analytics",
+    "instruction": "Design a responsive minimalist analytics widget for CargoLoom Sync used by enterprise IT admins monitoring supply-chain integrations. Show one large “EDI Message Queue” card with shipment status counts, a tiny latency sparkline, last failed partner name “NorthPier 3PL,” lots of white space, and a bottom navigation bar on mobile for Queue, Partners, Alerts, and Settings."
+  },
+  {
+    "id": 131,
+    "scenario": "dashboard_analytics",
+    "instruction": "Create a responsive card-grid dashboard for StageSignal Crew, a media and entertainment field operations app used by mobile event technicians. Use muted corporate blues and grays, dense compact cards for camera kits, venue check-ins, broadcast signal strength, crew assignments, incident reports, battery levels, upload queues, and a small schedule heatmap."
+  }
+]

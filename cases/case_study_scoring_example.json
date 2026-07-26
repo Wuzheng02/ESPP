@@ -1,0 +1,30 @@
+[
+  {
+    "instruction_id": 27,
+    "instruction_text": "Create an information-dense mobile promo page for HarvestDial Global, a retro agriculture-tech platform for multilingual crop forecasting. Use vintage seed-catalog colors and a modal-heavy interface showing a language overlay, weather alert pop-up, crop price ticker, soil sensor cards, region flags, radio-style CTA button, and navigation labeled in English, Spanish, and Hindi.",
+    "scenario": "landing_marketing",
+    "model": "model_A",
+    "note": "corresponds to cases/html/instruction_27_model_A.html and cases/png/instruction_27_model_A.png",
+    "human_score": 3.4,
+    "panel_full_score": 2.839,
+    "gap": -0.561,
+    "divergent_dimension": "Control",
+    "stage1_score_gap_between_panelists": 2,
+    "low_score_panelist": {
+      "brief": "middle_aged manager (female)",
+      "persona_id": "P_0419",
+      "stage1_score": 2,
+      "stage1_reason": "With the modal-heavy setup and that floating alert button, it feels like pop-ups could interrupt me and I'm not sure what I can dismiss or undo.",
+      "stage2_score": 2,
+      "stage2_reason": "I still feel low control because alerts/language elements and the floating button suggest interruptions without clear dismiss/undo management."
+    },
+    "high_score_panelist": {
+      "brief": "young_adult student (female)",
+      "persona_id": "P_0587",
+      "stage1_score": 4,
+      "stage1_reason": "I feel like I can pick regions and choose what to open from the nav without the page doing random stuff to me.",
+      "stage2_score": 3,
+      "stage2_reason": "I'm revising down to 3 because peers' points about potentially interruptive alert/modal elements (and unclear dismiss/undo) raise a real control/safety concern for me."
+    }
+  }
+]

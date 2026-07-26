@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CargoLoom Sync</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0B1121;
+            --surface: #111827;
+            --surface-2: #1F2937;
+            --surface-3: #162033;
+            --text: #E2E8F0;
+            --text-muted: #94A3B8;
+            --text-faint: #64748B;
+            --border: #1E293B;
+            --border-subtle: #1a2332;
+            --accent: #3B82F6;
+            --accent-glow: rgba(59, 130, 246, 0.15);
+            --good: #10B981;
+            --good-glow: rgba(16, 185, 129, 0.12);
+            --warn: #F59E0B;
+            --warn-glow: rgba(245, 158, 11, 0.12);
+            --danger: #EF4444;
+            --danger-glow: rgba(239, 68, 68, 0.12);
+            --danger-text: #F87171;
+            --queue: #6366F1;
+            --queue-glow: rgba(99, 102, 241, 0.12);
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.35; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.35); opacity: 0.6; }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes counter {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ambient glow on the right side */
+        .ambient-glow {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 45vw;
+            height: 45vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .app-shell {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 64px;
+            background: var(--surface);
+            border-right: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+
+        .sidebar-brand {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #2563EB);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: white;
+            letter-spacing: -0.5px;
+            margin-bottom: 36px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .sidebar-nav-item {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .sidebar-nav-item:hover {
+            background: var(--surface-2);
+        }
+
+        .sidebar-nav-item.active {
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+
+        .sidebar-nav-item.active::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 16px;
+            background: var(--accent);
+            border-radius: 0 2px 2px 0;
+        }
+
+        .sidebar-nav-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-faint);
+            transition: color 0.2s;
+        }
+
+        .sidebar-nav-item.active svg,
+        .sidebar-nav-item:hover svg {
+            color: var(--accent);
+        }
+
+        .sidebar-nav-item .badge {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--danger);
+            border: 2px solid var(--surface);
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-footer .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--surface-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            margin-left: 64px;
+            padding: 0 48px;
+            max-width: 1200px;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            padding: 40px 0 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .header .status-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-faint);
+            font-weight: 500;
+            background: var(--surface-2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .status-chip .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--good);
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 0 6px var(--good);
+        }
+
+        .content {
+            max-width: 800px;
+        }
+
+        /* The Queue Card */
+        .queue-card {
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+        }
+
+        .queue-card .card-header {
+            padding: 32px 36px 24px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .queue-card .card-header-left {
+            flex: 1;
+        }
+
+        .queue-card .title-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: var(--queue-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .card-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--queue);
+        }
+
+        .queue-card .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text);
+        }
+
+        .queue-card .card-subtitle {
+            font-size: 13px;
+            color: var(--text-faint);
+            line-height: 1.5;
+            max-width: 380px;
+        }
+
+        .latency-peek {
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .latency-label {
+            font-size: 11px;
+            color: var(--text-faint);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .latency-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -1px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .latency-unit {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-left: 2px;
+        }
+
+        .sparkline-container {
+            margin-top: 8px;
+            width: 120px;
+            height: 32px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .sparkline-container svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .queue-card .stats-row {
+            padding: 32px 36px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .stat {
+            position: relative;
+        }
+
+        .stat::after {
+            content: '';
+            position: absolute;
+            right: -16px;
+            top: 12%;
+            height: 76%;
+            width: 1px;
+            background: var(--border-subtle);
+        }
+
+        .stat:last-child::after {
+            display: none;
+        }
+
+        .stat-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .stat-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .stat-dot.total {
+            background: var(--accent);
+            box-shadow: 0 0 6px var(--accent-glow);
+        }
+
+        .stat-dot.inflight {
+            background: var(--good);
+            box-shadow: 0 0 6px var(--good-glow);
+        }
+
+        .stat-dot.queued {
+            background: var(--queue);
+            box-shadow: 0 0 6px var(--queue-glow);
+        }
+
+        .stat-dot.failed {
+            background: var(--danger);
+            box-shadow: 0 0 6px var(--danger-glow);
+            animation: breathe 2.5s ease-in-out infinite;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-faint);
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: -1px;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+            animation: counter 0.4s ease-out;
+        }
+
+        .stat.failed .stat-value {
+            color: var(--danger-text);
+        }
+
+        .stat-trend {
+            font-size: 11px;
+            color: var(--text-faint);
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        .stat-trend .trend-dot {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+
+        .trend-dot.up {
+            background: var(--good);
+        }
+
+        .trend-dot.down {
+            background: var(--danger);
+        }
+
+        .trend-dot.flat {
+            background: var(--text-faint);
+        }
+
+        /* Live activity bar */
+        .live-activity {
+            padding: 16px 36px;
+            border-top: 1px solid var(--border-subtle);
+            background: var(--surface-3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .live-indicator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--good);
+            box-shadow: 0 0 6px var(--good);
+            animation: pulse 1.5s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+
+        .live-activity-text {
+            font-size: 11px;
+            color: var(--text-faint);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .live-activity-text strong {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .live-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 35%;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            border-radius: 0 1px 1px 0;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        /* Partner card */
+        .partner-card {
+            margin-top: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 32px 36px;
+            animation: fadeInUp 0.6s ease-out 0.15s both;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+        }
+
+        .partner-card-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1;
+        }
+
+        .partner-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--danger-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .partner-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--danger);
+            opacity: 0.2;
+        }
+
+        .partner-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--danger);
+        }
+
+        .partner-info {
+            min-width: 0;
+        }
+
+        .partner-label {
+            font-size: 11px;
+            color: var(--danger);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .partner-label .badge {
+            font-size: 9px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: var(--danger);
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: none;
+        }
+
+        .partner-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.3px;
+        }
+
+        .partner-detail {
+            font-size: 12px;
+            color: var(--text-faint);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .partner-action {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+
+        .partner-action:hover {
+            color: #60A5FA;
+        }
+
+        /* Mobile Bottom Nav */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--surface);
+            border-top: 1px solid var(--border-subtle);
+            z-index: 100;
+            padding: 0 12px;
+            padding-bottom: env(safe-area-inset-bottom, 8px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .mobile-nav-inner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            max-width: 430px;
+            margin: 0 auto;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            cursor: pointer;
+            padding: 6px 16px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            border: none;
+            background: none;
+            color: var(--text-faint);
+            position: relative;
+        }
+
+        .mobile-nav-item:hover {
+            background: var(--surface-2);
+        }
+
+        .mobile-nav-item.active {
+            color: var(--accent);
+        }
+
+        .mobile-nav-item svg {
+            width: 22px;
+            height: 22px;
+            transition: all 0.2s;
+        }
+
+        .mobile-nav-item span {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .mobile-nav-item .badge {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--danger);
+            border: 2px solid var(--surface);
+        }
+
+        /* Responsive */
+        @media (max-width: 767px) {
+            .sidebar {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 0 20px;
+                padding-bottom: 90px;
+            }
+
+            .header {
+                padding: 24px 0 24px;
+            }
+
+            .header-title {
+                font-size: 12px;
+            }
+
+            .queue-card .card-header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 24px;
+            }
+
+            .latency-peek {
+                width: 100%;
+                text-align: left;
+                display: flex;
+                align-items: flex-end;
+                gap: 16px;
+            }
+
+            .sparkline-container {
+                margin-top: 0;
+                flex: 1;
+                max-width: 160px;
+            }
+
+            .queue-card .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 20px 24px;
+            }
+
+            .stat::after {
+                display: none;
+            }
+
+            .stat-value {
+                font-size: 28px;
+            }
+
+            .live-activity {
+                padding: 12px 24px;
+            }
+
+            .partner-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
+
+            .partner-card-left {
+                width: 100%;
+            }
+
+            .partner-action {
+                align-self: flex-end;
+                margin-top: -24px;
+            }
+
+            .mobile-nav {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .queue-card .stats-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .queue-card .card-title {
+                font-size: 18px;
+            }
+
+            .stat-value {
+                font-size: 26px;
+            }
+        }
+
+        /* Light grid pattern on background for texture */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.3;
+            background-image:
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 80px 80px;
+            background-position: -1px -1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="ambient-glow"></div>
+
+    <div class="app-shell">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">CL</div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-item active" title="Queue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="3" x2="9" y2="21"></line>
+                    </svg>
+                </div>
+                <div class="sidebar-nav-item" title="Partners">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <div class="sidebar-nav-item" title="Alerts">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <div class="badge"></div>
+                </div>
+                <div class="sidebar-nav-item" title="Analytics">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-nav-item" title="Settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </div>
+                <div class="avatar">AT</div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <header class="header">
+                <h1 class="header-title">CargoLoom Sync</h1>
+                <div class="status-chip">
+                    <div class="dot"></div>
+                    <span>All Systems Operational</span>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- EDI Message Queue Card -->
+                <div class="queue-card">
+                    <div class="card-header">
+                        <div class="card-header-left">
+                            <div class="title-row">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="3" x2="9" y2="21"></line>
+                                        <line x1="15" y1="3" x2="15" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <h2 class="card-title">EDI Message Queue</h2>
+                            </div>
+                            <p class="card-subtitle">Real-time shipment status across all active supply-chain integrations</p>
+                        </div>
+                        <div class="latency-peek">
+                            <div>
+                                <div class="latency-label">Avg Latency</div>
+                                <div class="latency-value" id="latency">42<span class="latency-unit">ms</span></div>
+                            </div>
+                            <div class="sparkline-container">
+                                <svg id="sparkline" viewBox="0 0 120 32" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
+                                            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path id="sparkPath" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path id="sparkFillPath" fill="url(#sparkFill)" stroke="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-header">
+                                <div class="stat-dot total"></div>
+                                <span class="stat-label">Total</span>
+                            </div>
+                            <div class="stat-value" id="stat-total">2,847</div>
+                            <div class="stat-trend"><span class="trend-dot up"></span>+12% vs last hour</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-header">
+                                <div class="stat-dot inflight"></div>
+                                <span class="stat-label">In Flight</span>
+                            </div>
+                            <div class="stat-value" id="stat-inflight">1,193</div>
+                            <div class="stat-trend"><span class="trend-dot up"></span>Processing normally</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-header">
+                                <div class="stat-dot queued"></div>
+                                <span class="stat-label">Queued</span>
+                            </div>
+                            <div class="stat-value" id="stat-queued">892</div>
+                            <div class="stat-trend"><span class="trend-dot flat"></span>Stable</div>
+                        </div>
+                        <div class="stat failed">
+                            <div class="stat-header">
+                                <div class="stat-dot failed"></div>
+                                <span class="stat-label">Failed</span>
+                            </div>
+                            <div class="stat-value" id="stat-failed">3</div>
+                            <div class="stat-trend"><span class="trend-dot down"></span>Requires attention</div>
+                        </div>
+                    </div>
+
+                    <div class="live-activity">
+                        <div class="live-indicator"></div>
+                        <span class="live-activity-text">Live: <strong id="live-msg">ASN-2048</strong> shipped via <strong id="live-courier">DHL Express</strong></span>
+                        <div class="live-progress"></div>
+                    </div>
+                </div>
+
+                <!-- Failed Partner Card -->
+                <div class="partner-card">
+                    <div class="partner-card-left">
+                        <div class="partner-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="partner-info">
+                            <div class="partner-label">Last Failed Partner <span class="badge">P0</span></div>
+                            <div class="partner-name">NorthPier 3PL</div>
+                            <div class="partner-detail">EDI 856 (ASN) — Last attempt 3 min ago &middot; Connection timeout on port 443</div>
+                        </div>
+                    </div>
+                    <div class="partner-action">View Logs &rarr;</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-inner">
+            <button class="mobile-nav-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+                <span>Queue</span>
+            </button>
+            <button class="mobile-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Partners</span>
+            </button>
+            <button class="mobile-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+                <span>Alerts</span>
+                <div class="badge"></div>
+            </button>
+            <button class="mobile-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+                <span>Settings</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        (function() {
+            // Sparkline data
+            const sparkData = [38, 42, 40, 45, 44, 41, 39, 43, 47, 42, 40, 38, 44, 46, 41, 39, 42, 45, 43, 40, 42, 38, 41, 44];
+            const sparkWidth = 120;
+            const sparkHeight = 32;
+            const maxVal = Math.max(...sparkData) + 2;
+            const minVal = Math.min(...sparkData) - 2;
+            const range = maxVal - minVal;
+
+            const points = sparkData.map((v, i) => {
+                const x = (i / (sparkData.length - 1)) * sparkWidth;
+                const y = sparkHeight - ((v - minVal) / range) * (sparkHeight - 4) - 2;
+                return `${x},${y}`;
+            });
+
+            const pathLine = `M${points.join(' L')}`;
+            const fillPath = pathLine + ` L${sparkWidth},${sparkHeight} L0,${sparkHeight} Z`;
+
+            const sparkPath = document.getElementById('sparkPath');
+            const sparkFillPath = document.getElementById('sparkFillPath');
+            if (sparkPath) sparkPath.setAttribute('d', pathLine);
+            if (sparkFillPath) sparkFillPath.setAttribute('d', fillPath);
+
+            // Live activity ticker
+            const activities = [
+                { msg: 'ASN-2048', courier: 'DHL Express' },
+                { msg: 'ORD-9912', courier: 'FedEx Ground' },
+                { msg: 'INV-3307', courier: 'UPS Freight' },
+                { msg: 'BOL-5561', courier: 'Maersk Line' },
+                { msg: 'SHP-7723', courier: 'DHL Express' },
+                { msg: 'ASN-2051', courier: 'FedEx Ground' },
+                { msg: 'ORD-9915', courier: 'UPS Freight' },
+                { msg: 'INV-3310', courier: 'DHL Express' },
+                { msg: 'BOL-5564', courier: 'Maersk Line' },
+                { msg: 'SHP-7726', courier: 'FedEx Ground' },
+            ];
+            let actIndex = 0;
+
+            function updateLive() {
+                const msgEl = document.getElementById('live-msg');
+                const courierEl = document.getElementById('live-courier');
+                if (msgEl && courierEl) {
+                    actIndex = (actIndex + 1) % activities.length;
+                    const a = activities[actIndex];
+                    msgEl.textContent = a.msg;
+                    courierEl.textContent = a.courier;
+                }
+            }
+
+            setInterval(updateLive, 4000);
+
+            // Micro-stat fluctuations
+            const statEls = {
+                total: document.getElementById('stat-total'),
+                inflight: document.getElementById('stat-inflight'),
+                queued: document.getElementById('stat-queued'),
+                failed: document.getElementById('stat-failed'),
+            };
+
+            const baseValues = { total: 2847, inflight: 1193, queued: 892, failed: 3 };
+
+            function formatNum(n) {
+                return n.toLocaleString();
+            }
+
+            function jitterStat() {
+                const key = ['total', 'inflight', 'queued'][Math.floor(Math.random() * 3)];
+                const el = statEls[key];
+                if (!el) return;
+                const base = baseValues[key];
+                const delta = Math.floor(Math.random() * 7) - 3;
+                const newVal = Math.max(0, base + delta);
+                el.textContent = formatNum(newVal);
+
+                // Occasionally reset to base
+                if (Math.random() < 0.3) {
+                    baseValues[key] = newVal;
+                }
+            }
+
+            setInterval(jitterStat, 3000);
+
+            // Latency jitter
+            const latencyEl = document.getElementById('latency');
+            if (latencyEl) {
+                setInterval(() => {
+                    const ms = 38 + Math.floor(Math.random() * 12);
+                    latencyEl.innerHTML = ms + '<span class="latency-unit">ms</span>';
+                }, 2500);
+            }
+
+            // Mobile nav toggle
+            document.querySelectorAll('.mobile-nav-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.mobile-nav-item').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Sidebar nav toggle
+            document.querySelectorAll('.sidebar-nav-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.sidebar-nav-item').forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

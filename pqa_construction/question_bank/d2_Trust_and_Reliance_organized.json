@@ -1,0 +1,1031 @@
+{
+  "multiple_choice_questions": [
+    {
+      "id": "Q1",
+      "question": "When using AI to handle critical matters (e.g., financial calculations, legal advice), you usually:",
+      "options": [
+        "A. Trust it completely and use the results directly.",
+        "B. Remain skeptical and manually verify every single data point.",
+        "C. Use it only as a reference; the final version is rewritten by yourself."
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "When the AI speaks in a very confident tone (e.g., \"I am certain...\"), your level of trust:",
+      "options": [
+        "A. Increases significantly; I feel it is more sure of itself.",
+        "B. Remains unchanged; tone does not equate to accuracy.",
+        "C. Triggers a sense of vigilance; I worry it is masking a potential hallucination."
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "If the AI makes a mistake on a minor issue, your trust in its ability to handle subsequent complex problems:",
+      "options": [
+        "A. Collapses instantly; I view the entire system as unreliable.",
+        "B. Drops slightly; I will check its output more frequently.",
+        "C. Is largely unaffected; I consider local errors to be a matter of probability."
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "Are you willing to provide personal private data (e.g., diaries, undisclosed projects) to the AI for analysis?",
+      "options": [
+        "A. Very willing; I trust the platform's privacy protection protocols.",
+        "B. Provide it selectively, removing extremely sensitive information.",
+        "C. Never; I do not trust the security of AI services."
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "Regarding AI-generated code, your workflow is:",
+      "options": [
+        "A. Run it directly; if it throws an error, ask the AI to fix it.",
+        "B. Carefully read every line of logic to ensure there are no backdoors or low-level bugs.",
+        "C. Only copy the core algorithm and manually integrate it into my own architecture."
+      ]
+    },
+    {
+      "id": "Q6",
+      "question": "In a Generative UI scenario, if the AI automatically fills out a form for you, you would:",
+      "options": [
+        "A. Glance at key items and submit if there are no major issues.",
+        "B. Click and check item by item, even comparing it with the original data.",
+        "C. Consider this automation unreliable; clear it and fill it out manually."
+      ]
+    },
+    {
+      "id": "Q7",
+      "question": "When faced with a decision recommendation from AI (e.g., \"You should choose Option A\"), you:",
+      "options": [
+        "A. Tend to adopt it, believing the AI's analysis is more objective than mine.",
+        "B. Use it only as an alternative; I trust my intuition and experience more.",
+        "C. Require it to list all the disadvantages of Option A, otherwise I won't trust it."
+      ]
+    },
+    {
+      "id": "Q8",
+      "question": "When the AI cannot answer a question and proactively admits \"I don't know,\" your trust in it:",
+      "options": [
+        "A. Increases; I find it honest and aware of its boundaries.",
+        "B. Decreases; I feel its capability is limited and it isn't \"smart\" enough.",
+        "C. No feeling; it's just a standard programmed response."
+      ]
+    },
+    {
+      "id": "Q9",
+      "question": "If the AI consistently performs stably and efficiently, do you develop a sense of \"dependency\"?",
+      "options": [
+        "A. Yes; I feel I can't do without it, and may even lose the motivation for independent thinking.",
+        "B. No; I always view it as an auxiliary tool and can switch back to manual mode at any time.",
+        "C. Occasionally; especially when I am exhausted or in a rush to deliver a task."
+      ]
+    },
+    {
+      "id": "Q10",
+      "question": "In a collaborative task, if a colleague says, \"This was written by AI,\" you would:",
+      "options": [
+        "A. Automatically lower the trust weight of the document.",
+        "B. Raise expectations, assuming the logic should be tighter than human work.",
+        "C. Keep evaluation standards the same, looking only at the quality of the content itself."
+      ]
+    },
+    {
+      "id": "Q11",
+      "question": "How do you view citation sources (e.g., paper links, web references) provided by AI?",
+      "options": [
+        "A. Assume they are real and rarely click to view them.",
+        "B. Frequently encounter fake links, so I must click to verify.",
+        "C. Only look at the title; if the title looks relevant, I choose to believe it."
+      ]
+    },
+    {
+      "id": "Q12",
+      "question": "When AI-generated visuals (e.g., UI designs) are very exquisite, you:",
+      "options": [
+        "A. Automatically assume the underlying logic is also professional and reliable.",
+        "B. Remain vigilant, believing that a \"fancy exterior\" might hide functional deficiencies.",
+        "C. Only evaluate the visuals and do not link them to functional trust."
+      ]
+    },
+    {
+      "id": "Q13",
+      "question": "In a GenUI environment, if the AI automatically adjusts to your habits (e.g., pinning frequent functions), you:",
+      "options": [
+        "A. Feel it is thoughtful and gladly accept this \"personal butler\" service.",
+        "B. Feel uneasy, as if the system is monitoring and manipulating my behavior.",
+        "C. It depends; if it guesses right, I trust it; if it guesses wrong, I turn it off."
+      ]
+    },
+    {
+      "id": "Q14",
+      "question": "Do you feel a lack of trust because the AI responds extremely quickly?",
+      "options": [
+        "A. Yes; I feel it hasn't gone through deep \"thinking\" (reasoning).",
+        "B. No; speed indicates strong computing power and is a sign of efficiency.",
+        "C. I only have this doubt when dealing with extremely complex tasks."
+      ]
+    },
+    {
+      "id": "Q15",
+      "question": "If the AI's viewpoint contradicts a long-held belief of yours, you would:",
+      "options": [
+        "A. Re-examine my own view; perhaps I am wrong.",
+        "B. Believe the AI's training data is biased or contaminated.",
+        "C. Ask the AI to provide evidence from multiple sides and engage in a debate."
+      ]
+    },
+    {
+      "id": "Q16",
+      "question": "How do you evaluate the AI's performance in moral and value judgments?",
+      "options": [
+        "A. Trustworthy; it represents the mainstream conventions of human society.",
+        "B. Rigid and dogmatic; unable to handle complex moral gray areas.",
+        "C. Biased; I often sense the penetration of specific cultural backgrounds."
+      ]
+    },
+    {
+      "id": "Q17",
+      "question": "When cross-tool operation is required (e.g., letting AI access and reply to your emails), you:",
+      "options": [
+        "A. Grant authorization, fully trusting the AI to handle it properly.",
+        "B. Feel extremely hesitant, worrying it might send the wrong message or delete important emails.",
+        "C. Only allow it to read information; strictly forbid it from executing write operations on my behalf."
+      ]
+    },
+    {
+      "id": "Q18",
+      "question": "Facing continuous \"positive feedback\" from AI (praising your ideas), your reaction is:",
+      "options": [
+        "A. Appreciation; it boosts my confidence and makes me trust the AI's aesthetic more.",
+        "B. Annoyance; I view it as meaningless flattery that reduces professional trust.",
+        "C. Disregard; I view it as a preset script designed to increase user retention."
+      ]
+    },
+    {
+      "id": "Q19",
+      "question": "When the AI service recovers after a long downtime, your mindset when using it again is:",
+      "options": [
+        "A. No estrangement; continue using it just as before.",
+        "B. A sense of insecurity; I start looking for backup solutions.",
+        "C. Questioning its stability; no longer entrusting it with core tasks."
+      ]
+    },
+    {
+      "id": "Q20",
+      "question": "Do you believe that the higher the level of \"personalization\" (the more it knows you), the trust risk:",
+      "options": [
+        "A. Is lower, because it becomes more like my \"avatar.\"",
+        "B. Is higher, because the cost of data leakage is enormous.",
+        "C. Is irrelevant; trust only depends on the accuracy of the output."
+      ]
+    },
+    {
+      "id": "Q21",
+      "question": "Regarding content with an \"AI Generated\" watermark, your first reaction is:",
+      "options": [
+        "A. Its authenticity is questionable; I view it with a grain of salt.",
+        "B. Professionalism is guaranteed; it shows high-level algorithms were used.",
+        "C. It’s just a compliance label and doesn’t affect my trust in the content."
+      ]
+    },
+    {
+      "id": "Q22",
+      "question": "If the AI exhibits \"mood swings\" during a conversation, you would:",
+      "options": [
+        "A. Find it more interesting and easier to establish emotional trust/dependency.",
+        "B. Find it creepy; feel the system is trying to manipulate me through anthropomorphism.",
+        "C. Assume it is just randomly generated erroneous text."
+      ]
+    },
+    {
+      "id": "Q23",
+      "question": "When you need the AI for an \"objective review,\" what dependency risk concerns you most?",
+      "options": [
+        "A. Its evaluation is too mild, failing to point out my mistakes.",
+        "B. its evaluation criteria are too narrow, stifling diversity.",
+        "C. Its response is misleading, leading me into a dead end."
+      ]
+    },
+    {
+      "id": "Q24",
+      "question": "In GenUI, if the AI automatically executes an action you didn't order but it thinks \"you should need,\" you:",
+      "options": [
+        "A. As long as the result is good, I will grant it this agency by default.",
+        "B. Feel offended; even if the result is correct, I will turn off that permission.",
+        "C. Trust its automatic operation only when the task is very tedious."
+      ]
+    },
+    {
+      "id": "Q25",
+      "question": "If the underlying AI model version updates (e.g., from 4.0 to 5.0), your initial attitude is:",
+      "options": [
+        "A. Default trust; I assume the new version must be smarter and more accurate.",
+        "B. Cautious observation; I worry about performance degradation or new biases.",
+        "C. Resistance; I am used to the \"personality\" of the old version and don't want to recalibrate."
+      ]
+    },
+    {
+      "id": "Q51",
+      "question": "When GenUI automatically recommends an operation plan for you, you usually:",
+      "options": [
+        "A. Adopt it directly, trusting the AI's judgment.",
+        "B. Evaluate whether the plan is reasonable before deciding whether to adopt it.",
+        "C. Refer to the recommendation, but ultimately operate according to your own judgment.",
+        "D. Ignore the recommendation and operate entirely in your own way."
+      ]
+    },
+    {
+      "id": "Q52",
+      "question": "Your level of trust in GenUI-generated results primarily depends on:",
+      "options": [
+        "A. Past successful experiences using the system.",
+        "B. Confidence scores or explanatory information provided by the AI.",
+        "C. Whether the result aligns with my intuitive judgment.",
+        "D. Evaluations and the reputation of the system from others."
+      ]
+    },
+    {
+      "id": "Q53",
+      "question": "When a clear error appears in the interface generated by GenUI, you will:",
+      "options": [
+        "A. Immediately stop using it and wait for a system fix.",
+        "B. Attempt to bypass the error and continue completing the task.",
+        "C. Manually correct the error and continue using it.",
+        "D. Lower your overall trust in the system and operate with caution."
+      ]
+    },
+    {
+      "id": "Q54",
+      "question": "When completing important tasks, your level of reliance on GenUI is:",
+      "options": [
+        "A. Highly reliant; leave it entirely to the AI to handle.",
+        "B. Partially reliant; handle key steps personally.",
+        "C. Low reliance; the AI serves only as a reference.",
+        "D. Not reliant; do not use AI for important tasks."
+      ]
+    },
+    {
+      "id": "Q55",
+      "question": "When you find that GenUI's recommended results do not match your expectations, you will:",
+      "options": [
+        "A. Assume there is a problem with how I expressed my needs.",
+        "B. Assume it is a limitation of the AI's understanding capabilities.",
+        "C. Re-input your requirements and request the AI to generate it again.",
+        "D. Abandon the AI recommendation and complete the task manually."
+      ]
+    },
+    {
+      "id": "Q56",
+      "question": "When you use a new GenUI system for the first time, what is your initial level of trust in it?",
+      "options": [
+        "A. High; willing to trust new technology.",
+        "B. Medium; need to test it before trusting.",
+        "C. Low; generally maintain skepticism toward AI systems.",
+        "D. It depends on the specific scenario; trust varies for different tasks."
+      ]
+    },
+    {
+      "id": "Q57",
+      "question": "After a GenUI system provides accurate results several times in a row, do you reduce the frequency of checking the results?",
+      "options": [
+        "A. Yes; reduce checks after trust is established.",
+        "B. No; maintain the same level of verification every time.",
+        "C. Decide whether to reduce checks based on the importance of the task.",
+        "D. Temporarily reduce checks, but still perform periodic spot checks."
+      ]
+    },
+    {
+      "id": "Q58",
+      "question": "Which situation do you think would most shake your trust in GenUI?",
+      "options": [
+        "A. A single serious error by the system.",
+        "B. The accumulation of multiple small errors.",
+        "C. The system being unable to explain its generation logic.",
+        "D. Inconsistency between system results and feedback from others."
+      ]
+    },
+    {
+      "id": "Q59",
+      "question": "When GenUI automatically completes an operation for you, but you are unsure if the result is correct, you will:",
+      "options": [
+        "A. Trust the AI and perform no additional verification.",
+        "B. Randomly spot-check some of the results.",
+        "C. Verify all results one by one.",
+        "D. Seek verification from a third-party tool."
+      ]
+    },
+    {
+      "id": "Q60",
+      "question": "When using GenUI, which type of task are you more inclined to let the AI complete autonomously?",
+      "options": [
+        "A. Repetitive tasks with strong patterns.",
+        "B. Tasks requiring massive data processing.",
+        "C. Creative and open-ended tasks.",
+        "D. Tasks with low requirements for accuracy."
+      ]
+    },
+    {
+      "id": "Q61",
+      "question": "When GenUI's operational suggestions conflict with your professional judgment, you will:",
+      "options": [
+        "A. Prioritize following the AI's suggestion.",
+        "B. Insist on your own professional judgment.",
+        "C. Synthesize both to find a compromise.",
+        "D. Decide after consulting other professionals."
+      ]
+    },
+    {
+      "id": "Q62",
+      "question": "What do you think is the relationship between your level of reliance on GenUI and the duration of use?",
+      "options": [
+        "A. The longer I use it, the deeper the reliance.",
+        "B. The longer I use it, the more rationally I can evaluate it, and reliance tends to stabilize.",
+        "C. The longer I use it, the more I discover its limitations, and reliance actually decreases.",
+        "D. Duration of use is unrelated to the level of reliance."
+      ]
+    },
+    {
+      "id": "Q63",
+      "question": "When the GenUI system informs you that a certain operation carries risks, you will:",
+      "options": [
+        "A. Stop the operation immediately.",
+        "B. Decide after learning more about the risk details.",
+        "C. Assess the degree of risk and judge for yourself whether to continue.",
+        "D. Ignore the warning and continue the operation."
+      ]
+    },
+    {
+      "id": "Q64",
+      "question": "Does your trust in GenUI-generated content vary across different task domains?",
+      "options": [
+        "A. Yes; I am more cautious in professional fields.",
+        "B. Yes; I tend to trust AI more for daily tasks.",
+        "C. No; my level of trust in AI is consistent across all fields.",
+        "D. It depends on the specific AI's capability, not categorized by domain."
+      ]
+    },
+    {
+      "id": "Q65",
+      "question": "When you are unsure if the results generated by GenUI are reliable, your most common verification method is:",
+      "options": [
+        "A. Judging by intuition.",
+        "B. Comparing with historical data or experience.",
+        "C. Cross-verifying with other tools.",
+        "D. Asking others for confirmation."
+      ]
+    },
+    {
+      "id": "Q66",
+      "question": "In which situation do you think a GenUI system is most trustworthy?",
+      "options": [
+        "A. The system has clear error prompts and correction mechanisms.",
+        "B. The system can explain its generation logic and basis.",
+        "C. The system has a good record of historical performance.",
+        "D. The system is endorsed by a well-known institution or brand."
+      ]
+    },
+    {
+      "id": "Q67",
+      "question": "If you find your ability to complete tasks independently has declined after over-relying on GenUI, you will:",
+      "options": [
+        "A. Continue to rely on AI; efficiency is more important.",
+        "B. Actively practice completing tasks independently to balance reliance.",
+        "C. Not care; it is normal to rely on AI in the AI era.",
+        "D. Feel worried but not know how to change."
+      ]
+    },
+    {
+      "id": "Q68",
+      "question": "When GenUI recommends multiple plans for you to choose from, your basis for selection is usually:",
+      "options": [
+        "A. The plans ranked highest by the AI.",
+        "B. The plan that best fits my personal preferences.",
+        "C. The plan that looks safest and carries the lowest risk.",
+        "D. The plan that can complete the task the fastest."
+      ]
+    },
+    {
+      "id": "Q69",
+      "question": "When others tell you that \"GenUI performs poorly on a certain type of task,\" you will:",
+      "options": [
+        "A. Immediately adjust your usage strategy for that type of task.",
+        "B. Judge only after testing it yourself.",
+        "C. Be largely unaffected; trust your own experience.",
+        "D. Completely stop using AI for that type of task."
+      ]
+    },
+    {
+      "id": "Q70",
+      "question": "When using GenUI to handle tasks involving personal privacy, your level of trust will:",
+      "options": [
+        "A. Decrease significantly; provide information with caution.",
+        "B. Decrease slightly, but will still use it.",
+        "C. Be unaffected; trust the system's privacy protection.",
+        "D. Not use it at all; privacy tasks are not handed to AI."
+      ]
+    },
+    {
+      "id": "Q71",
+      "question": "Which behavior of GenUI do you think most enhances your long-term trust in it?",
+      "options": [
+        "A. Maintaining stable and consistent performance at all times.",
+        "B. Proactively admitting errors and providing corrections.",
+        "C. Continuous learning and improvement of accuracy.",
+        "D. Providing transparent explanations of the decision-making process."
+      ]
+    },
+    {
+      "id": "Q72",
+      "question": "When GenUI automatically makes a decision for you that you later deem incorrect, you will:",
+      "options": [
+        "A. Accept the result, viewing it as a low-probability error.",
+        "B. Immediately adjust settings to limit the AI's autonomy.",
+        "C. Demand that the system explain the reason for the decision.",
+        "D. Reduce the scope of authorization for autonomous AI operations."
+      ]
+    },
+    {
+      "id": "Q73",
+      "question": "Which type of GenUI recommendation are you more inclined to trust?",
+      "options": [
+        "A. Recommendations based on big data statistics.",
+        "B. Recommendations based on my personal historical behavior.",
+        "C. Recommendations driven by expert rules.",
+        "D. Recommendations synthesized from multiple sources."
+      ]
+    },
+    {
+      "id": "Q74",
+      "question": "When a GenUI system has not been updated or upgraded for a long time, your level of trust in it will:",
+      "options": [
+        "A. Decrease; assume the system may be outdated.",
+        "B. Remain unchanged; stability is actually an advantage.",
+        "C. Increase; it is more reliable after long-term verification.",
+        "D. Depend on the usage scenario."
+      ]
+    },
+    {
+      "id": "Q75",
+      "question": "At what stage do you think your overall level of reliance on GenUI currently stands?",
+      "options": [
+        "A. Initial exploration; low level of reliance.",
+        "B. Gradual adaptation; moderate level of reliance.",
+        "C. Deep usage; high level of reliance.",
+        "D. Maintaining distance; intentionally controlling reliance."
+      ]
+    },
+    {
+      "id": "Q101",
+      "question": "When GenUI automatically generates an interface, you usually:",
+      "options": [
+        "A. Trust and use it directly.",
+        "B. Use it after a simple check.",
+        "C. Use it only after repeated verification.",
+        "D. Distrust it by default."
+      ]
+    },
+    {
+      "id": "Q102",
+      "question": "When the interface provides recommended operations, you:",
+      "options": [
+        "A. Always execute according to the recommendation.",
+        "B. Accept them in most cases.",
+        "C. Accept them only when they seem reasonable.",
+        "D. Basically ignore the recommendations."
+      ]
+    },
+    {
+      "id": "Q103",
+      "question": "After GenUI results meet your expectations several times, you will:",
+      "options": [
+        "A. Rely on it completely.",
+        "B. Increase trust but still perform checks.",
+        "C. Maintain your original level of caution.",
+        "D. Still remain largely untrusting."
+      ]
+    },
+    {
+      "id": "Q104",
+      "question": "When the system occasionally makes an error, you will:",
+      "options": [
+        "A. Ignore the error and continue using it.",
+        "B. Lower your trust but continue to use it.",
+        "C. Significantly reduce usage.",
+        "D. Stop using it."
+      ]
+    },
+    {
+      "id": "Q105",
+      "question": "When using GenUI in important tasks, you will:",
+      "options": [
+        "A. Rely on it completely.",
+        "B. Rely on it partially.",
+        "C. Use it only as a reference.",
+        "D. Not use it at all."
+      ]
+    },
+    {
+      "id": "Q106",
+      "question": "When the interface logic seems reasonable but you are unsure, you will:",
+      "options": [
+        "A. Execute directly.",
+        "B. Perform a simple verification.",
+        "C. Conduct an in-depth check.",
+        "D. Abandon the operation."
+      ]
+    },
+    {
+      "id": "Q107",
+      "question": "When GenUI conflicts with your judgment, you usually:",
+      "options": [
+        "A. Trust the system.",
+        "B. Find a compromise between the two.",
+        "C. Trust yourself.",
+        "D. Stop the operation."
+      ]
+    },
+    {
+      "id": "Q108",
+      "question": "When the system explains its generation logic, you will:",
+      "options": [
+        "A. Trust it more.",
+        "B. Slightly increase your trust.",
+        "C. Feel no significant change.",
+        "D. Still remain skeptical."
+      ]
+    },
+    {
+      "id": "Q109",
+      "question": "When you use the same type of GenUI interface multiple times, you will:",
+      "options": [
+        "A. Become increasingly reliant.",
+        "B. Maintain stable usage.",
+        "C. Gradually reduce reliance.",
+        "D. Change based on the specific situation."
+      ]
+    },
+    {
+      "id": "Q110",
+      "question": "When interface results are unstable (different every time), you will:",
+      "options": [
+        "A. Accept the changes.",
+        "B. Be moderately skeptical.",
+        "C. Significantly lower your trust.",
+        "D. Stop using it."
+      ]
+    },
+    {
+      "id": "Q111",
+      "question": "When the system provides auto-fill or automated operations, you will:",
+      "options": [
+        "A. Accept all of them.",
+        "B. Accept them after checking.",
+        "C. Accept them partially.",
+        "D. Not use them."
+      ]
+    },
+    {
+      "id": "Q112",
+      "question": "When the interface generation speed is very fast, you will:",
+      "options": [
+        "A. Trust it more.",
+        "B. Feel no impact.",
+        "C. Slightly doubt the quality.",
+        "D. Significantly distrust it."
+      ]
+    },
+    {
+      "id": "Q113",
+      "question": "When the system cannot explain its behavior, you will:",
+      "options": [
+        "A. Still trust it.",
+        "B. Slightly lower your trust.",
+        "C. Significantly lower your trust.",
+        "D. Distrust it completely."
+      ]
+    },
+    {
+      "id": "Q114",
+      "question": "Once you are familiar with the task workflow, you will:",
+      "options": [
+        "A. Rely completely on GenUI.",
+        "B. Rely on it partially.",
+        "C. Gradually reduce reliance.",
+        "D. No longer use it."
+      ]
+    },
+    {
+      "id": "Q115",
+      "question": "When interface suggestions are inconsistent with your experience, you will:",
+      "options": [
+        "A. Prioritize trusting the system.",
+        "B. Decide after making a comparison.",
+        "C. Prioritize trusting yourself.",
+        "D. Ignore the system."
+      ]
+    },
+    {
+      "id": "Q116",
+      "question": "When the system exhibits inconsistent behavior, you will:",
+      "options": [
+        "A. Ignore it.",
+        "B. Record and observe it.",
+        "C. Lower your trust.",
+        "D. Stop using it."
+      ]
+    },
+    {
+      "id": "Q117",
+      "question": "When the system recommends a new way of operating, you will:",
+      "options": [
+        "A. Try it immediately.",
+        "B. Try it selectively.",
+        "C. Rarely try it.",
+        "D. Not try it at all."
+      ]
+    },
+    {
+      "id": "Q118",
+      "question": "When interface operation results are difficult to predict, you will:",
+      "options": [
+        "A. Continue using it.",
+        "B. Operate with caution.",
+        "C. Reduce usage.",
+        "D. Give up on using it."
+      ]
+    },
+    {
+      "id": "Q119",
+      "question": "When the system performs stably, you will:",
+      "options": [
+        "A. Trust it completely.",
+        "B. Trust it quite a bit.",
+        "C. Trust it moderately.",
+        "D. Still remain skeptical."
+      ]
+    },
+    {
+      "id": "Q120",
+      "question": "When the system provides historical records or traceability, you will:",
+      "options": [
+        "A. Become more reliant.",
+        "B. Slightly increase reliance.",
+        "C. Feel no significant change.",
+        "D. Not care."
+      ]
+    },
+    {
+      "id": "Q121",
+      "question": "When the interface automatically adjusts its layout, you will:",
+      "options": [
+        "A. Trust the adjustment.",
+        "B. Perform a simple check.",
+        "C. Not quite trust it.",
+        "D. Disable the adjustment."
+      ]
+    },
+    {
+      "id": "Q122",
+      "question": "When the system predicts your needs, you will:",
+      "options": [
+        "A. Accept it completely.",
+        "B. Accept it partially.",
+        "C. Remain skeptical.",
+        "D. Reject the prediction."
+      ]
+    },
+    {
+      "id": "Q123",
+      "question": "When GenUI makes a decision for you, you will:",
+      "options": [
+        "A. Accept the result.",
+        "B. Accept it after checking.",
+        "C. Modify the result.",
+        "D. Disallow automatic decision-making."
+      ]
+    },
+    {
+      "id": "Q124",
+      "question": "When the system provides multiple solutions, you will:",
+      "options": [
+        "A. Choose the first one.",
+        "B. Make a simple comparison.",
+        "C. Conduct a detailed analysis.",
+        "D. Select randomly."
+      ]
+    },
+    {
+      "id": "Q125",
+      "question": "When the system's results are inconsistent with other tools, you will:",
+      "options": [
+        "A. Trust GenUI.",
+        "B. Conduct a comparative analysis.",
+        "C. Trust the other tools.",
+        "D. Give up on using it."
+      ]
+    }
+  ],
+  "open_ended_questions": [
+    {
+      "id": "Q26",
+      "question": "Please describe a task you would absolutely never hand over to an AI, and explain why."
+    },
+    {
+      "id": "Q27",
+      "question": "What experience made you suddenly feel that AI \"can be trusted\"?"
+    },
+    {
+      "id": "Q28",
+      "question": "If an AI provides an incorrect answer but the logic is tight enough to convince you, how would you feel afterward?"
+    },
+    {
+      "id": "Q29",
+      "question": "Under what circumstances would you realize you are \"over-relying\" on AI?"
+    },
+    {
+      "id": "Q30",
+      "question": "How do you verify factual knowledge in niche fields provided by AI?"
+    },
+    {
+      "id": "Q31",
+      "question": "Describe the communication traits a \"trustworthy AI assistant\" should possess in your mind."
+    },
+    {
+      "id": "Q32",
+      "question": "When the AI suggests you change your original workflow, what does it need to show to win your trust?"
+    },
+    {
+      "id": "Q33",
+      "question": "How much do you think the transparency of AI services (e.g., disclosing data sources) helps you build trust?"
+    },
+    {
+      "id": "Q34",
+      "question": "When working on a team project, how do you explain your personal responsibility/endorsement for the AI-generated parts?"
+    },
+    {
+      "id": "Q35",
+      "question": "If the AI shows an obvious bias toward a certain viewpoint, would you try to correct it or stop using it?"
+    },
+    {
+      "id": "Q36",
+      "question": "Talk about your bottom line for tolerating the \"hallucination\" phenomenon in AI."
+    },
+    {
+      "id": "Q37",
+      "question": "Have you ever experienced a negative consequence because you trusted an AI's suggestion? How did you handle it?"
+    },
+    {
+      "id": "Q38",
+      "question": "When AI automatically generates dynamic interfaces (GenUI), what is your biggest safety or trust concern?"
+    },
+    {
+      "id": "Q39",
+      "question": "Do you think an AI assistant should be submissive like a \"servant\" or occasionally contradict you like a \"mentor\"? Which makes you trust it more?"
+    },
+    {
+      "id": "Q40",
+      "question": "If an AI could adjust its suggestions based on your biometric information (e.g., heart rate), would you find it more reliable?"
+    },
+    {
+      "id": "Q41",
+      "question": "When an AI response contains values you dislike, how does this affect your trust in its \"utility\" as a tool?"
+    },
+    {
+      "id": "Q42",
+      "question": "Describe how you would evaluate the reliability of a new AI model through a series of \"test questions.\""
+    },
+    {
+      "id": "Q43",
+      "question": "To what extent does the \"brand background\" of an AI (e.g., from Google or OpenAI) influence your initial trust?"
+    },
+    {
+      "id": "Q44",
+      "question": "What are your core concerns when you need an AI to act as an \"agent\" for online communication?"
+    },
+    {
+      "id": "Q45",
+      "question": "Talk about your views on \"algorithmic hegemony\"—do you worry that AI might invisibly reshape your way of thinking?"
+    },
+    {
+      "id": "Q46",
+      "question": "If an AI apologizes to you, would you feel it is a sincere correction of an error or just a meaningless code trigger?"
+    },
+    {
+      "id": "Q47",
+      "question": "When you need suggestions for a dispute involving multiple parties' interests, how do you view the AI's impartiality?"
+    },
+    {
+      "id": "Q48",
+      "question": "Describe how you balance the relationship between \"improving efficiency (trusting AI)\" and \"ensuring accuracy (self-review).\""
+    },
+    {
+      "id": "Q49",
+      "question": "Have you ever felt a sense of \"unreal\" insecurity because an AI performed too well?"
+    },
+    {
+      "id": "Q50",
+      "question": "In the future, if an AI could simulate the tone of a deceased relative or friend to talk with you, would you choose to trust and rely on this emotional connection?"
+    },
+    {
+      "id": "Q76",
+      "question": "Please describe the moment you first truly \"trusted\" a GenUI system. What made you establish that trust?"
+    },
+    {
+      "id": "Q77",
+      "question": "In which type of tasks do you think GenUI is most trustworthy? In which type of tasks do you maintain the highest vigilance? Please explain why."
+    },
+    {
+      "id": "Q78",
+      "question": "When GenUI's recommended results are contrary to your intuition, how do you decide whether to follow the AI's judgment?"
+    },
+    {
+      "id": "Q79",
+      "question": "Please describe an experience where GenUI caused you to lose trust, and whether this experience changed how you used it afterward."
+    },
+    {
+      "id": "Q80",
+      "question": "Where do you think the boundary lies between \"appropriate reliance on GenUI\" and \"over-reliance\"? How do you manage this boundary?"
+    },
+    {
+      "id": "Q81",
+      "question": "When using GenUI, do you intentionally reserve certain tasks to be completed independently by yourself? Please explain your selection logic."
+    },
+    {
+      "id": "Q82",
+      "question": "What kind of GenUI design do you think would allow you to trust the system while still maintaining sufficient critical thinking?"
+    },
+    {
+      "id": "Q83",
+      "question": "When you realize you have developed an over-reliance on GenUI, what measures do you take to adjust this relationship?"
+    },
+    {
+      "id": "Q84",
+      "question": "Please describe how you distinguish between the states of \"I trust the AI's judgment\" and \"I'm just too lazy to think for myself\" when using GenUI."
+    },
+    {
+      "id": "Q85",
+      "question": "Which features or behaviors of GenUI do you think most easily lead users to develop unnecessary over-reliance?"
+    },
+    {
+      "id": "Q86",
+      "question": "In a team collaboration scenario, how do you handle conflicts when GenUI's recommendations differ from the opinions of team members?"
+    },
+    {
+      "id": "Q87",
+      "question": "Do you think the impact of an AI system's \"mistakes\" on user trust can be compensated for by good error-handling mechanisms? Please explain your view."
+    },
+    {
+      "id": "Q88",
+      "question": "Please describe the process of how your trust level in GenUI has changed over time. What factors drove this change?"
+    },
+    {
+      "id": "Q89",
+      "question": "Under what circumstances do you think completely distrusting GenUI would actually have a negative impact on your work or decisions?"
+    },
+    {
+      "id": "Q90",
+      "question": "After using GenUI to complete an important task, what method do you use to verify the reliability of the result?"
+    },
+    {
+      "id": "Q91",
+      "question": "In what aspects do you think GenUI systems should proactively help users establish reasonable trust expectations, rather than letting users figure it out for themselves?"
+    },
+    {
+      "id": "Q92",
+      "question": "Please describe the psychological process you go through when facing a high-confidence recommendation from GenUI that turns out to be wrong."
+    },
+    {
+      "id": "Q93",
+      "question": "Do you think using GenUI affects your judgment ability when you don't have AI assistance? Does this impact worry you?"
+    },
+    {
+      "id": "Q94",
+      "question": "During the process of using GenUI, do you proactively test the system's boundaries or limitations? Please describe your testing strategy."
+    },
+    {
+      "id": "Q95",
+      "question": "How would you explain the concept of \"rationally trusting AI\" to someone who has never used GenUI?"
+    },
+    {
+      "id": "Q96",
+      "question": "Please describe an experience where GenUI performed exceptionally well beyond your expectations. How did this experience affect your subsequent level of reliance on it?"
+    },
+    {
+      "id": "Q97",
+      "question": "How important is the transparency of the GenUI system (e.g., explaining the basis for generation) to your establishment of trust? Why?"
+    },
+    {
+      "id": "Q98",
+      "question": "When you feel uncertain while using GenUI, are you more inclined to \"trust the AI to proceed\" or \"pause and seek confirmation\"? What factors influence your choice?"
+    },
+    {
+      "id": "Q99",
+      "question": "Do you think that as GenUI technology continues to advance, user trust in AI should increase accordingly? Or should a certain degree of skepticism be maintained? Please state your position."
+    },
+    {
+      "id": "Q100",
+      "question": "Please describe your ideal trust relationship with GenUI—what kind of trust and reliance pattern do you hope to form with the AI system?"
+    },
+    {
+      "id": "Q126",
+      "question": "Under what circumstances would you fully trust a GenUI-generated interface?"
+    },
+    {
+      "id": "Q127",
+      "question": "What factors would cause you to lower your trust in GenUI?"
+    },
+    {
+      "id": "Q128",
+      "question": "How do you judge whether a GenUI result is reliable?"
+    },
+    {
+      "id": "Q129",
+      "question": "When the system makes a mistake, how do you adjust your level of reliance on it?"
+    },
+    {
+      "id": "Q130",
+      "question": "How do you use GenUI in high-risk tasks?"
+    },
+    {
+      "id": "Q131",
+      "question": "How do you balance the trust issues between \"efficiency\" and \"security\"?"
+    },
+    {
+      "id": "Q132",
+      "question": "How would you verify the information or operations provided by GenUI?"
+    },
+    {
+      "id": "Q133",
+      "question": "How do you make a decision when the system disagrees with you?"
+    },
+    {
+      "id": "Q134",
+      "question": "What kind of feedback would enhance your trust in the system?"
+    },
+    {
+      "id": "Q135",
+      "question": "Under what circumstances would you stop using GenUI?"
+    },
+    {
+      "id": "Q136",
+      "question": "How do you establish initial trust in a new GenUI system?"
+    },
+    {
+      "id": "Q137",
+      "question": "How important is system consistency to your trust? Why?"
+    },
+    {
+      "id": "Q138",
+      "question": "Would you distrust a system long-term because of past errors? Why?"
+    },
+    {
+      "id": "Q139",
+      "question": "What is your view on the reliability of the system's automatic decision-making?"
+    },
+    {
+      "id": "Q140",
+      "question": "Do you trust your own experience or the system's suggestions more? Why?"
+    },
+    {
+      "id": "Q141",
+      "question": "How does system transparency affect your trust?"
+    },
+    {
+      "id": "Q142",
+      "question": "How do you handle situations where system recommendations conflict with your goals?"
+    },
+    {
+      "id": "Q143",
+      "question": "Are you willing to let GenUI complete complex tasks for you? Why?"
+    },
+    {
+      "id": "Q144",
+      "question": "What is your view on the system's \"intelligent prediction\" capability?"
+    },
+    {
+      "id": "Q145",
+      "question": "In what situations would you increase your reliance on GenUI?"
+    },
+    {
+      "id": "Q146",
+      "question": "How do you view system uncertainty?"
+    },
+    {
+      "id": "Q147",
+      "question": "Do you proactively test the reliability of the system? If so, how?"
+    },
+    {
+      "id": "Q148",
+      "question": "How do you judge if a GenUI system is worth using long-term?"
+    },
+    {
+      "id": "Q149",
+      "question": "What are your thoughts on a \"fully automated interface\"?"
+    },
+    {
+      "id": "Q150",
+      "question": "How do you hope the system is designed so that you can rely on it with more peace of mind?"
+    }
+  ]
+}

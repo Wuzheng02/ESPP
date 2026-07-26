@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StageSignal Crew · Dashboard</title>
+  <style>
+    /* ── reset & base ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f1f4f8;
+      color: #1e293b;
+      padding: 1.25rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.4;
+    }
+
+    /* ── layout ── */
+    .dashboard {
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .header h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1e3a5f;
+    }
+    .header h1 small {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #5b6f87;
+      background: #e2e8f0;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #4a5b72;
+    }
+    .badge-live {
+      background: #2563eb;
+      color: #fff;
+      padding: 0.2rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+    .timestamp {
+      background: #e9edf3;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #3b4d66;
+    }
+
+    /* ── grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.9rem;
+    }
+
+    /* ── cards ── */
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 0.9rem 1rem 1rem 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      border: 1px solid #e6edf4;
+      transition: box-shadow 0.15s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 20, 40, 0.08);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.55rem;
+    }
+    .card-header .title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #5b6f87;
+    }
+    .card-header .icon {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    .card-body {
+      flex: 1;
+    }
+
+    /* ── compact utilities ── */
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.78rem;
+      margin-bottom: 0.3rem;
+    }
+    .stat-row .label {
+      color: #6f7e93;
+    }
+    .stat-row .value {
+      font-weight: 600;
+      color: #1e293b;
+    }
+    .stat-row .value.good { color: #1e7e34; }
+    .stat-row .value.warn { color: #b45309; }
+    .stat-row .value.bad { color: #b91c1c; }
+
+    .meter {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      margin: 0.35rem 0 0.5rem 0;
+      overflow: hidden;
+    }
+    .meter-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: #2563eb;
+    }
+    .meter-fill.good { background: #16a34a; }
+    .meter-fill.warn { background: #d97706; }
+    .meter-fill.bad { background: #dc2626; }
+
+    .tag {
+      display: inline-block;
+      background: #e9edf3;
+      color: #1e3a5f;
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .tag.blue { background: #dbeafe; color: #1e40af; }
+    .tag.green { background: #dcfce7; color: #166534; }
+    .tag.orange { background: #fef3c7; color: #92400e; }
+    .tag.red { background: #fee2e2; color: #991b1b; }
+
+    .crew-avatars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin: 0.3rem 0 0.2rem 0;
+    }
+    .avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: #1e293b;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #d1d9e6;
+    }
+    .avatar.blue { background: #93c5fd; }
+    .avatar.green { background: #86efac; }
+    .avatar.orange { background: #fdba74; }
+    .avatar.purple { background: #c4b5fd; }
+
+    .incident-list {
+      font-size: 0.72rem;
+      list-style: none;
+      padding: 0;
+      margin: 0.2rem 0 0 0;
+    }
+    .incident-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem 0;
+      border-bottom: 1px solid #f0f4fa;
+    }
+    .incident-list li:last-child { border-bottom: none; }
+    .incident-list .sev {
+      font-weight: 600;
+      padding: 0 0.4rem;
+      border-radius: 3px;
+      font-size: 0.6rem;
+    }
+    .sev-high { background: #fee2e2; color: #991b1b; }
+    .sev-mid { background: #fef3c7; color: #92400e; }
+    .sev-low { background: #e9edf3; color: #3b4d66; }
+
+    /* ── heatmap ── */
+    .heatmap-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+      margin: 0.3rem 0 0 0;
+    }
+    .heatmap-cell {
+      aspect-ratio: 1;
+      border-radius: 3px;
+      background: #e6edf4;
+      font-size: 0.45rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a5b72;
+      font-weight: 500;
+      min-height: 18px;
+    }
+    .heatmap-cell.filled-1 { background: #d6e2f0; }
+    .heatmap-cell.filled-2 { background: #a8c1db; }
+    .heatmap-cell.filled-3 { background: #6f95c4; }
+    .heatmap-cell.filled-4 { background: #3b6fa5; color: #fff; }
+    .heatmap-cell.filled-5 { background: #1e4a7a; color: #fff; }
+    .heatmap-label {
+      font-size: 0.55rem;
+      color: #5b6f87;
+      margin-top: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ── responsive tweaks ── */
+    @media (max-width: 640px) {
+      body { padding: 0.75rem; }
+      .grid { grid-template-columns: 1fr; gap: 0.75rem; }
+      .header h1 { font-size: 1.15rem; }
+    }
+    @media (min-width: 641px) and (max-width: 820px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 821px) and (max-width: 1150px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    /* ── extra density ── */
+    .compact-list {
+      font-size: 0.72rem;
+      margin: 0.1rem 0;
+    }
+    .compact-list .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.15rem 0;
+    }
+    .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-right: 0.3rem;
+    }
+    .dot.green { background: #16a34a; }
+    .dot.yellow { background: #d97706; }
+    .dot.red { background: #dc2626; }
+    .dot.blue { background: #2563eb; }
+
+    hr { border: none; border-top: 1px solid #edf2f7; margin: 0.4rem 0; }
+
+    .sub {
+      font-size: 0.65rem;
+      color: #6f7e93;
+    }
+  </style>
+</head>
+<body>
+<div class="dashboard">
+  <!-- header -->
+  <div class="header">
+    <h1>
+      📡 StageSignal Crew
+      <small>field ops</small>
+    </h1>
+    <div class="header-right">
+      <span class="badge-live">● LIVE</span>
+      <span class="timestamp">⏱ 14:32 · 04/11</span>
+      <span style="font-size:1rem;">👤</span>
+    </div>
+  </div>
+
+  <!-- grid -->
+  <div class="grid">
+
+    <!-- 1. Camera Kits -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">📷 Camera Kits</span>
+        <span class="icon">🎥</span>
+      </div>
+      <div class="card-body">
+        <div class="stat-row"><span class="label">Checked out</span><span class="value">12</span></div>
+        <div class="stat-row"><span class="label">Available</span><span class="value good">8</span></div>
+        <div class="stat-row"><span class="label">In repair</span><span class="value warn">3</span></div>
+        <div class="meter"><div class="meter-fill" style="width:65%"></div></div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.2rem;margin-top:0.25rem;">
+          <span class="tag">Sony FX6 · 4</span>
+          <span class="tag blue">RED Komodo · 3</span>
+          <span class="tag">Canon C70 · 5</span>
+        </div>
+        <div class="sub" style="margin-top:0.25rem;">Next calibration: 3 kits overdue</div>
+      </div>
+    </div>
+
+    <!-- 2. Venue Check‑ins -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">📍 Venue Check‑ins</span>
+        <span class="icon">🏟️</span>
+      </div>
+      <div class="card-body">
+        <div class="stat-row"><span class="label">Today</span><span class="value">6 / 9</span></div>
+        <div class="stat-row"><span class="label">On time</span><span class="value good">83%</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.2rem;margin-top:0.3rem;">
+          <span class="tag green">✅ The Roxy · 09:00</span>
+          <span class="tag green">✅ Paramount · 10:30</span>
+          <span class="tag orange">⏳ Echo Arena · 13:00</span>
+          <span class="tag red">❌ Brixton · 08:00</span>
+        </div>
+        <div class="sub" style="margin-top:0.2rem;">Last: 14:20 · Grand Hall</div>
+      </div>
+    </div>
+
+    <!-- 3. Broadcast Signal Strength -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">📡 Signal Strength</span>
+        <span class="icon">📶</span>
+      </div>
+      <div class="card-body">
+        <div class="stat-row"><span class="label">Primary</span><span class="value good">-42 dBm</span></div>
+        <div class="meter"><div class="meter-fill good" style="width:88%"></div></div>
+        <div class="stat-row"><span class="label">Backup</span><span class="value warn">-68 dBm</span></div>
+        <div class="meter"><div class="meter-fill warn" style="width:54%"></div></div>
+        <div class="stat-row"><span class="label">Latency</span><span class="value">12 ms</span></div>
+        <div class="sub" style="margin-top:0.25rem;">🛰️ 4 bars · 5 GHz</div>
+      </div>
+    </div>
+
+    <!-- 4. Crew Assignments -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">👥 Crew Assignments</span>
+        <span class="icon">🧑‍🤝‍🧑</span>
+      </div>
+      <div class="card-body">
+        <div class="stat-row"><span class="label">On duty</span><span class="value">14 / 18</span></div>
+        <div class="crew-avatars">
+          <span class="avatar blue">AL</span>
+          <span class="avatar green">MC</span>
+          <span class="avatar orange">JD</span>
+          <span class="avatar">PW</span>
+          <span class="avatar purple">SK</span>
+          <span class="avatar blue">TR</span>
+          <span class="avatar">+7</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.2rem;margin-top:0.25rem;">
+          <span class="tag">🎤 Audio · 4</span>
+          <span class="tag blue">💡 Lighting · 3</span>
+          <span class="tag green">📹 Video · 5</span>
+          <span class="tag orange">🔧 Rigging · 2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Incident Reports -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">⚠️ Incidents</span>
+        <span class="icon">🚨</span>
+      </div>
+      <div class="card-body">
+        <div class="stat-row"><span class="label">Open</span><span class="value bad">4</span></div>
+        <ul class="incident-list">
+          <li><span>🔌 Power drop stage B</span><span class="sev sev-high">HIGH</span></li>
+          <li><span>📡 RF interference</span><span class="sev sev-mid">MID</span></li>
+          <li><span>🚧 Cable trip hazard</span><span class="sev sev-mid">MID</span></li>
+          <li><span>🔋 Battery door fault</span><span class="sev sev-low">LOW</span></li>
+        </ul>
+        <div class="sub" style="margin-top:0.2rem;">Last report: 13:47</div>
+      </div>
+    </div>
+
+    <!-- 6. Battery Levels -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">🔋 Batteries</span>
+        <span class="icon">⚡</span>
+      </div>
+      <div class="card-body">
+        <div class="compact-list">
+          <div class="item"><span><span class="dot green"></span>Handheld mics</span><span>92%</span></div>
+          <div class="item"><span><span class="dot green"></span>Camera sled</span><span>78%</span></div>
+          <div class="item"><span><span class="dot yellow"></span>Monitor TX</span><span>44%</span></div>
+          <div class="item"><span><span class="dot red"></span>IFB pack #3</span><span>11%</span></div>
+          <div class="item"><span><span class="dot yellow"></span>Comms hub</span><span>39%</span></div>
+        </div>
+        <div class="meter" style="margin-top:0.3rem;"><div class="meter-fill warn" style="width:52%"></div></div>
+        <div class="sub">avg 53% · 6 units ≤ 30%</div>
+      </div>
+    </div>
+
+    <!-- 7. Upload Queues -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">⬆️ Upload Queues</span>
+        <span class="icon">☁️</span>
+      </div>
+      <div class="card-body">
+        <div class="stat-row"><span class="label">Pending</span><span class="value warn">14</span></div>
+        <div class="stat-row"><span class="label">Transferring</span><span class="value">3</span></div>
+        <div class="stat-row"><span class="label">Failed</span><span class="value bad">1</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.2rem;margin-top:0.25rem;">
+          <span class="tag blue">🎬 B-roll · 2.1 GB</span>
+          <span class="tag">🎙️ Audio · 0.8 GB</span>
+          <span class="tag orange">📁 Stills · 0.3 GB</span>
+        </div>
+        <div class="meter" style="margin-top:0.3rem;"><div class="meter-fill" style="width:28%"></div></div>
+        <div class="sub">≈ 14 min remaining</div>
+      </div>
+    </div>
+
+    <!-- 8. Schedule Heatmap -->
+    <div class="card">
+      <div class="card-header">
+        <span class="title">📅 Schedule Density</span>
+        <span class="icon">🗓️</span>
+      </div>
+      <div class="card-body">
+        <div class="heatmap-grid">
+          <div class="heatmap-cell">M</div>
+          <div class="heatmap-cell">T</div>
+          <div class="heatmap-cell">W</div>
+          <div class="heatmap-cell">T</div>
+          <div class="heatmap-cell">F</div>
+          <div class="heatmap-cell">S</div>
+          <div class="heatmap-cell">S</div>
+          <!-- week 1 -->
+          <div class="heatmap-cell filled-5">6</div>
+          <div class="heatmap-cell filled-4">5</div>
+          <div class="heatmap-cell filled-5">7</div>
+          <div class="heatmap-cell filled-3">4</div>
+          <div class="heatmap-cell filled-2">2</div>
+          <div class="heatmap-cell filled-1">1</div>
+          <div class="heatmap-cell filled-1">1</div>
+          <!-- week 2 -->
+          <div class="heatmap-cell filled-4">5</div>
+          <div class="heatmap-cell filled-5">6</div>
+          <div class="heatmap-cell filled-3">3</div>
+          <div class="heatmap-cell filled-4">5</div>
+          <div class="heatmap-cell filled-2">2</div>
+          <div class="heatmap-cell filled-2">2</div>
+          <div class="heatmap-cell filled-1">0</div>
+          <!-- week 3 -->
+          <div class="heatmap-cell filled-3">4</div>
+          <div class="heatmap-cell filled-5">6</div>
+          <div class="heatmap-cell filled-4">5</div>
+          <div class="heatmap-cell filled-5">7</div>
+          <div class="heatmap-cell filled-3">3</div>
+          <div class="heatmap-cell filled-1">1</div>
+          <div class="heatmap-cell filled-2">2</div>
+        </div>
+        <div class="heatmap-label">
+          <span>← past</span>
+          <span>shifts/day</span>
+          <span>future →</span>
+        </div>
+        <div class="sub" style="margin-top:0.2rem;">Peak: Thu (7) · 3 wk avg</div>
+      </div>
+    </div>
+
+  </div>
+  <!-- footer note -->
+  <div style="margin-top:1rem;font-size:0.65rem;color:#7a8b9f;text-align:right;border-top:1px solid #e2eaf2;padding-top:0.6rem;">
+    <span>StageSignal Crew · v2.4 · 4 active venues</span>
+  </div>
+</div>
+</body>
+</html>

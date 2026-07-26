@@ -1,0 +1,714 @@
+[
+  {
+    "id": "P_0000",
+    "demographic": {
+      "age_group": "teen",
+      "gender": "female",
+      "ethnicity": "white",
+      "occupation": "student"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "low",
+      "extraversion": "high",
+      "agreeableness": "low",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "general_genui",
+      "domain_experience": "novice",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "curiosity",
+    "frustration": "unclear_feedback",
+    "goal": "productivity",
+    "behavior_pattern": "minimal-effort",
+    "context": "focused_work",
+    "ui_expectation": [
+      "clear feedback",
+      "interactive elements"
+    ]
+  },
+  {
+    "id": "P_0001",
+    "demographic": {
+      "age_group": "middle_aged",
+      "gender": "female",
+      "ethnicity": "asian",
+      "occupation": "business_owner"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "high",
+      "extraversion": "medium",
+      "agreeableness": "medium",
+      "neuroticism": "medium"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "design_tools",
+      "domain_experience": "intermediate",
+      "usage_frequency": "occasional"
+    },
+    "motivation": "learning",
+    "frustration": "complex_interface",
+    "goal": "content_creation",
+    "behavior_pattern": "exploratory",
+    "context": "low-resource",
+    "ui_expectation": [
+      "structured layouts"
+    ]
+  },
+  {
+    "id": "P_0002",
+    "demographic": {
+      "age_group": "senior",
+      "gender": "female",
+      "ethnicity": "asian",
+      "occupation": "retired"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "medium",
+      "extraversion": "high",
+      "agreeableness": "high",
+      "neuroticism": "medium"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "medium",
+      "target_domain": "design_tools",
+      "domain_experience": "novice",
+      "usage_frequency": "rare"
+    },
+    "motivation": "efficiency",
+    "frustration": "unclear_feedback",
+    "goal": "productivity",
+    "behavior_pattern": "task-oriented",
+    "context": "multitasking",
+    "ui_expectation": [
+      "exploratory interfaces",
+      "interactive elements",
+      "friendly tone"
+    ]
+  },
+  {
+    "id": "P_0003",
+    "demographic": {
+      "age_group": "young_adult",
+      "gender": "female",
+      "ethnicity": "white",
+      "occupation": "junior_employee"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "medium",
+      "extraversion": "high",
+      "agreeableness": "high",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "data_analysis",
+      "domain_experience": "intermediate",
+      "usage_frequency": "occasional"
+    },
+    "motivation": "social_connection",
+    "frustration": "information_overload",
+    "goal": "information_acquisition",
+    "behavior_pattern": "task-oriented",
+    "context": "multitasking",
+    "ui_expectation": [
+      "exploratory interfaces",
+      "clear feedback",
+      "interactive elements",
+      "friendly tone"
+    ]
+  },
+  {
+    "id": "P_0004",
+    "demographic": {
+      "age_group": "teen",
+      "gender": "male",
+      "ethnicity": "black",
+      "occupation": "student"
+    },
+    "personality": {
+      "openness": "medium",
+      "conscientiousness": "medium",
+      "extraversion": "low",
+      "agreeableness": "low",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "low"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "design_tools",
+      "domain_experience": "novice",
+      "usage_frequency": "rare"
+    },
+    "motivation": "learning",
+    "frustration": "lack_of_control",
+    "goal": "social_interaction",
+    "behavior_pattern": "deep_research",
+    "context": "multitasking",
+    "ui_expectation": [
+      "clear feedback"
+    ]
+  },
+  {
+    "id": "P_0005",
+    "demographic": {
+      "age_group": "middle_aged",
+      "gender": "male",
+      "ethnicity": "white",
+      "occupation": "senior_engineer"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "medium",
+      "extraversion": "low",
+      "agreeableness": "low",
+      "neuroticism": "low"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "adventurous",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "medium",
+      "target_domain": "design_tools",
+      "domain_experience": "intermediate",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "entertainment",
+    "frustration": "information_overload",
+    "goal": "content_creation",
+    "behavior_pattern": "minimal-effort",
+    "context": "low-resource",
+    "ui_expectation": [
+      "exploratory interfaces"
+    ]
+  },
+  {
+    "id": "P_0006",
+    "demographic": {
+      "age_group": "teen",
+      "gender": "female",
+      "ethnicity": "black",
+      "occupation": "student"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "medium",
+      "extraversion": "medium",
+      "agreeableness": "low",
+      "neuroticism": "medium"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "low"
+    },
+    "experience": {
+      "tech_literacy": "medium",
+      "target_domain": "programming_tools",
+      "domain_experience": "expert",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "curiosity",
+    "frustration": "lack_of_control",
+    "goal": "information_acquisition",
+    "behavior_pattern": "task-oriented",
+    "context": "focused_work",
+    "ui_expectation": [
+      "minimal interface"
+    ]
+  },
+  {
+    "id": "P_0007",
+    "demographic": {
+      "age_group": "senior",
+      "gender": "female",
+      "ethnicity": "hispanic",
+      "occupation": "retired"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "low",
+      "extraversion": "medium",
+      "agreeableness": "medium",
+      "neuroticism": "low"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "low"
+    },
+    "experience": {
+      "tech_literacy": "high",
+      "target_domain": "design_tools",
+      "domain_experience": "expert",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "curiosity",
+    "frustration": "slow_response",
+    "goal": "information_acquisition",
+    "behavior_pattern": "deep_research",
+    "context": "focused_work",
+    "ui_expectation": [
+      "minimal interface"
+    ]
+  },
+  {
+    "id": "P_0008",
+    "demographic": {
+      "age_group": "adult",
+      "gender": "female",
+      "ethnicity": "white",
+      "occupation": "researcher"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "high",
+      "extraversion": "high",
+      "agreeableness": "low",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "high",
+      "target_domain": "content_creation",
+      "domain_experience": "intermediate",
+      "usage_frequency": "rare"
+    },
+    "motivation": "curiosity",
+    "frustration": "complex_interface",
+    "goal": "social_interaction",
+    "behavior_pattern": "exploratory",
+    "context": "focused_work",
+    "ui_expectation": [
+      "exploratory interfaces",
+      "structured layouts",
+      "clear feedback",
+      "interactive elements"
+    ]
+  },
+  {
+    "id": "P_0009",
+    "demographic": {
+      "age_group": "senior",
+      "gender": "male",
+      "ethnicity": "asian",
+      "occupation": "retired"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "high",
+      "extraversion": "low",
+      "agreeableness": "low",
+      "neuroticism": "low"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "medium",
+      "target_domain": "programming_tools",
+      "domain_experience": "expert",
+      "usage_frequency": "occasional"
+    },
+    "motivation": "learning",
+    "frustration": "lack_of_control",
+    "goal": "information_acquisition",
+    "behavior_pattern": "task-oriented",
+    "context": "low-resource",
+    "ui_expectation": [
+      "exploratory interfaces",
+      "structured layouts"
+    ]
+  },
+  {
+    "id": "P_0010",
+    "demographic": {
+      "age_group": "middle_aged",
+      "gender": "male",
+      "ethnicity": "asian",
+      "occupation": "manager"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "medium",
+      "extraversion": "medium",
+      "agreeableness": "medium",
+      "neuroticism": "medium"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "medium",
+      "target_domain": "general_genui",
+      "domain_experience": "expert",
+      "usage_frequency": "occasional"
+    },
+    "motivation": "efficiency",
+    "frustration": "slow_response",
+    "goal": "entertainment",
+    "behavior_pattern": "exploratory",
+    "context": "focused_work",
+    "ui_expectation": [
+      "exploratory interfaces"
+    ]
+  },
+  {
+    "id": "P_0011",
+    "demographic": {
+      "age_group": "young_adult",
+      "gender": "male",
+      "ethnicity": "black",
+      "occupation": "junior_employee"
+    },
+    "personality": {
+      "openness": "medium",
+      "conscientiousness": "low",
+      "extraversion": "low",
+      "agreeableness": "medium",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "adventurous",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "general_genui",
+      "domain_experience": "intermediate",
+      "usage_frequency": "occasional"
+    },
+    "motivation": "entertainment",
+    "frustration": "slow_response",
+    "goal": "information_acquisition",
+    "behavior_pattern": "deep_research",
+    "context": "mobile_fragmented",
+    "ui_expectation": [
+      "clear feedback"
+    ]
+  },
+  {
+    "id": "P_0012",
+    "demographic": {
+      "age_group": "young_adult",
+      "gender": "male",
+      "ethnicity": "hispanic",
+      "occupation": "junior_employee"
+    },
+    "personality": {
+      "openness": "medium",
+      "conscientiousness": "medium",
+      "extraversion": "medium",
+      "agreeableness": "medium",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "content_creation",
+      "domain_experience": "novice",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "social_connection",
+    "frustration": "complex_interface",
+    "goal": "productivity",
+    "behavior_pattern": "task-oriented",
+    "context": "focused_work",
+    "ui_expectation": [
+      "clear feedback"
+    ]
+  },
+  {
+    "id": "P_0013",
+    "demographic": {
+      "age_group": "teen",
+      "gender": "male",
+      "ethnicity": "asian",
+      "occupation": "student"
+    },
+    "personality": {
+      "openness": "high",
+      "conscientiousness": "low",
+      "extraversion": "high",
+      "agreeableness": "low",
+      "neuroticism": "medium"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "data_analysis",
+      "domain_experience": "intermediate",
+      "usage_frequency": "occasional"
+    },
+    "motivation": "curiosity",
+    "frustration": "lack_of_control",
+    "goal": "information_acquisition",
+    "behavior_pattern": "task-oriented",
+    "context": "mobile_fragmented",
+    "ui_expectation": [
+      "exploratory interfaces",
+      "interactive elements"
+    ]
+  },
+  {
+    "id": "P_0014",
+    "demographic": {
+      "age_group": "young_adult",
+      "gender": "female",
+      "ethnicity": "hispanic",
+      "occupation": "freelancer"
+    },
+    "personality": {
+      "openness": "medium",
+      "conscientiousness": "low",
+      "extraversion": "low",
+      "agreeableness": "medium",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "low"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "general_genui",
+      "domain_experience": "intermediate",
+      "usage_frequency": "rare"
+    },
+    "motivation": "curiosity",
+    "frustration": "slow_response",
+    "goal": "productivity",
+    "behavior_pattern": "task-oriented",
+    "context": "multitasking",
+    "ui_expectation": [
+      "clear feedback"
+    ]
+  },
+  {
+    "id": "P_0015",
+    "demographic": {
+      "age_group": "senior",
+      "gender": "female",
+      "ethnicity": "asian",
+      "occupation": "retired"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "medium",
+      "extraversion": "low",
+      "agreeableness": "low",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "medium",
+      "target_domain": "design_tools",
+      "domain_experience": "novice",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "social_connection",
+    "frustration": "lack_of_control",
+    "goal": "productivity",
+    "behavior_pattern": "task-oriented",
+    "context": "mobile_fragmented",
+    "ui_expectation": [
+      "clear feedback"
+    ]
+  },
+  {
+    "id": "P_0016",
+    "demographic": {
+      "age_group": "teen",
+      "gender": "female",
+      "ethnicity": "asian",
+      "occupation": "student"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "medium",
+      "extraversion": "low",
+      "agreeableness": "high",
+      "neuroticism": "medium"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "conservative",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "content_creation",
+      "domain_experience": "novice",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "efficiency",
+    "frustration": "lack_of_control",
+    "goal": "content_creation",
+    "behavior_pattern": "task-oriented",
+    "context": "focused_work",
+    "ui_expectation": [
+      "friendly tone"
+    ]
+  },
+  {
+    "id": "P_0017",
+    "demographic": {
+      "age_group": "teen",
+      "gender": "female",
+      "ethnicity": "asian",
+      "occupation": "student"
+    },
+    "personality": {
+      "openness": "medium",
+      "conscientiousness": "low",
+      "extraversion": "high",
+      "agreeableness": "low",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "intuitive",
+      "risk": "adventurous",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "high",
+      "target_domain": "programming_tools",
+      "domain_experience": "intermediate",
+      "usage_frequency": "rare"
+    },
+    "motivation": "curiosity",
+    "frustration": "unclear_feedback",
+    "goal": "information_acquisition",
+    "behavior_pattern": "exploratory",
+    "context": "mobile_fragmented",
+    "ui_expectation": [
+      "clear feedback",
+      "interactive elements"
+    ]
+  },
+  {
+    "id": "P_0018",
+    "demographic": {
+      "age_group": "adult",
+      "gender": "male",
+      "ethnicity": "black",
+      "occupation": "manager"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "high",
+      "extraversion": "low",
+      "agreeableness": "medium",
+      "neuroticism": "low"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "adventurous",
+      "control": "high"
+    },
+    "experience": {
+      "tech_literacy": "low",
+      "target_domain": "design_tools",
+      "domain_experience": "novice",
+      "usage_frequency": "rare"
+    },
+    "motivation": "curiosity",
+    "frustration": "slow_response",
+    "goal": "entertainment",
+    "behavior_pattern": "exploratory",
+    "context": "mobile_fragmented",
+    "ui_expectation": [
+      "structured layouts"
+    ]
+  },
+  {
+    "id": "P_0019",
+    "demographic": {
+      "age_group": "adult",
+      "gender": "female",
+      "ethnicity": "black",
+      "occupation": "teacher"
+    },
+    "personality": {
+      "openness": "low",
+      "conscientiousness": "low",
+      "extraversion": "medium",
+      "agreeableness": "low",
+      "neuroticism": "high"
+    },
+    "cognitive_style": {
+      "processing": "analytical",
+      "risk": "conservative",
+      "control": "low"
+    },
+    "experience": {
+      "tech_literacy": "high",
+      "target_domain": "general_genui",
+      "domain_experience": "expert",
+      "usage_frequency": "frequent"
+    },
+    "motivation": "learning",
+    "frustration": "complex_interface",
+    "goal": "social_interaction",
+    "behavior_pattern": "task-oriented",
+    "context": "multitasking",
+    "ui_expectation": [
+      "clear feedback"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 6,
+    "scenario": "landing_marketing",
+    "text": "Design a tablet marketing widget for DinnerBell Family, a food delivery service for parents managing shared family accounts, with a retro 1970s diner aesthetic in cream, tomato red, and mustard. Show a card grid of six family meal-plan cards with kid icons, allowance labels, delivery times, and one prominent “Add to Family Wallet” action."
+  },
+  {
+    "id": 27,
+    "scenario": "landing_marketing",
+    "text": "Create an information-dense mobile promo page for HarvestDial Global, a retro agriculture-tech platform for multilingual crop forecasting. Use vintage seed-catalog colors and a modal-heavy interface showing a language overlay, weather alert pop-up, crop price ticker, soil sensor cards, region flags, radio-style CTA button, and navigation labeled in English, Spanish, and Hindi."
+  },
+  {
+    "id": 104,
+    "scenario": "dashboard_analytics",
+    "text": "Design a responsive minimalist analytics widget for CargoLoom Sync used by enterprise IT admins monitoring supply-chain integrations. Show one large “EDI Message Queue” card with shipment status counts, a tiny latency sparkline, last failed partner name “NorthPier 3PL,” lots of white space, and a bottom navigation bar on mobile for Queue, Partners, Alerts, and Settings."
+  },
+  {
+    "id": 131,
+    "scenario": "dashboard_analytics",
+    "text": "Create a responsive card-grid dashboard for StageSignal Crew, a media and entertainment field operations app used by mobile event technicians. Use muted corporate blues and grays, dense compact cards for camera kits, venue check-ins, broadcast signal strength, crew assignments, incident reports, battery levels, upload queues, and a small schedule heatmap."
+  },
+  {
+    "id": 189,
+    "scenario": "forms_auth_flow",
+    "text": "Create a responsive neumorphic onboarding widget for RoadPals Auto that helps first-time users add their first vehicle, with soft gray panels, rounded shadows, and a mobile-style bottom navigation bar. Focus on one centered VIN entry card with scan icon, example VIN text, help tooltip, progress dot indicator, and a friendly “Save my car” primary action."
+  },
+  {
+    "id": 281,
+    "scenario": "ecommerce_content_listing",
+    "text": "Design a responsive brutalist discovery page for “FrameForge Index,” a media-rights catalog for power users comparing indie films, podcasts, and live-event streams. Use a high-contrast black/white/red palette, oversized condensed typography, dense card grid, sticky filters for genre/license/region, tiny metadata chips, availability badges, and a compact watchlist panel."
+  }
+]
