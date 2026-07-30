@@ -1,5 +1,7 @@
 # Beyond a Single Judge: The Evidence-Grounded, Social-Weighted Persona Panel for Generative UI Evaluation
 
+![ESPP Framework](https://github.com/Wuzheng02/ESPP/blob/main/pipeline.png)
+
 This repository contains the reference implementation of the **Evidence-Grounded, Social-Weighted Persona Panel (ESPP)**, a three-stage evaluation method for Generative UI (GenUI) that replaces a single LLM-as-a-judge with a panel of psychologically diverse, evidence-grounded personas. Each panelist (i) independently rates a generated interface on five dimensions, (ii) exchanges opinions with the rest of the panel under a trait-derived, semantically-gated bounded-confidence mechanism, and (iii) is aggregated via Delphi-inspired social weighting into a single score.
 
 
