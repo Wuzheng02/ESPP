@@ -1,11 +1,7 @@
-# Beyond a Single Judge: Simulating Social Persona Panels for Generative UI Evaluation
+# Beyond a Single Judge: The Evidence-Grounded, Social-Weighted Persona Panel for Generative UI Evaluation
 
-This repository contains the reference implementation of the **Social-Weighted Persona Panel (SPP)**, a three-stage evaluation method for Generative UI (GenUI) that replaces a single LLM-as-a-judge with a panel of psychologically diverse, evidence-grounded personas. Each panelist (i) independently rates a generated interface on five dimensions, (ii) exchanges opinions with the rest of the panel under a trait-derived, semantically-gated bounded-confidence mechanism, and (iii) is aggregated via Delphi-inspired social weighting into a single score.
+This repository contains the reference implementation of the **Evidence-Grounded, Social-Weighted Persona Panel (ESPP)**, a three-stage evaluation method for Generative UI (GenUI) that replaces a single LLM-as-a-judge with a panel of psychologically diverse, evidence-grounded personas. Each panelist (i) independently rates a generated interface on five dimensions, (ii) exchanges opinions with the rest of the panel under a trait-derived, semantically-gated bounded-confidence mechanism, and (iii) is aggregated via Delphi-inspired social weighting into a single score.
 
-SPP tracks human judgment substantially more closely than a naive single-pass LLM judge (Pearson $r$: $0.716 \rightarrow 0.922$ in our experiments), and our analyses attribute most of this gain to genuine persona diversity and P-Q-A evidence grounding rather than prompt-ensembling alone.
-
-> Paper: *Beyond a Single Judge: Simulating Social Persona Panels for Generative UI Evaluation* (under review).
-> This is an anonymized code release accompanying the submission; author/venue information is intentionally omitted.
 
 ## Installation
 
