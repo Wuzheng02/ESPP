@@ -97,4 +97,11 @@ python pipeline.py --models model_A --no-pqa
 - Model names evaluated in the paper are anonymized here as `model_A` / `model_B` / `model_C` placeholders; see the paper for the actual list of 14 commercial/open-source models.
 
 
-
+```bibtex
+@article{wu2026beyond,
+  title={Beyond a Single Judge: Simulating Social Persona Panels for Generative UI Evaluation},
+  author={Wu, Zheng and Luo, Yibo and Zhang, Pu and Yang, Cheng and Zhang, Zhuosheng},
+  journal={arXiv preprint arXiv:2607.28439},
+  year={2026}
+}
+```
